@@ -1,6 +1,14 @@
 import Link from "next/link";
+import Head from 'next/head';
 import Button from "@material-ui/core/Button";
-import { Typography } from "@material-ui/core";
+
+const PageHead = () => (
+  <Head>
+    <title>Good Food Guide</title>
+    <meta charSet='utf-8' />
+    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+  </Head>
+)
 
 export const PageLink = props => (
   <Link href={`/${props.link}`}>
@@ -36,6 +44,7 @@ const Header = () => (
 
 const Layout = props => (
   <div id="layout">
+    <PageHead />
     <center>
       <Header />
       <Navigation />
