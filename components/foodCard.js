@@ -17,7 +17,7 @@ class FoodCard extends Component {
       <div>
         {
           Data.map((data, index) => (
-            <Card raised key={index}>
+            <Card raised key={index} style={{ marginBottom: 15 }}>
               <CardActionArea>
                 <CardMedia image={data.image} title={data.sick} />
                 <CardContent>
