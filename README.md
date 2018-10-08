@@ -56,7 +56,7 @@ $ npm install
 ```bash
 $ yarn dev 
 # or
-npm run dev
+$ npm run dev
 ```
 
 ## Contributing
