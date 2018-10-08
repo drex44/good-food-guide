@@ -31,7 +31,7 @@ Create a pull request that will be merged to the main repo.
 
 ## Contributing
 
-check out the [contributing.md](Contributing.md)
+check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
 
 ## Important Links :pencil2:
 
