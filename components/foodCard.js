@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   Card,
   CardActionArea,
@@ -8,6 +9,14 @@ import {
   CardActions,
   Button
 } from "@material-ui/core";
+
+const PostLink = (props) => (
+  <Link href={`detailedFoodDetails?title=${props.title}`}>
+    <Button size="small" color="primary">
+        {props.title}
+    </Button>
+  </Link>
+)
 
 const FoodCard = props => {
   return (
@@ -28,9 +37,7 @@ const FoodCard = props => {
         <Button size="small" color="primary">
           Share
         </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        <PostLink title="Learn More" />
       </CardActions>
     </Card>
   );
