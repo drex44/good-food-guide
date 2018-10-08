@@ -6,6 +6,10 @@ Let's have a productive Hacktoberfest. Submit 5 PRs to this account after regist
 
 My name is Dhanraj Acharya and I am hosting this repository for the month of October, 2018. The idea is to create a website over the month, about Foods to eat when you're unwell. This site is open to all forms of suggestions. Happy contributing!
 
+If you like this repo then show your support,
+
+:star: this repo
+
 ## How it works :building_construction:
 
 :white_check_mark:
@@ -21,17 +25,47 @@ Make some edits on your own copy that fixes the issues.
 Create a pull request that will be merged to the main repo.
 (**Remember to indicate what issue you're fixing**)
 
-:white*check_mark:\_You can check your progress here after every merged PR* : https://hacktoberfest.digitalocean.com/stats
+:white_check_mark:You can check your progress here after every merged PR* : https://hacktoberfest.digitalocean.com/stats
 
 :white_check_mark:Your code will be reviewed and approved.
 
 :white_check_mark:If you have questions on any issue, kindly use the comment.
 
-**Don't forget to add your name to Contributors.md(AN EASY PR)**
+:white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR)**
+
+## Quick Start
+
+1.  Clone the project
+
+2.  Navigate to your new project:
+
+```bash
+$ cd good-food-guide
+```
+
+3.  Install all dependencies:
+
+```bash
+$ yarn
+# or
+$ npm install
+```
+
+4.  Start the dev server and edit some code!
+
+```bash
+$ yarn dev 
+# or
+$ npm run dev
+```
 
 ## Contributing
 
 check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
+
+The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
+
+https://good-food-guide.netlify.com
 
 ## Important Links :pencil2:
 
