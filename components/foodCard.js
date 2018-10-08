@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Head from 'next/head'
 import Data from './dataList'
 
 import {
@@ -15,6 +16,9 @@ class FoodCard extends Component {
   render () {
     return (
       <div>
+        <Head>
+          <title>Good Food Guide</title>
+        </Head>
         {
           Data.map((data, index) => (
             <Card raised key={index} style={{ marginBottom: 15 }}>
