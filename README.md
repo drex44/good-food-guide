@@ -33,8 +33,8 @@ Create a pull request that will be merged to the main repo.
 
 Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
 
-1. [Learn React](https://www.w3schools.com/html/)
-2. [Learn NextJs](https://www.w3schools.com/Css/)
-3. [Learn Material UI](https://www.w3schools.com/js/)
+1. [Learn React](https://reactjs.org/docs/hello-world.html)
+2. [Learn NextJs](https://nextjs.org/learn)
+3. [Material UI Docs](http://material-ui.com)
 4. [Learn how to make pull request](https://help.github.com/articles/creating-a-pull-request/)
 5. [Learn how to fork a repository](https://help.github.com/articles/fork-a-repo/)
