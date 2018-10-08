@@ -37,6 +37,10 @@ Create a pull request that will be merged to the main repo.
 
 check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
 
+The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
+
+https://good-food-guide.netlify.com
+
 ## Important Links :pencil2:
 
 Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
