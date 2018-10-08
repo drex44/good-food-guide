@@ -54,7 +54,9 @@ $ npm install
 4.  Start the dev server and edit some code!
 
 ```bash
-$ yarn dev or npm run dev
+$ yarn dev 
+# or
+npm run dev
 ```
 
 ## Contributing
