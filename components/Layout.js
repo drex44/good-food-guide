@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from 'next/head';
 import Button from "@material-ui/core/Button";
+import Footer from "../components/Footer";
 
 const PageHead = () => (
   <Head>
@@ -50,6 +51,7 @@ const Layout = props => (
       <Navigation />
     </center>
     <div id="content">{props.children}</div>
+    <Footer />
     <style jsx>{`
       #layout,
       #content {
