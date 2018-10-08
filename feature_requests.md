@@ -1,4 +1,5 @@
-#Good Food Guide
+Good Food Guide
 ----
-##Features
+Features
 <br>
+1. Suggest food depending upon the orders of the unwell users in the vicinity.
