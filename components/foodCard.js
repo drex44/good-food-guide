@@ -29,7 +29,7 @@ const FoodCard = props => {
         <Button size="small" color="primary">
           Share
         </Button>
-        <Link href={`/foodDetails?title=ViralFever`}> 
+        <Link href={`/foodDetails?title=ViralFever`}>
           <Button size="small" color="primary">
             Learn More
           </Button>
