@@ -1,4 +1,6 @@
-import React from "react";
+import React, { Component } from 'react'
+import Data from './dataList'
+
 import {
   Card,
   CardActionArea,
@@ -7,33 +9,40 @@ import {
   Typography,
   CardActions,
   Button
-} from "@material-ui/core";
+} from '@material-ui/core'
 
-const FoodCard = props => {
-  return (
-    <Card raised>
-      <CardActionArea>
-        <CardMedia image="/images/viral-fever.jpg" title="Viral fever" />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Viral Fever
-          </Typography>
-          <Typography component="p">
-            Coriander Tea, Bland Diet, Gargle With Salt Water, Eat Raw Garlic &
-            Onion, "Honey, Lemon and Ginger Juice", Tulsi ( Basil) Leaves
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
-  );
+class FoodCard extends Component {
+  render () {
+    return (
+      <div>
+        {
+          Data.map((data, index) => (
+            <Card raised key={index}>
+              <CardActionArea>
+                <CardMedia image={data.image} title={data.sick} />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {data.sick}
+                  </Typography>
+                  <Typography component="p">
+                    {data.goodFoods}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button size="small" color="primary">
+                Share
+                </Button>
+                <Button size="small" color="primary">
+                    Learn More
+                </Button>
+              </CardActions>
+            </Card>
+          ))
+        }
+      </div>
+    )
+  }
 };
 
-export default FoodCard;
+export default FoodCard
