@@ -21,13 +21,13 @@ Make some edits on your own copy that fixes the issues.
 Create a pull request that will be merged to the main repo.
 (**Remember to indicate what issue you're fixing**)
 
-:white*check_mark:\_You can check your progress here after every merged PR* : https://hacktoberfest.digitalocean.com/stats
+:white_check_mark:You can check your progress here after every merged PR* : https://hacktoberfest.digitalocean.com/stats
 
 :white_check_mark:Your code will be reviewed and approved.
 
 :white_check_mark:If you have questions on any issue, kindly use the comment.
 
-**Don't forget to add your name to Contributors.md(AN EASY PR)**
+:white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR)**
 
 ## Contributing
 
