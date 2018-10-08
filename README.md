@@ -1,4 +1,4 @@
-# :tada::tada::smile: Good Food Guide
+# Good Food Guide :tada::tada::smile: 
 
 Let's have a productive Hacktoberfest. Submit 5 PRs to this account after registering yourself [here](https://hacktoberfest.digitalocean.com/).
 
@@ -6,7 +6,7 @@ Let's have a productive Hacktoberfest. Submit 5 PRs to this account after regist
 
 My name is Dhanraj Acharya and I am hosting this repository for the month of October, 2018. The idea is to create a website over the month, about Foods to eat when you're unwell. This site is open to all forms of suggestions. Happy contributing!
 
-## :building_construction: How it works
+## How it works :building_construction:
 
 :white_check_mark:
 Check for open issues
@@ -29,7 +29,11 @@ Create a pull request that will be merged to the main repo.
 
 **Don't forget to add your name to Contributors.md(AN EASY PR)**
 
-## :pencil2: Important Links
+## Contributing
+
+check out the [contributing.md](Contributing.md)
+
+## Important Links :pencil2:
 
 Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
 
