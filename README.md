@@ -33,6 +33,30 @@ Create a pull request that will be merged to the main repo.
 
 :white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR)**
 
+## Quick Start
+
+1.  Clone the project
+
+2.  Navigate to your new project:
+
+```bash
+$ cd good-food-guide
+```
+
+3.  Install all dependencies:
+
+```bash
+$ yarn
+# or
+$ npm install
+```
+
+4.  Start the dev server and edit some code!
+
+```bash
+$ yarn dev or npm run dev
+```
+
 ## Contributing
 
 check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
