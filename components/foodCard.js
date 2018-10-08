@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Data from './dataList'
+import React, { Component } from 'react';
+import Data from './dataList';
 
 import {
   Card,
@@ -9,7 +9,8 @@ import {
   Typography,
   CardActions,
   Button
-} from '@material-ui/core'
+} from '@material-ui/core';
+import Link from 'next/link';
 
 class FoodCard extends Component {
   render () {
@@ -33,9 +34,11 @@ class FoodCard extends Component {
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Button size="small" color="primary">
+                <Link href={`/foodDetails?title=${data.sick}`}>
+                  <Button size="small" color="primary">
                     Learn More
-                </Button>
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           ))
