@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from 'next/head';
+import Footer from './Footer';
 import Button from "@material-ui/core/Button";
 
 const PageHead = () => (
@@ -53,19 +54,24 @@ const Layout = props => (
     <style jsx>{`
       #layout,
       #content {
-        margin: 20px;
-        padding: 20px;
+        margin: 20px 20px 0;
+        padding: 20px 20px 0;
       }
       color: #625f5f;
     `}</style>
     <style jsx global>
       {`
+        body {
+          margin: 0px
+        },
         a {
           margin: 10px;
           color: #0003ff;
         }
+
       `}
     </style>
+    <Footer />
   </div>
 );
 
