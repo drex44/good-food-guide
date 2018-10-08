@@ -6,6 +6,10 @@ Let's have a productive Hacktoberfest. Submit 5 PRs to this account after regist
 
 My name is Dhanraj Acharya and I am hosting this repository for the month of October, 2018. The idea is to create a website over the month, about Foods to eat when you're unwell. This site is open to all forms of suggestions. Happy contributing!
 
+If you like this repo then show your support,
+
+:star: this repo
+
 ## How it works :building_construction:
 
 :white_check_mark:
