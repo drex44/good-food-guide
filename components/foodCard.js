@@ -8,6 +8,7 @@ import {
   CardActions,
   Button
 } from "@material-ui/core";
+import Link from 'next/link';
 
 const FoodCard = props => {
   return (
@@ -28,9 +29,11 @@ const FoodCard = props => {
         <Button size="small" color="primary">
           Share
         </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+        <Link href={`/foodDetails?title=ViralFever`}> 
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   );
