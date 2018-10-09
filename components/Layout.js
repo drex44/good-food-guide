@@ -56,7 +56,6 @@ const Layout = props => (
       #layout,
       #content {
         margin: 20px;
-        padding: 20px;
       }
       color: #625f5f;
     `}</style>
