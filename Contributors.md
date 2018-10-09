@@ -10,3 +10,6 @@ Developer from Brasil! React is life
 
 ### [Muhammad Al Anis Faishal](http://github.com/maafaishal)
 I'm Indonesian developer. Pray for Palu 🙏
+
+### [Gustavo Araújo](http://github.com/gwgga)
+I am a brazilian developer and I really love what I do.
