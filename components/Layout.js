@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Head from "next/head";
 import Button from "@material-ui/core/Button";
+import Typography from '@material-ui/core/Typography';
 import Footer from "../components/Footer";
+
+const styles = {
+  root: {
+    width: '100%',
+    maxWidth: 500,
+  },
+};
 
 const PageHead = () => (
   <Head>
@@ -29,11 +37,13 @@ const Navigation = () => (
 const Header = () => (
   <div>
     <Link href="/">
-      <a style={{ margin: "0px" }}>
-        <h1>Good Food Guide</h1>
-      </a>
+      <Typography component="h2" variant="h1" gutterBottom color="primary">
+        Good Food Guide
+      </Typography>
     </Link>
-    <h3>A guide to know which foods are good when you have certain disease!</h3>
+    <Typography style={{ fontSize: "18px" }} component="h2" variant="h3" gutterBottom>
+      A guide to know which foods are good when you have certain disease!
+    </Typography>
     <style jsx>{`
       h1 {
         color: #4b4949;

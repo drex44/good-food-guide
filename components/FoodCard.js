@@ -23,7 +23,7 @@ class FoodCard extends Component {
               <CardActionArea style={{ width: '100%' }}>
                 <CardMedia style={{height: 0, paddingTop: '25%'}} image={data.image} title={data.sick} />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" color="primary">
                     {data.sick}
                   </Typography>
                   <Typography component="p">{data.goodFoods}</Typography>
