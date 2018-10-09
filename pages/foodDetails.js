@@ -6,7 +6,7 @@ const dataSet = (data, queryId) => {
     if(data.id == queryId) {
         return(
             <div>
-                <p>{data.image}</p>
+                <img src={data.image}></img>
                 <p>{data.sick}</p>
                 <p>{data.goodFoods}</p>
             </div>
