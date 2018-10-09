@@ -34,7 +34,7 @@ class FoodCard extends Component {
                 <Button size="small" color="primary">
                 Share
                 </Button>
-                <Link href={`/foodDetails?title=${data.sick}`}>
+                <Link href={{ pathname: '/foodDetails', query: { title: data.sick, id: data.id }}}>
                   <Button size="small" color="primary">
                     Learn More
                   </Button>
