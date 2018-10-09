@@ -17,5 +17,11 @@ export default [
     image: "https://www.google.co.id/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjV9Nqr8PbdAhUhR48KHYjvD2AQjRx6BAgBEAU&url=http%3A%2F%2Fhome.bt.com%2Flifestyle%2Fhealth%2Fhealth-concerns%2Fwhat-is-aussie-flu-11364215917573&psig=AOvVaw0d0_v2vbG3uPCYjcUWvQgp&ust=1539089234071343",
     sick: "Flu",
     goodFoods: `Bananas, Rice, Applesauce, Toast, Flat ginger ale, Coke, Saltines`
+  },
+  {
+    id: 3,
+    image: "https://www.findatopdoc.com/var/fatd/storage/images/healthy-living/the-common-cold-symptoms-and-management/67599-1-eng-US/The-Common-Cold-Symptoms-and-Management_article_main.jpg",
+    sick: "Common Cold",
+    goodFoods: `Chicken Soup, Broths, Garlic, Coconut Water, Hot Tea, Honey, Ginger, Spicy Foods, Bananas, Oatmeal, Yogurt, Avocados`
   }
 ]
