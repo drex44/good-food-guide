@@ -20,14 +20,20 @@ export default [
   },
   {
     id: 3,
+    image: "https://www.findatopdoc.com/var/fatd/storage/images/healthy-living/the-common-cold-symptoms-and-management/67599-1-eng-US/The-Common-Cold-Symptoms-and-Management_article_main.jpg",
+    sick: "Common Cold",
+    goodFoods: `Chicken Soup, Broths, Garlic, Coconut Water, Hot Tea, Honey, Ginger, Spicy Foods, Bananas, Oatmeal, Yogurt, Avocados`
+  },
+  {
+    id: 4,
     image: "http://spydersalejacket.net/wp-content/uploads/2016/01/hot-drinks-4.jpg",
     sick: "It hurts to swallow",
     goodFoods: `Combine peppermint tea (lukewarm, not hot)—which has analgesic and anesthetic effects—and Manuka honey, which is known for its wound-healing properties. Soft, creamy foods such as cream soups, mashed potatoes, yogurt, scrambled eggs, and custards are also soothing. `
   },
   {
-    id: 4,
+    id: 5,
     image: "https://www.thespruceeats.com/thmb/hh7q_4n69WWWKpHxIAgRao_oatA=/2048x1365/filters:no_upscale():max_bytes(150000):strip_icc()/homemade-ginger-tea-3377239-5-5_preview-5afd9c53c06471003692829d.jpeg",
     sick: "You have a runny nose",
-    goodFoods: `Try Wakaya ginger tea, suggests Slayton. Ginger contains antioxidant and anti-inflammatory properties that may help clear up a cold faster than just waiting it out `
+    goodFoods: `Try Wakaya ginger tea, suggests Slayton. Ginger contains antioxidant and anti-inflammatory properties that may help clear up a cold faster than just waiting it out`
   }
 ]
