@@ -1,15 +1,15 @@
 import Link from "next/link";
-import Head from 'next/head';
+import Head from "next/head";
 import Button from "@material-ui/core/Button";
 import Footer from "../components/Footer";
 
 const PageHead = () => (
   <Head>
     <title>Good Food Guide</title>
-    <meta charSet='utf-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
   </Head>
-)
+);
 
 export const PageLink = props => (
   <Link href={`/${props.link}`}>
@@ -28,7 +28,7 @@ const Navigation = () => (
 
 const Header = () => (
   <div>
-    <Link as="/">
+    <Link href="/">
       <a style={{ margin: "0px" }}>
         <h1>Good Food Guide</h1>
       </a>
