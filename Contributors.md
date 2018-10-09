@@ -13,3 +13,6 @@ I'm Indonesian developer. Pray for Palu 🙏
 
 ### [Gustavo Araújo](http://github.com/gwgga)
 I am a brazilian developer and I really love what I do.
+
+### [Cintia Tahirih](http://github.com/cTahirih)
+Developer Frontend Junior from Perú.
