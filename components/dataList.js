@@ -63,4 +63,10 @@ export default [
     sick: "Headache",
     goodFoods: `If the headache is caused by dehydration eat watermelon. Coffee, alleviate a headache by helping to reduce the size of the blood vessels. Almonds, rich in magnesium helps to relaxe the blood vessels and gives a relief from headaches `
   },
+  {
+    id: 11,
+    image: "https://rotasaude.lusiadas.pt/wp-content/uploads/2015/11/tipos-de-diabetes.jpg",
+    sick: "Diabetes",
+    goodFoods: `Try avocado, it can help regulate appetite. Try using sliced mushrooms as a meat alternative in recipes like stir fries for a way to fill up without the added calories.`
+  }
 ]
