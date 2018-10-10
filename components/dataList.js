@@ -1,20 +1,20 @@
 export default [
   {
     id: 0,
-    image: "/images/viral-fever.jpg",
+    image: "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q4pm8e3cu6jvjkglehjef9lvd3-20170619023343.Medi.jpeg",
     sick: "Viral Fever",
     goodFoods: `Coriander Tea, Bland Diet, Gargle With Salt Water, Eat Raw Garlic &
     Onion, "Honey, Lemon and Ginger Juice", Tulsi(Basil) Leaves`
   },
   {
     id: 1,
-    image: "https://www.google.co.id/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiIjYXy7_bdAhVKs48KHVTGCMEQjRx6BAgBEAU&url=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2F73936.php&psig=AOvVaw0AxJ5ySRVR0Xxv9tzpTxXe&ust=1539089109264432",
+    image: "https://cdn1.medicalnewstoday.com/content/images/articles/073/73936/headache.jpg",
     sick: "Headaches",
     goodFoods: `Russet Potato, Cucumber, Cherries, Fortified Whole Grain Cereal, Hot Peppers, Pumpkin Seeds, Oatmeall, Brown Rice`
   },
   {
     id: 2,
-    image: "https://www.google.co.id/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjV9Nqr8PbdAhUhR48KHYjvD2AQjRx6BAgBEAU&url=http%3A%2F%2Fhome.bt.com%2Flifestyle%2Fhealth%2Fhealth-concerns%2Fwhat-is-aussie-flu-11364215917573&psig=AOvVaw0d0_v2vbG3uPCYjcUWvQgp&ust=1539089234071343",
+    image: "http://home.bt.com/images/aussie-flu-136424074707202601-180104121014.jpg",
     sick: "Flu",
     goodFoods: `Bananas, Rice, Applesauce, Toast, Flat ginger ale, Coke, Saltines`
   },
