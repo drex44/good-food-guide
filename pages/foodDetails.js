@@ -8,7 +8,9 @@ const dataSet = (data, queryId) => {
             <div>
                 <p>{data.image}</p>
                 <p>{data.sick}</p>
-                <p>{data.goodFoods}</p>
+                <p>{Object.keys(data.goodFoods).map((key) => {
+                  return data.goodFoods[key].map((food) => (`${food.name}, `));
+                })}</p>
             </div>
         )
     }    
