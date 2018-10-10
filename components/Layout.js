@@ -1,15 +1,23 @@
 import Link from "next/link";
-import Head from 'next/head';
+import Head from "next/head";
 import Button from "@material-ui/core/Button";
+import Typography from '@material-ui/core/Typography';
 import Footer from "../components/Footer";
+
+const styles = {
+  root: {
+    width: '100%',
+    maxWidth: 500,
+  },
+};
 
 const PageHead = () => (
   <Head>
     <title>Good Food Guide</title>
-    <meta charSet='utf-8' />
-    <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
   </Head>
-)
+);
 
 export const PageLink = props => (
   <Link href={`/${props.link}`}>
@@ -28,12 +36,14 @@ const Navigation = () => (
 
 const Header = () => (
   <div>
-    <Link as="/">
-      <a style={{ margin: "0px" }}>
-        <h1>Good Food Guide</h1>
-      </a>
+    <Link href="/">
+      <Typography component="h2" variant="h1" gutterBottom color="primary">
+        Good Food Guide
+      </Typography>
     </Link>
-    <h3>A guide to know which foods are good when you have certain disease!</h3>
+    <Typography style={{ fontSize: "18px" }} component="h2" variant="h3" gutterBottom>
+      A guide to know which foods are good when you have certain disease!
+    </Typography>
     <style jsx>{`
       h1 {
         color: #4b4949;
@@ -56,7 +66,6 @@ const Layout = props => (
       #layout,
       #content {
         margin: 20px;
-        padding: 20px;
       }
       color: #625f5f;
     `}</style>

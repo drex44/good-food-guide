@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import FoodCard from "../components/foodCard";
+import FoodCard from "../components/FoodCard";
 
 const Index = props => (
   <Layout>

@@ -21,6 +21,10 @@ Fork the repo
 :white_check_mark:
 Make some edits on your own copy that fixes the issues.
 
+
+:white_check_mark:
+Create a **new branch and then commit**.
+
 :white_check_mark:
 Create a pull request that will be merged to the main repo.
 (**Remember to indicate what issue you're fixing**)
@@ -31,7 +35,9 @@ Create a pull request that will be merged to the main repo.
 
 :white_check_mark:If you have questions on any issue, kindly use the comment.
 
-:white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR)**
+:white_check_mark: **Don't forget to comment on the issue, you're working on. otherwise there will be two PRs for the same issue!**
+
+:white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR, Remember to contribute to the repo then raise this PR)**
 
 ## Quick Start
 

@@ -10,6 +10,12 @@ class About extends React.Component {
         <Typography variant="body1">
           An open source project to show what to eat when you're ill
         </Typography>
+        <Typography component="p">
+          Check us out on{" "}
+          <a target="_new" href="https://github.com/drex44/good-food-guide">
+            Github
+          </a>
+        </Typography>
       </Layout>
     );
   }
