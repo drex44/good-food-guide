@@ -24,7 +24,11 @@ class FoodCard extends Component {
                 <Typography gutterBottom variant="h5" component="h2">
                   {data.sick}
                 </Typography>
-                <Typography component="p">{data.goodFoods}</Typography>
+                <Typography component="p">
+                {Object.keys(data.goodFoods).map((key) => {
+                  return data.goodFoods[key].map((food) => (`${food.name}, `));
+                })}
+                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
