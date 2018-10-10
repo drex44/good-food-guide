@@ -3,7 +3,6 @@ import Head from "next/head";
 import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
 import Footer from "../components/Footer";
-
 const styles = {
   root: {
     width: '100%',
@@ -37,7 +36,7 @@ const Navigation = () => (
 const Header = () => (
   <div>
     <Link href="/">
-      <Typography component="h2" variant="h1" gutterBottom color="primary">
+      <Typography component="h2" variant="h1" gutterBottom color="primary" style={{ fontSize: "4em" }}>
         Good Food Guide
       </Typography>
     </Link>
