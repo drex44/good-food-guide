@@ -23,7 +23,7 @@ const Header = () => (
   <div>
     <SearchAppBar />
     <Link href="/">
-      <Typography component="h2" variant="h1" gutterBottom color="primary">
+      <Typography component="h2" variant="h1" gutterBottom color="primary" style={{ fontSize: "4em" }}>
         Good Food Guide
       </Typography>
     </Link>
