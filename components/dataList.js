@@ -9,8 +9,8 @@ export default [
   {
     id: 1,
     image: "https://cdn1.medicalnewstoday.com/content/images/articles/073/73936/headache.jpg",
-    sick: "Headaches",
-    goodFoods: `Russet Potato, Cucumber, Cherries, Fortified Whole Grain Cereal, Hot Peppers, Pumpkin Seeds, Oatmeall, Brown Rice`
+    sick: "Headache",
+    goodFoods: `Russet Potato, Cucumber, Cherries, Fortified Whole Grain Cereal, Hot Peppers, Pumpkin Seeds, Oatmeall, Brown Rice. If the headache is caused by dehydration eat watermelon. Coffee, alleviate a headache by helping to reduce the size of the blood vessels. Almonds, rich in magnesium helps to relaxe the blood vessels and gives a relief from headaches`
   },
   {
     id: 2,
@@ -47,24 +47,21 @@ export default [
     image: "https://www.helpguide.org/images/stress/young-woman-fingers-to-temples-500.jpg",
     sick: "Stress",
     goodFoods: `Try tea. It calms frazzled nerves. The magnesium in Swiss chard and other leafy veggies helps balance the body's stress hormone, cortisol. Try Fish, Wholee-Wheat Pretzels, Carrots, Milk, Yogurt, Nut `
-  },{
+  },
+  {
     id: 8,
     image: "https://cdn.images.express.co.uk/img/dynamic/11/590x/high-blood-pressure-symptom-stroke-diet-supplement-956307.jpg",
     sick: "High blood pressure",
     goodFoods: `Leafy greens, which are high in potassium. Potassium helps your kidneys get rid of more sodium through your urine. This in turn lowers your blood pressure. Red beets, Skim milk and yoghurt, Oatmeal, Bananas, Salmon, mackerel and fish with omega-3s also good for high blood pressure `
-  },{
+  },
+  {
     id: 9,
     image: "https://cdn.24.co.za/files/Cms/General/d/6736/4edcc78735b94f1dbb4040820fd71419.png",
     sick: "Constipation",
     goodFoods: `Eat food which are rich in fobers such as prunes( Dried plums), Apples, Pears, Kiwifruit.  Artichokes have a prebiotic effect, promoting good gut health and regularity.Rhubarb is a leafy plant that is well known for its bowel-stimulating properties.`
-  },{
-    id: 10,
-    image: "https://cdn1.medicalnewstoday.com/content/images/articles/073/73936/headache.jpg",
-    sick: "Headache",
-    goodFoods: `If the headache is caused by dehydration eat watermelon. Coffee, alleviate a headache by helping to reduce the size of the blood vessels. Almonds, rich in magnesium helps to relaxe the blood vessels and gives a relief from headaches `
   },
   {
-    id: 11,
+    id: 10,
     image: "https://rotasaude.lusiadas.pt/wp-content/uploads/2015/11/tipos-de-diabetes.jpg",
     sick: "Diabetes",
     goodFoods: `Try avocado, it can help regulate appetite. Try using sliced mushrooms as a meat alternative in recipes like stir fries for a way to fill up without the added calories.`
