@@ -14,10 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/core": "latest",
+    "@material-ui/icons": "^3.0.1",
+    "jss": "latest",
     "next": "^7.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "jss": "latest",
     "react-jss": "latest"
   }
 }

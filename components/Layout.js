@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Head from "next/head";
-import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
 import Footer from "../components/Footer";
+import SearchAppBar from "../components/Header";
+
 const styles = {
   root: {
     width: '100%',
@@ -18,23 +19,9 @@ const PageHead = () => (
   </Head>
 );
 
-export const PageLink = props => (
-  <Link href={`/${props.link}`}>
-    <Button style={{ margin: "5px" }} variant="outlined" color="primary">
-      {props.title}
-    </Button>
-  </Link>
-);
-
-const Navigation = () => (
-  <div>
-    <PageLink link="" title="Home" />
-    <PageLink link="about" title="About" />
-  </div>
-);
-
 const Header = () => (
   <div>
+    <SearchAppBar />
     <Link href="/">
       <Typography component="h2" variant="h1" gutterBottom color="primary" style={{ fontSize: "4em" }}>
         Good Food Guide
@@ -57,7 +44,6 @@ const Layout = props => (
     <PageHead />
     <center>
       <Header />
-      <Navigation />
     </center>
     <div id="content">{props.children}</div>
     <Footer />
