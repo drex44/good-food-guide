@@ -3,6 +3,7 @@ import Data from "./../components/dataList";
 import Layout from "../components/Layout";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import FoodList from "../components/FoodList";
 
 const styles = theme => ({
   root: {
@@ -22,9 +23,7 @@ const dataSet = (data, queryId) => {
             {data.sick}
           </Typography>
           <Typography variant="body1" gutterBottom>
-            {Object.keys(data.goodFoods).map(key => {
-              return data.goodFoods[key].map(food => `${food.name}, `);
-            })}
+            <FoodList cardData={data} />
           </Typography>
         </Grid>
       </Grid>
