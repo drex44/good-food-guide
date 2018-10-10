@@ -10,14 +10,20 @@ const styles = theme => ({
       width: '100%',
       maxWidth: 500,
     },
+    img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+      },
   });
 
 const dataSet = (data, queryId) => {
     if(data.id == queryId) {
         return(
             <Grid container spacing={8}>
-                <Grid item xs={12}  direction="column" align="center">
-                    <img src={data.image}></img>
+                <Grid item xs={12}  align="center">
+                    <img src={data.image} style={{maxWidth: '100%'}}></img>
                     <Typography variant="subtitle1" gutterBottom>
                         {data.sick}
                     </Typography>
@@ -32,7 +38,7 @@ const dataSet = (data, queryId) => {
 
 const FoodDetails = withRouter((props) => (
     <Layout>
-        <Typography component="h2" variant="h3" gutterBottom color="primary" align="center">
+        <Typography component="h2" variant="h3" gutterBottom color="primary" align="center" style={{ fontSize: "2em" }}>
             {props.router.query.title}
         </Typography>        
         { 
