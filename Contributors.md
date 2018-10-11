@@ -22,3 +22,6 @@ Developer Frontend Junior from Perú.
 
 ### [Klanti Islam](https://github.com/klanti117)
 React Newbie from NYC.
+
+### [N.L Sum](https://github.com/nlsum1)
+Developer from Malaysia.
