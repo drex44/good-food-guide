@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Data from "./dataList";
-import FoodList from "./FoodList";
 import {
   Card,
   CardActionArea,
@@ -30,7 +29,7 @@ class FoodCard extends Component {
                   image={data.image}
                   title={data.sick}
                 />
-                <CardContent style={{paddingBottom: 0}}>
+
                 <CardContent>
                   <Typography
                     gutterBottom
@@ -40,14 +39,14 @@ class FoodCard extends Component {
                   >
                     {data.sick}
                   </Typography>
+                  <Typography component="p">
+                    {" "}
+                    {Object.keys(data.goodFoods).map(key => {
+                      return data.goodFoods[key].map(food => `${food.name}, `);
+                    })}
+                  </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardContent style={{background: "#f9f9f9"}}>
-              <Typography component="p">
-                    {" "}
-                <FoodList cardData={data} />
-                </Typography>
-              </CardContent>
               <CardActions>
                 <Button size="small" color="primary">
                   Share
