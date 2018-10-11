@@ -85,7 +85,7 @@ export default [
     searchKey: "flu",
     sick: "Flu",
     image:
-      "http://home.bt.com/images/aussie-flu-136424074707202601-180104121014.jpg",
+      "https://cdn.shopify.com/s/files/1/0470/7525/articles/flu_1024x1024.jpg",
     goodFoods: {
       vegan: [
         {
@@ -187,7 +187,7 @@ export default [
     searchKey: "hurts-to-swallow",
     sick: "It hurts to swallow",
     image:
-      "http://spydersalejacket.net/wp-content/uploads/2016/01/hot-drinks-4.jpg",
+      "https://cdn1.medicalnewstoday.com/content/images/articles/320/320621/throat-ulcers.jpg",
     goodFoods: {
       vegan: [
         {
