@@ -55,7 +55,6 @@ const Layout = props => (
     <div id="content">{props.children}</div>
     <Footer />
     <style jsx>{`
-      #layout,
       #content {
         margin: 0 10px;
       }
