@@ -67,7 +67,7 @@ export default [
           desc: ""
         },
         {
-          name: "Oatmeall",
+          name: "Oatmeal",
           desc: ""
         },
         {
