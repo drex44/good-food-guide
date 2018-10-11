@@ -16,7 +16,7 @@ class FoodCard extends Component {
   render() {
     return (
       <Grid container spacing={8}>
-        {this.props.Data.map((data, index) => (
+        {this.props.Data.map((disease, index) => (
           <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
             <Card
               raised
@@ -26,8 +26,8 @@ class FoodCard extends Component {
               <CardActionArea style={{ width: "100%" }}>
                 <CardMedia
                   style={{ height: 0, paddingTop: "25%" }}
-                  image={data.image}
-                  title={data.sick}
+                  image={disease.image}
+                  title={disease.sick}
                 />
                 <CardContent>
                   <Typography
@@ -36,13 +36,13 @@ class FoodCard extends Component {
                     component="h2"
                     color="primary"
                   >
-                    {data.sick}
+                    {disease.sick}
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardContent style={{ background: "#f9f9f9" }}>
                 <Typography component="p">
-                  <FoodList cardData={data} />
+                  <FoodList cardData={disease} />
                 </Typography>
               </CardContent>
               <CardActions>
@@ -50,10 +50,10 @@ class FoodCard extends Component {
                   Share
                 </Button>
                 <Link
-                  as={`/foodDetails/${data.searchKey}`}
+                  as={`/foodDetails/${disease.searchKey}`}
                   href={{
                     pathname: "/foodDetails",
-                    query: { disease: data.searchKey }
+                    query: { disease: disease.searchKey }
                   }}
                 >
                   <Button size="small" color="primary">
@@ -65,8 +65,8 @@ class FoodCard extends Component {
           </Grid>
         ))}
       </Grid>
-    );
-  }
-}
+      );
+    }
+};
 
 export default FoodCard;
