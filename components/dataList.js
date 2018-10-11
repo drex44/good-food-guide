@@ -67,7 +67,7 @@ export default [
           desc: ""
         },
         {
-          name: "Oatmeal",
+          name: "Oatmeall",
           desc: ""
         },
         {
@@ -383,6 +383,34 @@ export default [
         }
       ],
       nonVegan: []
+    }
+  },
+   {
+    id: 11,
+    image:
+      "https://cdn2.stylecraze.com/wp-content/uploads/2014/07/Top-10-Foods-To-Relieve-Menstrual-Cramps-1.jpg",
+    sick: "Menstrual Cramps",
+    goodFoods: {
+      vegan: [
+        { 
+          name: "Chamomile Tea", 
+          desc: "relief abdominal cramp and calm you down" 
+        },
+        {
+          name: "Ginger Tea", 
+          desc: "relief abdominal cramp"
+        },		
+        {
+          name: "Dark Leafy Vegetables", 
+          desc: "full of iron, which helps when you are losing iron during menstruation"
+        }
+      ],
+      nonVegan: [ 
+		    { 
+          name: "Salmon", 
+          desc: "Omega-3 will reduce imflammation and pain" 
+        }
+	    ]
     }
   }
 ];
