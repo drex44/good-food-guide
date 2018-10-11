@@ -19,3 +19,6 @@ I am a brazilian developer and I really love what I do.
 
 ### [Cintia Tahirih](http://github.com/cTahirih)
 Developer Frontend Junior from Perú.
+
+### [Klanti Islam](https://github.com/klanti117)
+React Newbie from NYC.
