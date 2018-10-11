@@ -40,7 +40,7 @@ const FoodCard = props => {
                 <FoodList cardData={disease} />
               </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions >
               <Button size="small" color="primary">
                 Share
               </Button>
