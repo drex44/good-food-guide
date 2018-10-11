@@ -30,7 +30,6 @@ class FoodCard extends Component {
                   image={data.image}
                   title={data.sick}
                 />
-                <CardContent style={{paddingBottom: 0}}>
                 <CardContent>
                   <Typography
                     gutterBottom
