@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Data from "./dataList";
 import {
   Card,
   CardActionArea,
@@ -16,7 +15,7 @@ class FoodCard extends Component {
   render() {
     return (
       <Grid container spacing={8}>
-        {Data.map((data, index) => (
+        {this.props.Data.map((data, index) => (
           <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
             <Card
               raised
