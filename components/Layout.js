@@ -21,7 +21,7 @@ const Layout = props => (
     <style jsx>{`
       #layout,
       #content {
-        margin: 20px;
+        margin: 0 10px;
       }
       color: #625f5f;
     `}</style>
