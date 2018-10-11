@@ -21,7 +21,6 @@ import Link from "next/link";
 const styles = theme => ({
   root: {
     width: "100%",
-    marginBottom: "15px"
   },
   grow: {
     flexGrow: 1
@@ -185,17 +184,6 @@ class PrimarySearchAppBar extends React.Component {
                   </Typography>
                 </Button>
               </Link>
-            </div>
-            <div className={classes.sectionDesktop}>
-              <Typography
-                className={classes.title}
-                variant="h6"
-                color="inherit"
-                noWrap
-              >
-                A guide to know which foods are good when you have certain
-                disease!
-              </Typography>
             </div>
             <div className={classes.sectionMobile}>
               <Link href="/">
