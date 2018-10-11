@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FoodList from "./FoodList";
 import {
   Card,
   CardActionArea,
@@ -28,7 +29,6 @@ class FoodCard extends Component {
                   image={data.image}
                   title={data.sick}
                 />
-
                 <CardContent>
                   <Typography
                     gutterBottom
@@ -38,22 +38,22 @@ class FoodCard extends Component {
                   >
                     {data.sick}
                   </Typography>
-                  <Typography component="p">
-                    {" "}
-                    {Object.keys(data.goodFoods).map(key => {
-                      return data.goodFoods[key].map(food => `${food.name}, `);
-                    })}
-                  </Typography>
                 </CardContent>
               </CardActionArea>
+              <CardContent style={{ background: "#f9f9f9" }}>
+                <Typography component="p">
+                  <FoodList cardData={data} />
+                </Typography>
+              </CardContent>
               <CardActions>
                 <Button size="small" color="primary">
                   Share
                 </Button>
                 <Link
+                  as={`/foodDetails/${data.searchKey}`}
                   href={{
                     pathname: "/foodDetails",
-                    query: { title: data.sick, id: data.id }
+                    query: { disease: data.searchKey }
                   }}
                 >
                   <Button size="small" color="primary">

@@ -3,6 +3,7 @@ import Data from "./../components/dataList";
 import Layout from "../components/Layout";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import FoodList from "../components/FoodList";
 
 const styles = theme => ({
   root: {
@@ -18,8 +19,8 @@ const styles = theme => ({
   }
 });
 
-const dataSet = (data, queryId) => {
-  if (data.id == queryId) {
+const dataSet = (data, queryKey) => {
+  if (data.searchKey == queryKey) {
     return (
       <Grid container spacing={8}>
         <Grid item xs={12} align="center">
@@ -28,9 +29,7 @@ const dataSet = (data, queryId) => {
             {data.sick}
           </Typography>
           <Typography variant="body1" gutterBottom>
-            {Object.keys(data.goodFoods).map(key => {
-              return data.goodFoods[key].map(food => `${food.name}, `);
-            })}
+            <FoodList cardData={data} />
           </Typography>
         </Grid>
       </Grid>
@@ -50,7 +49,7 @@ const FoodDetails = withRouter(props => (
     >
       {props.router.query.title}
     </Typography>
-    {Data.map((data, index) => dataSet(data, props.router.query.id))}
+    {Data.map((data, index) => dataSet(data, props.router.query.disease))}
   </Layout>
 ));
 
