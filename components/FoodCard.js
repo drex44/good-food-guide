@@ -18,7 +18,7 @@ class FoodCard extends Component {
     return (
       <Grid container spacing={8}>
         {Data.map((data, index) => (
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
             <Card
               raised
               key={index}
@@ -31,6 +31,7 @@ class FoodCard extends Component {
                   title={data.sick}
                 />
                 <CardContent style={{paddingBottom: 0}}>
+                <CardContent>
                   <Typography
                     gutterBottom
                     variant="h5"
