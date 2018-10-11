@@ -41,10 +41,9 @@ class FoodCard extends Component {
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardContent style={{background: "#f9f9f9"}}>
-              <Typography component="p">
-                    {" "}
-                <FoodList cardData={data} />
+              <CardContent style={{ background: "#f9f9f9" }}>
+                <Typography component="p">
+                  <FoodList cardData={data} />
                 </Typography>
               </CardContent>
               <CardActions>
@@ -52,9 +51,10 @@ class FoodCard extends Component {
                   Share
                 </Button>
                 <Link
+                  as={`/foodDetails/${data.searchKey}`}
                   href={{
                     pathname: "/foodDetails",
-                    query: { title: data.sick, id: data.id }
+                    query: { disease: data.searchKey }
                   }}
                 >
                   <Button size="small" color="primary">

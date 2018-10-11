@@ -19,8 +19,8 @@ const styles = theme => ({
   }
 });
 
-const dataSet = (data, queryId) => {
-  if (data.id == queryId) {
+const dataSet = (data, queryKey) => {
+  if (data.searchKey == queryKey) {
     return (
       <Grid container spacing={8}>
         <Grid item xs={12} align="center">
@@ -49,7 +49,7 @@ const FoodDetails = withRouter(props => (
     >
       {props.router.query.title}
     </Typography>
-    {Data.map((data, index) => dataSet(data, props.router.query.id))}
+    {Data.map((data, index) => dataSet(data, props.router.query.disease))}
   </Layout>
 ));
 
