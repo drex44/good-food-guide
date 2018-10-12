@@ -1,9 +1,6 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
 import NavigationBar from "../components/NavigationBar";
-import {
-  Typography
-} from "@material-ui/core";
 
 const PageHead = () => (
   <Head>
@@ -16,47 +13,12 @@ const PageHead = () => (
 const Layout = props => (
   <div id="layout">
     <PageHead />
-    <center>
-      <NavigationBar />
-    </center>
-    <div style=
-    {{
-      height: '60vh', 
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center', 
-      alignItems: 'center'}}>
-      <Typography
-        gutterBottom
-        variant="h2"
-        component="h2"
-        color="primary"
-      >
-        A guide to know which foods are good
-      </Typography>
-      <Typography
-        gutterBottom
-        variant="h2"
-        component="h2"
-        color="primary"
-      >
-        when you have certain disease!
-      </Typography>
-      <div>
-        <img src="https://i.imgur.com/jFe8S1R.png" alt="Good Foods"></img>
-      </div>
-      <hr style={{
-        background: '#9c27b0', 
-        width: '30%',
-        border: 'none',
-        height: '2px'}}>
-      </hr>
-    </div>    
+    <NavigationBar />
     <div id="content">{props.children}</div>
     <Footer />
     <style jsx>{`
       #content {
-        margin: 0 10px;
+        margin: 0 5px;
       }
 
       #layout {
