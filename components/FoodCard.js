@@ -16,7 +16,7 @@ class FoodCard extends Component {
   render() {
     return (
       <Grid container spacing={8}>
-        {this.props.Data.map((disease, index) => (
+        {this.props.FoodData.map((disease, index) => (
           <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
             <Card
               raised
@@ -65,8 +65,8 @@ class FoodCard extends Component {
           </Grid>
         ))}
       </Grid>
-      );
-    }
-};
+    );
+  }
+}
 
 export default FoodCard;
