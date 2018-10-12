@@ -12,7 +12,8 @@ const styles = theme => ({
   images: {
     maxWidth: "100%",
     height: "auto",
-    display: "block"
+    display: "block",
+    borderRadius: "10px"
   },
   boxImage: {
     [theme.breakpoints.down('sm')]: {
