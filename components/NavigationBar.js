@@ -97,7 +97,7 @@ const Navigation = () => (
   <div>
     <PageLink link="" title="Home" />
     <PageLink link="about" title="About" />
-    <LanguageSelect />
+    {/* <LanguageSelect /> */}
   </div>
 );
 
