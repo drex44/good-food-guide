@@ -19,7 +19,7 @@ import LanguageSelect from "../components/LanguageSelect";
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: "100%"
   },
   grow: {
     flexGrow: 1
