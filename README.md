@@ -88,3 +88,9 @@ check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/m
 The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
 
 https://good-food-guide.netlify.com
+
+
+## License
+
+This repository is licensed under the MIT license. See `LICENSE` for
+details.
