@@ -8,22 +8,21 @@ class Footer extends Component {
   render() {
     return (
       <div id="footer-container">
-        <Typography variant="subtitle2">
+        <Typography variant="subtitle2" style={{color: '#ffffff'}}>
           Good Food Guide - An Open Source Project
         </Typography>
-        <Link href="/terms">
-          <a>Terms</a>
+        <Link href="/terms" >
+          <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>Terms</a>
         </Link>
         <style jsx>{`
           #footer-container {
-            position: absolute;
-            left: 0;
             width: 100%;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f0f0f0;
+            background: #9c27b0;
+            padding: 5px;
           }
         `}</style>
       </div>

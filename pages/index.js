@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import FoodCard from "../components/FoodCard";
 import FoodData from "../components/dataList";
+import Jumbotron from "../components/Jumbotron";
 
 class Index extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout filterList={this.filterList}>
+        <Jumbotron />
         <FoodCard FoodData={this.state.items} />
       </Layout>
     );
