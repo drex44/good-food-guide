@@ -13,7 +13,7 @@ const PageHead = () => (
 const Layout = props => (
   <div id="layout">
     <PageHead />
-    <NavigationBar />
+    <NavigationBar filterList={props.filterList} />
     <div id="content">{props.children}</div>
     <Footer />
     <style jsx>{`
@@ -33,6 +33,7 @@ const Layout = props => (
           margin: 10px;
           color: #0003ff;
         }
+        color: #625f5f;
       `}
     </style>
   </div>
