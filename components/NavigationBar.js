@@ -15,10 +15,11 @@ import AboutIcon from "@material-ui/icons/Info";
 import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
+import LanguageSelect from "../components/LanguageSelect";
 
 const styles = theme => ({
   root: {
-    width: "100%",
+    width: "100%"
   },
   grow: {
     flexGrow: 1
@@ -96,6 +97,7 @@ const Navigation = () => (
   <div>
     <PageLink link="" title="Home" />
     <PageLink link="about" title="About" />
+    <LanguageSelect />
   </div>
 );
 
