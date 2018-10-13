@@ -12,13 +12,13 @@ const styles = {
 	vegan: {
 		background: green[500],
 		color: 'white',
-		fontSize: 17,
+		fontSize: 12,
 		margin: 5
 	},
 	nonVegan: {
 		background: deepOrange[500],
 		color: 'white',
-		fontSize: 17,
+		fontSize: 12,
 		margin: 5
 	}
 };

@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import FoodList from "../components/FoodList";
+import Image from "../components/ContainerImage";
 
 const styles = theme => ({
   root: {
@@ -11,12 +12,6 @@ const styles = theme => ({
     width: "100%",
     maxWidth: 500
   },
-  img: {
-    margin: "auto",
-    display: "block",
-    maxWidth: "100%",
-    maxHeight: "100%"
-  }
 });
 
 const dataSet = (data, queryKey) => {
@@ -24,8 +19,8 @@ const dataSet = (data, queryKey) => {
     return (
       <Grid container spacing={8}>
         <Grid item xs={12} align="center">
-          <img src={data.image} style={{ maxWidth: "100%" }} />
-          <Typography variant="subtitle1" gutterBottom>
+          <Image src = {data} />
+          <Typography variant="subtitle1" gutterBottom color="primary" style={{fontSize: "30px",}}>
             {data.sick}
           </Typography>
           <Typography variant="body1" gutterBottom>

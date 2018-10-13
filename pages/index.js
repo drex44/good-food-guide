@@ -1,9 +1,11 @@
 import Layout from "../components/Layout";
 import FoodCard from "../components/FoodCard";
 import FoodData from "../components/dataList";
+import Jumbotron from "../components/Jumbotron";
 
 const Index = props => (
-  <Layout>
+  <Layout> 
+    <Jumbotron />
     <FoodCard FoodData={FoodData} />
   </Layout>
 );
