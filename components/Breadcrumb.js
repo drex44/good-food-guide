@@ -50,7 +50,7 @@ class Breadcrumb extends React.Component {
   }
   componentDidMount() {
     const path = window.location.pathname.split('/');
-    this.setState({ sickName: path[2].replace('-', ' ') })
+    this.setState({ sickName: path[2].replace(/[|&;$%@"<>()+,-]/g, ' ') })
   }
   render() {
     const { classes } = this.props;
