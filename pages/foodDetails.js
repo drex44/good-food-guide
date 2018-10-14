@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import FoodList from "../components/FoodList";
 import Image from "../components/ContainerImage";
+import Breadcrumb from "../components/Breadcrumb";
 
 const styles = theme => ({
   root: {
@@ -17,17 +18,20 @@ const styles = theme => ({
 const dataSet = (data, queryKey) => {
   if (data.searchKey == queryKey) {
     return (
-      <Grid container spacing={8}>
-        <Grid item xs={12} align="center">
-          <Image src = {data} />
-          <Typography variant="subtitle1" gutterBottom color="primary" style={{fontSize: "30px",}}>
-            {data.sick}
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            <FoodList cardData={data} />
-          </Typography>
+      <div>
+        <Breadcrumb />
+        <Grid container spacing={8}>
+          <Grid item xs={12} align="center">
+            <Image src = {data} />
+            <Typography variant="subtitle1" gutterBottom color="primary" style={{fontSize: "30px",}}>
+              {data.sick}
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              <FoodList cardData={data} />
+            </Typography>
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     );
   }
 };
