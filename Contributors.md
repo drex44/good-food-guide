@@ -25,3 +25,6 @@ React Newbie from NYC.
 
 ### [N.L Sum](https://github.com/nlsum1)
 Developer from Malaysia.
+
+### [Pieter du Toit](https://github.com/Pdut89)
+React dev from South Africa.

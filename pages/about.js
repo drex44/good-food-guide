@@ -7,7 +7,6 @@ import { Divider } from "@material-ui/core";
 
 const styles = theme => ({
   about: {
-    minHeight: "88.7vh",
     padding: "20px"
   },
   title: {

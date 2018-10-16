@@ -14,7 +14,7 @@ const styles = theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '20px 0 15px',
+    height: '50px',
 
     '& p': {
       display: 'inline-block'
