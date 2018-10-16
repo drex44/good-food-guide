@@ -18,7 +18,7 @@ class Index extends React.Component {
         item.sick.toLowerCase().search(event.target.value.toLowerCase()) !== -1
       );
     });
-    this.setState({ items: items });
+    this.setState({ items });
   };
   componentDidMount = () => {
     this.setState({ items: this.state.initialItems });

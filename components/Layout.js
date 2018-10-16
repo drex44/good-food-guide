@@ -16,19 +16,19 @@ const Layout = props => (
     <NavigationBar filterList={props.filterList} />
     <div id="content">{props.children}</div>
     <Footer />
-    <style jsx>{`
-      #content {
-        margin: 0 5px;
-      }
-      color: #625f5f;
-    `}</style>
+
     <style jsx global>
       {`
+        * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+        }
+
         a {
           margin: 10px;
           color: #0003ff;
         }
-        color: #625f5f;
       `}
     </style>
   </div>
