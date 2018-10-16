@@ -11,6 +11,7 @@ import {
   Button
 } from "@material-ui/core";
 import Link from "next/link";
+import ShareModal from './ShareModal';
 
 class FoodCard extends Component {
 
@@ -48,9 +49,7 @@ class FoodCard extends Component {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" color="primary">
-                    Share
-                  </Button>
+                <ShareModal shareLink={`https://good-food-guide.netlify.com/foodDetails/${disease.searchKey}`} />
                   <Link
                     as={`/foodDetails/${disease.searchKey}`}
                     href={{
