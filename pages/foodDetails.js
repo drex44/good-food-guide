@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import FoodList from "../components/FoodList";
 import Image from "../components/ContainerImage";
-import Breadcrumb from "../components/Breakcrumb";
+import Breadcrumb from "../components/Breadcrumb";
 import Link from "next/link";
 import Button from "@material-ui/core/Button";
 
