@@ -16,7 +16,7 @@ class FoodCard extends Component {
 
   render() {
     return (
-      <section className="grid-container">
+      <section style={{padding: 30}}>
         <Grid container spacing={8}>
           {this.props.FoodData.map((disease, index) => (
             <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
@@ -67,17 +67,6 @@ class FoodCard extends Component {
             </Grid>
           ))}
         </Grid>
-        <style jsx>{`
-          .grid-container {
-            padding: 30px;
-            min-height: calc(55vh - 114px);
-          }
-          @media screen and (max-width: 600px) {
-            .grid-container {
-              min-height: calc(55vh - 104px);
-            }
-          }
-        `}</style>
       </section>
     );
   }

@@ -22,7 +22,6 @@ class Footer extends Component {
             align-items: center;
             justify-content: center;
             background: #9c27b0;
-            padding: 5px;
           }
         `}</style>
       </div>

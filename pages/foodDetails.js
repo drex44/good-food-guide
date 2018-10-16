@@ -48,16 +48,6 @@ const dataSet = (data, queryKey) => {
 
 const FoodDetails = withRouter(props => (
   <Layout>
-    <Typography
-      component="h2"
-      variant="h3"
-      gutterBottom
-      color="primary"
-      align="center"
-      style={{ fontSize: "2em" }}
-    >
-      {props.router.query.title}
-    </Typography>
     {Data.map((data, index) => dataSet(data, props.router.query.disease))}
   </Layout>
 ));
