@@ -19,7 +19,7 @@
     "next": "^7.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-jss": "latest", 
+    "react-jss": "latest",
     "react-share": "^2.3.1"
   }
 }

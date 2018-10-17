@@ -25,7 +25,20 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
           />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-127670782-2"
+          />
+          <script>
+            window.dataLayer = window.dataLayer || []; function
+            gtag()&#123;dataLayer.push(arguments);&#125; gtag('js', new Date());
+            gtag('config', 'UA-127670782-2');
+          </script>
         </Head>
         <body>
           <Main />
