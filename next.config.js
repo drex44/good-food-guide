@@ -4,52 +4,52 @@ module.exports = {
       "/": { page: "/" },
       "/about": { page: "/about" },
       "/terms": { page: "/terms" },
-      "/foodDetails/viral-fever": {
-        page: "/foodDetails",
+      "/disease/viral-fever": {
+        page: "/disease",
         query: { disease: "viral-fever" }
       },
-      "/foodDetails/headache": {
-        page: "/foodDetails",
+      "/disease/headache": {
+        page: "/disease",
         query: { disease: "headache" }
       },
-      "/foodDetails/flu": {
-        page: "/foodDetails",
+      "/disease/flu": {
+        page: "/disease",
         query: { disease: "flu" }
       },
-      "/foodDetails/common-cold": {
-        page: "/foodDetails",
+      "/disease/common-cold": {
+        page: "/disease",
         query: { disease: "common-cold" }
       },
-      "/foodDetails/hurts-to-swallow": {
-        page: "/foodDetails",
+      "/disease/hurts-to-swallow": {
+        page: "/disease",
         query: { disease: "hurts-to-swallow" }
       },
-      "/foodDetails/runny-nose": {
-        page: "/foodDetails",
+      "/disease/runny-nose": {
+        page: "/disease",
         query: { disease: "runny-nose" }
       },
-      "/foodDetails/gastritis": {
-        page: "/foodDetails",
+      "/disease/gastritis": {
+        page: "/disease",
         query: { disease: "gastritis" }
       },
-      "/foodDetails/stress": {
-        page: "/foodDetails",
+      "/disease/stress": {
+        page: "/disease",
         query: { disease: "stress" }
       },
-      "/foodDetails/high-blood-pressure": {
-        page: "/foodDetails",
+      "/disease/high-blood-pressure": {
+        page: "/disease",
         query: { disease: "high-blood-pressure" }
       },
-      "/foodDetails/constipation": {
-        page: "/foodDetails",
+      "/disease/constipation": {
+        page: "/disease",
         query: { disease: "constipation" }
       },
-      "/foodDetails/diabetes": {
-        page: "/foodDetails",
+      "/disease/diabetes": {
+        page: "/disease",
         query: { disease: "diabetes" }
       },
-      "/foodDetails/menstrual-cramps": {
-        page: "/foodDetails",
+      "/disease/menstrual-cramps": {
+        page: "/disease",
         query: { disease: "menstrual-cramps" }
       }
     };

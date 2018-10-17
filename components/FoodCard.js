@@ -11,13 +11,12 @@ import {
   Button
 } from "@material-ui/core";
 import Link from "next/link";
-import ShareModal from './ShareModal';
+import ShareModal from "./ShareModal";
 
 class FoodCard extends Component {
-
   render() {
     return (
-      <section style={{padding: 30}}>
+      <section style={{ padding: 30 }}>
         <Grid container spacing={8}>
           {this.props.FoodData.map((disease, index) => (
             <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
@@ -49,11 +48,15 @@ class FoodCard extends Component {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                <ShareModal shareLink={`https://good-food-guide.netlify.com/foodDetails/${disease.searchKey}`} />
+                  <ShareModal
+                    shareLink={`https://good-food-guide.netlify.com/disease/${
+                      disease.searchKey
+                    }`}
+                  />
                   <Link
-                    as={`/foodDetails/${disease.searchKey}`}
+                    as={`/disease/${disease.searchKey}`}
                     href={{
-                      pathname: "/foodDetails",
+                      pathname: "/disease",
                       query: { disease: disease.searchKey }
                     }}
                   >
