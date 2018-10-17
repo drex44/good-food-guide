@@ -28,3 +28,7 @@ Developer from Malaysia.
 
 ### [Pieter du Toit](https://github.com/Pdut89)
 React dev from South Africa.
+
+
+### [Tom Landis](https://github.com/TomLandis)
+A Developer in Japan
