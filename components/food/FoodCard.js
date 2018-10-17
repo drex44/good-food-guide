@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import DiseaseItem from "./DiseaseItem";
 
-class DiseaseCard extends Component {
+class FoodCard extends Component {
   render() {
     return (
       <Grid container spacing={8}>
@@ -57,4 +57,4 @@ class DiseaseCard extends Component {
   }
 }
 
-export default DiseaseCard;
+export default FoodCard;

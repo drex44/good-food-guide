@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FoodList from "./FoodList";
+import FoodList from "../food/FoodList";
 import {
   Card,
   CardActionArea,
@@ -11,14 +11,14 @@ import {
   Button
 } from "@material-ui/core";
 import Link from "next/link";
-import ShareModal from "./ShareModal";
+import ShareModal from "../ShareModal";
 
-class FoodCard extends Component {
+class DiseaseCard extends Component {
   render() {
     return (
       <section style={{ padding: 30 }}>
         <Grid container spacing={8}>
-          {this.props.FoodData.map((disease, index) => (
+          {this.props.DiseaseData.map((disease, index) => (
             <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
               <Card
                 raised
@@ -74,4 +74,4 @@ class FoodCard extends Component {
   }
 }
 
-export default FoodCard;
+export default DiseaseCard;

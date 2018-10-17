@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import NavigationBar from "../components/NavigationBar";
+import Footer from "./Footer";
+import NavigationBar from "../navigation/NavigationBar";
 
 const PageHead = () => (
   <Head>
@@ -27,7 +27,7 @@ const Layout = props => (
       }
       @media screen and (max-width: 600px) {
         #content {
-          min-height: calc(100vh - 104px)
+          min-height: calc(100vh - 104px);
         }
       }
     `}</style>

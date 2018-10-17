@@ -15,7 +15,7 @@ import AboutIcon from "@material-ui/icons/Info";
 import HomeIcon from "@material-ui/icons/Home";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
-import LanguageSelect from "../components/LanguageSelect";
+import LanguageSelect from "./LanguageSelect";
 
 const styles = theme => ({
   root: {

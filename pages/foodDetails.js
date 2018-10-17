@@ -1,7 +1,6 @@
-import Layout from "../components/Layout";
 import React from "react";
-import Jumbotron from "../components/Jumbotron";
-import DiseaseCard from "../components/DiseaseCard";
+import Layout from "../components/layout/Layout";
+import FoodCard from "../components/food/FoodCard";
 
 const dummy_data = [
   {
@@ -19,8 +18,7 @@ class FoodTreatment extends React.Component {
   render() {
     return (
       <Layout>
-        <Jumbotron />
-        <DiseaseCard foodData={dummy_data} />
+        <FoodCard foodData={dummy_data} />
       </Layout>
     );
   }

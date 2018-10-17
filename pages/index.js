@@ -1,7 +1,7 @@
-import Layout from "../components/Layout";
-import FoodCard from "../components/FoodCard";
+import Layout from "../components/layout/Layout";
+import DiseaseCard from "../components/disease/DiseaseCard";
 import FoodData from "../components/dataList";
-import Jumbotron from "../components/Jumbotron";
+import Jumbotron from "../components/layout/Jumbotron";
 
 class Index extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Index extends React.Component {
     return (
       <Layout filterList={this.filterList}>
         <Jumbotron />
-        <FoodCard FoodData={this.state.items} />
+        <DiseaseCard DiseaseData={this.state.items} />
       </Layout>
     );
   }

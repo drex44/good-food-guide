@@ -1,9 +1,8 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import React from "react";
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
-import { Divider } from "@material-ui/core";
 
 const styles = theme => ({
   about: {
