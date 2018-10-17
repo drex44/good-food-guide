@@ -4,7 +4,7 @@ import { Chip } from "@material-ui/core";
 
 const styles = {
   disease: {
-    background: "red",
+    background: "purple",
     color: "white",
     fontSize: 12,
     margin: 5

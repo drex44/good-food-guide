@@ -13,6 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import AboutIcon from "@material-ui/icons/Info";
 import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
 import LanguageSelect from "./LanguageSelect";
@@ -96,6 +97,7 @@ export const PageLink = props => (
 const Navigation = () => (
   <div>
     <PageLink link="" title="Home" />
+    <PageLink link="foodDetails/banana" title="Food Details" />
     <PageLink link="about" title="About" />
     {/* <LanguageSelect /> */}
   </div>
@@ -154,6 +156,14 @@ class PrimarySearchAppBar extends React.Component {
               <HomeIcon />
             </IconButton>
             <p>Home</p>
+          </MenuItem>
+        </Link>
+        <Link href="/foodDetails/banana">
+          <MenuItem>
+            <IconButton color="inherit">
+              <ReceiptIcon />
+            </IconButton>
+            <p>Food Details</p>
           </MenuItem>
         </Link>
         <Link href="/about">

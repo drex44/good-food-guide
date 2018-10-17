@@ -1,58 +1,42 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Grid,
-  Typography
-} from "@material-ui/core";
+import Link from "next/link";
+import { CardContent, Grid, Typography, Button } from "@material-ui/core";
+import Breadcrumb from "../layout/Breadcrumb";
 import DiseaseItem from "./DiseaseItem";
 
 class FoodCard extends Component {
   render() {
+    let data = this.props.food;
     return (
-      <Grid container spacing={8}>
-        {this.props.foodData.map((food, index) => (
-          <Grid item xs={4} md={6} lg={3} style={{ display: "flex" }}>
-            <Card
-              raised
-              key={index}
-              style={{ marginBottom: 15, width: "100%" }}
+      <div>
+        {/* <Breadcrumb /> */}
+        <Grid container spacing={8}>
+          <Grid item xs={12} align="center">
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              color="primary"
+              style={{ fontSize: "30px" }}
             >
-              <CardActionArea style={{ width: "100%" }}>
-                <CardMedia
-                  style={{ height: 0, paddingTop: "25%" }}
-                  image={food.image}
-                  title={food.title}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    color="primary"
-                  >
-                    {food.title}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardContent style={{ background: "#f9f9f9" }}>
-                <p
-                  style={{
-                    fontSize: "20px",
-                    fontWieght: "bold",
-                    fontFamily: "Roboto"
-                  }}
-                >
-                  Diseases it can treat:
-                </p>
-                <DiseaseItem />
-              </CardContent>
-            </Card>
+              {data}
+            </Typography>
+            <p
+              style={{
+                fontSize: "20px",
+                fontWieght: "bold",
+                fontFamily: "Roboto"
+              }}
+            >
+              Diseases it can treat
+            </p>
+            <DiseaseItem />
+            <br />
+            <Link href="/">
+              <Button variant="contained">Back</Button>
+            </Link>
           </Grid>
-        ))}
-      </Grid>
+        </Grid>
+      </div>
     );
   }
 }

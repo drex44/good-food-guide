@@ -4,6 +4,10 @@ module.exports = {
       "/": { page: "/" },
       "/about": { page: "/about" },
       "/terms": { page: "/terms" },
+      "/foodDetails/banana": {
+        page: "/foodDetails",
+        query: { food: "banana" }
+      },
       "/disease/viral-fever": {
         page: "/disease",
         query: { disease: "viral-fever" }
