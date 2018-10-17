@@ -59,7 +59,7 @@ class Terms extends React.Component {
 
     return (
       <Layout>
-        <div className={classes.terms}>
+        <div className={classes.terms} style={{ padding: 30 }}>
           <Typography
             variant="h4"
             align="center"
