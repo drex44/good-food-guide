@@ -1,4 +1,4 @@
-# Contributors
+﻿# Contributors
 
 All amazing people who contributed in this repo!
 
@@ -13,6 +13,9 @@ Developer and DevOps from Canary Islands!
 
 ### [Muhammad Al Anis Faishal](http://github.com/maafaishal)
 I'm Indonesian developer. Pray for Palu 🙏
+
+### [Pasan Jayawickrama](https://github.com/pasanjayawickrama)
+I'm Srilankan Student.
 
 ### [Gustavo Araújo](http://github.com/gwgga)
 I am a brazilian developer and I really love what I do.
