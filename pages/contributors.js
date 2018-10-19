@@ -1,17 +1,16 @@
 import React from "react";
-import fetch from 'isomorphic-fetch'
+import fetch from "isomorphic-fetch";
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
-import Avatar from '@material-ui/core/Avatar';
-import classNames from 'classnames';
+import Avatar from "@material-ui/core/Avatar";
+import classNames from "classnames";
 
 import Layout from "../components/layout/Layout";
 
-
 const styles = theme => ({
   contributors: {
-    padding: "20px",
+    padding: "20px"
   },
   title: {
     [theme.breakpoints.down("sm")]: {
@@ -37,24 +36,24 @@ const styles = theme => ({
     }
   },
   row: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'column'
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column"
   },
   avatar: {
-    margin: 10,
+    margin: 10
   },
   bigAvatar: {
     width: 60,
-    height: 60,
+    height: 60
   },
   root: {
-    display: 'flex',
-    width: '60%',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden'
-  },
+    display: "flex",
+    width: "60%",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    overflow: "hidden"
+  }
 });
 
 class Contributors extends React.Component {
@@ -77,24 +76,24 @@ class Contributors extends React.Component {
             align="center"
             className={classes.paragraph}
           >
-           Amazing people who made this project possible
+            Amazing people who made this project possible
           </Typography>
         </div>
         <div className={classes.root}>
-          {
-            this.props.contributors.map((item, index) =>{
-              return (  <div className={classes.row}>
-               <a href={item.html_url} target="_blank">
-                <Avatar
-                        alt={item.login}
-                        src={item.avatar_url}
-                        className={classNames(classes.avatar, classes.bigAvatar)}
-                        href="https://www.google.com"
-                      />
-               </a>
-              </div>)
-            })
-          }
+          {this.props.contributors.map((item, index) => {
+            return (
+              <div className={classes.row}>
+                <a href={item.html_url} target="_blank">
+                  <Avatar
+                    alt={item.login}
+                    src={item.avatar_url}
+                    className={classNames(classes.avatar, classes.bigAvatar)}
+                    href="https://www.google.com"
+                  />
+                </a>
+              </div>
+            );
+          })}
         </div>
       </Layout>
     );
@@ -102,10 +101,12 @@ class Contributors extends React.Component {
 }
 
 Contributors.getInitialProps = async function(context) {
-   const response = await fetch('https://api.github.com/repos/drex44/good-food-guide/contributors');
-   const data = await response.json();
-  return { 
-    contributors :  data
+  const response = await fetch(
+    "https://api.github.com/repos/drex44/good-food-guide/contributors"
+  );
+  const data = await response.json();
+  return {
+    contributors: data
   };
 };
 

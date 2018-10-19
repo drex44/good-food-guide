@@ -1,24 +1,56 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
+import { Grid, withStyles } from "@material-ui/core";
+
+const styles = theme => ({
+  partition: {
+    textAlign: "center"
+  }
+});
 
 class Footer extends Component {
   render() {
+    const { classes } = this.props;
     return (
       <div id="footer-container">
-      <Typography variant="subtitle2" style={{color: '#ffffff'}}>
-          Good Food Guide - An Open Source Project
-          <Link href="/terms" >
-          <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>Terms</a>
-        </Link>
-        </Typography>
-      <Typography variant="subtitle2" style={{color: '#ffffff'}}>
-          Crafted &lt;&#47;&gt; with love &hearts; 
-          <Link href="/contributors" >
-          <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>by amazing people!</a>
-        </Link>
-          
-      </Typography>
+        <Grid container>
+          <Grid item xs className={classes.partition}>
+            <Typography variant="subtitle2" style={{ color: "#ffffff" }}>
+              Good Food Guide - An Open Source Project
+            </Typography>
+          </Grid>
+          <Grid item xs className={classes.partition}>
+            <Typography variant="subtitle2" style={{ color: "#ffffff" }}>
+              Crafted &lt;&#47;&gt; with love &hearts; by{" "}
+              <Link href="/contributors">
+                <a
+                  style={{
+                    color: "#ffffff",
+                    margin: "0px",
+                    textDecoration: "underline",
+                    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+                  }}
+                >
+                  amazing people!
+                </a>
+              </Link>
+            </Typography>
+          </Grid>
+          <Grid item xs className={classes.partition}>
+            <Link href="/terms">
+              <a
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+                }}
+              >
+                Terms
+              </a>
+            </Link>
+          </Grid>
+        </Grid>
         <style jsx>{`
           #footer-container {
             width: 100%;
@@ -28,6 +60,7 @@ class Footer extends Component {
             justify-content: center;
             background: #9c27b0;
             flex-direction: column;
+            min-height: 4em;
           }
         `}</style>
       </div>
@@ -35,4 +68,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default withStyles(styles)(Footer);
