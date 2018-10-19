@@ -12,8 +12,12 @@ class Footer extends Component {
           <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>Terms</a>
         </Link>
         </Typography>
-      <Typography variant="caption" style={{color: '#ffffff'}}>
-          Crafted &lt;&#47;&gt; with love &hearts; by amazing people!
+      <Typography variant="subtitle2" style={{color: '#ffffff'}}>
+          Crafted &lt;&#47;&gt; with love &hearts; 
+          <Link href="/contributors" >
+          <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>by amazing people!</a>
+        </Link>
+          
       </Typography>
         <style jsx>{`
           #footer-container {
