@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import Link from "next/link";
-
 import Typography from "@material-ui/core/Typography";
-import { Button } from "@material-ui/core";
 
 class Footer extends Component {
   render() {
     return (
       <div id="footer-container">
-        <Typography variant="subtitle2" style={{color: '#ffffff'}}>
+      <Typography variant="subtitle2" style={{color: '#ffffff'}}>
           Good Food Guide - An Open Source Project
-        </Typography>
-        <Link href="/terms" >
+          <Link href="/terms" >
           <a style={{color: '#ffffff', textDecoration: 'none', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'}}>Terms</a>
         </Link>
+        </Typography>
+      <Typography variant="caption" style={{color: '#ffffff'}}>
+          Crafted &lt;&#47;&gt; with love &hearts; by amazing people!
+      </Typography>
         <style jsx>{`
           #footer-container {
             width: 100%;
@@ -22,6 +23,7 @@ class Footer extends Component {
             align-items: center;
             justify-content: center;
             background: #9c27b0;
+            flex-direction: column;
           }
         `}</style>
       </div>
