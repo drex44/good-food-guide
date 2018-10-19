@@ -1,12 +1,12 @@
-import Layout from "../components/layout/Layout";
 import React from "react";
+import fetch from 'isomorphic-fetch'
 import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import Avatar from '@material-ui/core/Avatar';
 import classNames from 'classnames';
-import fetch from 'isomorphic-fetch'
-import Link from "next/link";
+
+import Layout from "../components/layout/Layout";
 
 
 const styles = theme => ({
