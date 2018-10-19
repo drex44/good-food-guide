@@ -426,5 +426,50 @@ export default [
         }
       ]
     }
+  },
+
+   {
+    id: 12,
+    searchKey: "heart disease",
+    sick: "Heart Disease",
+    image:
+      "https://secure.i.telegraph.co.uk/multimedia/archive/02943/meddiet_2943573b.jpg",
+    goodFoods: {
+      vegan: [
+        {
+          name: "Legumes and Soy",
+          desc: "oy protein has been shown to lower LDL cholesterol levels, especially if blood cholesterol levels are high"
+        },
+        {
+          name: "Tea",
+          desc: "some evidence suggests that the antioxidants in tea can help prevent the build-up of fatty deposits in the arteries."
+        },
+        {
+          name: "Nuts and Seeds",
+          desc:
+            "hey should be eaten in small quantities, as they are high in kilojoules"
+        },
+        {
+          name: "Some vegetables oils ",
+          desc: "such as corn, soy and safflower, which contain omega-6 fatty acids, and those containing omega-3 fatty acids such as canola and olive oil."
+        },
+        {
+          name: "Garlic",
+          desc: "a compound in fresh garlic called allicin has been found in some studies to lower blood cholesterol"
+        },
+        {
+          name:"Fods enriched with plant sterols",
+          desc:" daily intake of 2–3 g of phytosterols/stanols lowers LDL cholesterol levels by approximately ten per cent in healthy people and in those with high cholesterol and those with diabetes. This intake can be achieved by the consumption of two to three serves of phytosterol-enriched foods like margarine spreads, reduced-fat yoghurts, milk and breakfast cereals."
+        }
+      ],
+      nonVegan: [
+        {
+          name: "Oily Fish",
+          desc: "such as mackerel, sardines, tuna and salmon which contain omega-3 fatty acids"
+        }
+      ]
+    }
   }
+
+
 ];
