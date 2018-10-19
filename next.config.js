@@ -4,6 +4,7 @@ module.exports = {
       "/": { page: "/" },
       "/about": { page: "/about" },
       "/terms": { page: "/terms" },
+      "/contributors": { page: "/contributors" },
       "/foodDetails/banana": {
         page: "/foodDetails",
         query: { food: "banana" }
