@@ -215,7 +215,7 @@ class Terms extends React.Component {
 
           <p className={classes.paragraph}>
             If you have any questions about these Terms, please contact us (Go
-            to our github repo and raise an issue!).
+            to our github repo and raise an issue!). Thank You.!
           </p>
         </div>
       </Layout>
