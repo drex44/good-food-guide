@@ -430,7 +430,7 @@ export default [
 
    {
     id: 12,
-    searchKey: "heart disease",
+    searchKey: "heart-disease",
     sick: "Heart Disease",
     image:
       "https://secure.i.telegraph.co.uk/multimedia/archive/02943/meddiet_2943573b.jpg",
