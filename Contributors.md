@@ -32,3 +32,7 @@ React dev from South Africa.
 
 ### [Tom Landis](https://github.com/TomLandis)
 A Developer in Japan
+
+
+### [Cristian Kumul](https://github.com/cristianKumul)
+A Developer in Cancun, Mexico
