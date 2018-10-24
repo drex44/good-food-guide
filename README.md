@@ -1,10 +1,10 @@
 # Good Food Guide :tada::tada::smile: 
 
-A guide to know which foods are good when you have certain disease!
+A guide to know which foods are good when you are suffering from a certain disease!
 
 ## Hacktoberfest '18
 
-We are celebrating the hacktoberfest 2018!
+We are celebrating Hacktoberfest 2018!
 
 Let's have a productive Hacktoberfest. Submit 5 PRs to this repo after registering yourself [here](https://hacktoberfest.digitalocean.com/).
 
