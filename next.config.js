@@ -56,6 +56,10 @@ module.exports = {
       "/disease/menstrual-cramps": {
         page: "/disease",
         query: { disease: "menstrual-cramps" }
+      },
+      "/disease/heart-disease": {
+        page: "/disease",
+        query: { disease: "heart-disease" }
       }
     };
   }
