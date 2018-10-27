@@ -469,7 +469,27 @@ export default [
         }
       ]
     }
+  },
+  {
+    id: 13,
+    searchKey: "dengue",
+    sick: "Dengue",
+    image:"https://www.kailashhealthcare.com/UserFiles/HealthTips/429cb41b-89d4-408f-a636-f90f54e9854a.jpg",
+    goodFoods: {
+      vegan: [
+        {
+          name: "Papaya Leaves",
+          desc: "Just crush the papaya leaves and squeeze them to extract the juice"
+        },
+        {
+          name: "Broccoli",
+          desc: "Broccoli is an excellent source of Vitamin K which helps to regenerate blood platelets."
+        },
+        {
+          name: "Pomegranate",
+          desc:"Pomegranate is rich in essential nutrients and minerals that provides the body with required energy."
+        }
+      ]
+    }
   }
-
-
 ];
