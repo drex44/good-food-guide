@@ -35,10 +35,11 @@ Developer from Malaysia.
 ### [Pieter du Toit](https://github.com/Pdut89)
 React dev from South Africa.
 
-
 ### [Tom Landis](https://github.com/TomLandis)
 A Developer in Japan
 
-
 ### [Cristian Kumul](https://github.com/cristianKumul)
 A Developer in Cancun, Mexico
+
+### [Rishubh Jain](https://github.com/rishubhjain)
+Open source enthusiast, ex-pythonista
