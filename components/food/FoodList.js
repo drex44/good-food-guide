@@ -9,7 +9,7 @@ const FoodList = ({ cardData }) => {
     <div>
       {Object.keys(cardData.goodFoods).map(type =>
         cardData.goodFoods[type].map(food => (
-          <FoodListItem type={type} food={food} />
+          <FoodListItem key={food.name} type={type} food={food} />
         ))
       )}
     </div>

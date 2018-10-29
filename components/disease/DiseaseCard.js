@@ -19,7 +19,14 @@ class DiseaseCard extends Component {
       <section style={{ padding: 30 }}>
         <Grid container spacing={8}>
           {this.props.DiseaseData.map((disease, index) => (
-            <Grid item xs={12} md={6} lg={3} style={{ display: "flex" }}>
+            <Grid
+              key={disease.searchKey}
+              item
+              xs={12}
+              md={6}
+              lg={3}
+              style={{ display: "flex" }}
+            >
               <Card
                 raised
                 key={index}

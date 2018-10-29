@@ -29,16 +29,26 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
-
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-127670782-2"
           />
-          <script>
-            window.dataLayer = window.dataLayer || []; function
-            gtag()&#123;dataLayer.push(arguments);&#125; gtag('js', new Date());
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || []; function
+            gtag(){dataLayer.push(arguments);}; gtag('js', new Date());
             gtag('config', 'UA-127670782-2');
-          </script>
+   `
+            }}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.$crisp=[];window.CRISP_WEBSITE_ID="64b60fbd-87d2-4674-aff1-772dfdc81ec8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+   `
+            }}
+          />
         </Head>
         <body>
           <Main />
