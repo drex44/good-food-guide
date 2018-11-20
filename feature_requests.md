@@ -1,7 +1,8 @@
-Good Food Guide
-----
+## Good Food Guide
+
 Requested features,
 <br>
+
 1. Suggest food depending upon the orders of the unwell users in the vicinity.
 2. Add localization for major languages.
 3. Show option to filter foods depending upon user location.
@@ -11,4 +12,3 @@ Requested features,
 7. Search food feature: Pulls up specific foods that list their known benefits.
 8. Search health points: Pulls up specific body/organ/health aspects & lists beneficial foods.
 9. Add filters for pulling health issue such as by gender, age group, consider some health issues are gender or age specific.
-

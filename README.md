@@ -1,68 +1,55 @@
-# Good Food Guide :tada::tada::smile: 
+# Good Food Guide :tada::tada::smile:
 
 A guide to know which foods are good when you are suffering from a certain disease!
 
-## Hacktoberfest '18
+### Background
 
-We are celebrating Hacktoberfest 2018!
-
-Let's have a productive Hacktoberfest. Submit 5 PRs to this repo after registering yourself [here](https://hacktoberfest.digitalocean.com/).
-
-The idea is to create a website, about Foods to eat when you're unwell. This repository is open to all forms of suggestions. so wear your thinking hat and let the hacking begin.
-
-Happy contributing!
+It started when the Hacktoberfest '18 was announced with the vision to make a productive [Hacktoberfest](https://hacktoberfest.digitalocean.com/).
 
 If you like this repo then show your support,
 
 :star: this repo
 
-### How it works :building_construction:
+## Technology Stack
 
-:white_check_mark:
-Check for open issues
+### Frontend
 
-:white_check_mark:
-Fork the repo
+- Framework: NextJS
+- Hosting: Netlify(currently). It will be changed to Zeit Now soon.
 
-:white_check_mark:
-Make some edits on your own copy that fixes the issues.
+### Backend
 
+- Environment: NodeJS
+- Framework: Zeit Micro
+- Database: MongoDB
+- Hosting: Zeit Now, mLab
 
-:white_check_mark:
-Create a **new branch and then commit**.
+For information on packages used, checkout the package.json in api and www.
 
-:white_check_mark:
-Create a pull request that will be merged to the main repo.
-(**Remember to indicate what issue you're fixing**)
+## Contributing
 
-:white_check_mark:You can check your progress here after every merged PR* : https://hacktoberfest.digitalocean.com/stats
+We use [monorepo structure](https://trunkbaseddevelopment.com/monorepos/) to host code. This repository is open to all forms of suggestions. so wear your thinking hat and let the hacking begin.
 
-:white_check_mark:Your code will be reviewed and approved.
+For more, check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
 
-:white_check_mark:If you have questions on any issue, kindly use the comment.
+### Continuos Deployments
 
-:white_check_mark: **Don't forget to comment on the issue, you're working on. otherwise there will be two PRs for the same issue!**
+The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
 
-:white_check_mark: **Don't forget to add your name to Contributors.md(AN EASY PR, Remember to contribute to the repo then raise this PR)**
+This CD will break now as project structure has changed a lot!
+https://good-food-guide.netlify.com
 
-### Important Links :pencil2:
+soon it will be changed to,
+https://good-food-guide.now.sh
 
-Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
-
-1. [Learn React](https://reactjs.org/docs/hello-world.html)
-2. [Learn NextJs](https://nextjs.org/learn)
-3. [Material UI Docs](http://material-ui.com)
-4. [Learn how to make pull request](https://help.github.com/articles/creating-a-pull-request/)
-5. [Learn how to fork a repository](https://help.github.com/articles/fork-a-repo/)
-
-## Quick Start
+### Quick Start for contributing
 
 1.  Clone the project
 
 2.  Navigate to your new project:
 
 ```bash
-$ cd good-food-guide
+$ cd good-food-guide/www
 ```
 
 3.  Install all dependencies:
@@ -76,19 +63,20 @@ $ npm install
 4.  Start the dev server and edit some code!
 
 ```bash
-$ yarn dev 
+$ yarn dev
 # or
 $ npm run dev
 ```
 
-## Contributing
+### Important Links :pencil2:
 
-check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
+Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
 
-The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
-
-https://good-food-guide.netlify.com
-
+1. [Learn React](https://reactjs.org/docs/hello-world.html)
+2. [Learn NextJs](https://nextjs.org/learn)
+3. [Material UI Docs](http://material-ui.com)
+4. [Learn how to make pull request](https://help.github.com/articles/creating-a-pull-request/)
+5. [Learn how to fork a repository](https://help.github.com/articles/fork-a-repo/)
 
 ## License
 
