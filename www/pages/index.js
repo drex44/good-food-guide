@@ -1,13 +1,13 @@
 import Layout from "../components/layout/Layout";
 import DiseaseCard from "../components/disease/DiseaseCard";
-import FoodData from "../components/dataList";
 import Jumbotron from "../components/layout/Jumbotron";
+import { getAllDiseases } from "../modules/api";
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      initialItems: FoodData,
+      initialItems: props.FoodData,
       items: []
     };
   }
@@ -33,5 +33,12 @@ class Index extends React.Component {
     );
   }
 }
+
+Index.getInitialProps = async () => {
+  const data = await getAllDiseases();
+  return {
+    FoodData: data
+  };
+};
 
 export default Index;

@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "api/getAllDiseases/index.js",
+  "author": "Dhanraj Acharya",
+  "license": "MIT",
+  "description": "Microservices for good-food-guide",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "micro -l tcp://0.0.0.0:${PORT-3001}"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "micro": "^9.3.3",
+    "micro-fork": "^0.1.1",
+    "micro-http-router": "^1.3.0",
+    "mongoose": "^5.3.12"
+  }
+}

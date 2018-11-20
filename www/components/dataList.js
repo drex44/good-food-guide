@@ -1,6 +1,5 @@
 export default [
   {
-    id: 0,
     searchKey: "viral-fever",
     sick: "Viral Fever",
     image:
@@ -34,10 +33,10 @@ export default [
           desc: ""
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 1,
     searchKey: "headache",
     sick: "Headache",
     image:
@@ -78,10 +77,10 @@ export default [
         }
       ],
       nonVegan: []
-    }
+    },
+    valid: true
   },
   {
-    id: 2,
     searchKey: "flu",
     sick: "Flu",
     image:
@@ -118,11 +117,10 @@ export default [
         }
       ],
       nonVegan: []
-    }
+    },
+    valid: true
   },
   {
-    id: 3,
-
     searchKey: "common-cold",
     sick: "Common Cold",
     image:
@@ -180,10 +178,10 @@ export default [
           desc: ""
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 4,
     searchKey: "hurts-to-swallow",
     sick: "It hurts to swallow",
     image:
@@ -221,10 +219,10 @@ export default [
           desc: ""
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 5,
     searchKey: "runny-nose",
     sick: "Runny nose",
     image:
@@ -238,10 +236,10 @@ export default [
         }
       ],
       nonVegan: []
-    }
+    },
+    valid: true
   },
   {
-    id: 6,
     searchKey: "gastritis",
     sick: "Gastritis",
     image:
@@ -272,10 +270,10 @@ export default [
           desc: "Try low-fat food"
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 7,
     searchKey: "stress",
     sick: "Stress",
     image:
@@ -310,10 +308,10 @@ export default [
           desc: ""
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 8,
     searchKey: "high-blood-pressure",
     sick: "High blood pressure",
     image:
@@ -339,10 +337,10 @@ export default [
           desc: "fish with omega-3s also good for high blood pressure"
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 9,
     searchKey: "constipation",
     sick: "Constipation",
     image:
@@ -377,10 +375,10 @@ export default [
         }
       ],
       nonVegan: []
-    }
+    },
+    valid: true
   },
   {
-    id: 10,
     searchKey: "diabetes",
     sick: "Diabetes",
     image:
@@ -395,10 +393,10 @@ export default [
         }
       ],
       nonVegan: []
-    }
+    },
+    valid: true
   },
   {
-    id: 11,
     searchKey: "menstrual-cramps",
     sick: "Menstrual Cramps",
     image:
@@ -425,11 +423,10 @@ export default [
           desc: "Omega-3 will reduce imflammation and pain"
         }
       ]
-    }
+    },
+    valid: true
   },
-
-   {
-    id: 12,
+  {
     searchKey: "heart-disease",
     sick: "Heart Disease",
     image:
@@ -438,11 +435,13 @@ export default [
       vegan: [
         {
           name: "Legumes and Soy",
-          desc: "oy protein has been shown to lower LDL cholesterol levels, especially if blood cholesterol levels are high"
+          desc:
+            "oy protein has been shown to lower LDL cholesterol levels, especially if blood cholesterol levels are high"
         },
         {
           name: "Tea",
-          desc: "some evidence suggests that the antioxidants in tea can help prevent the build-up of fatty deposits in the arteries."
+          desc:
+            "some evidence suggests that the antioxidants in tea can help prevent the build-up of fatty deposits in the arteries."
         },
         {
           name: "Nuts and Seeds",
@@ -451,45 +450,54 @@ export default [
         },
         {
           name: "Some vegetables oils ",
-          desc: "such as corn, soy and safflower, which contain omega-6 fatty acids, and those containing omega-3 fatty acids such as canola and olive oil."
+          desc:
+            "such as corn, soy and safflower, which contain omega-6 fatty acids, and those containing omega-3 fatty acids such as canola and olive oil."
         },
         {
           name: "Garlic",
-          desc: "a compound in fresh garlic called allicin has been found in some studies to lower blood cholesterol"
+          desc:
+            "a compound in fresh garlic called allicin has been found in some studies to lower blood cholesterol"
         },
         {
-          name:"Fods enriched with plant sterols",
-          desc:" daily intake of 2–3 g of phytosterols/stanols lowers LDL cholesterol levels by approximately ten per cent in healthy people and in those with high cholesterol and those with diabetes. This intake can be achieved by the consumption of two to three serves of phytosterol-enriched foods like margarine spreads, reduced-fat yoghurts, milk and breakfast cereals."
+          name: "Fods enriched with plant sterols",
+          desc:
+            " daily intake of 2–3 g of phytosterols/stanols lowers LDL cholesterol levels by approximately ten per cent in healthy people and in those with high cholesterol and those with diabetes. This intake can be achieved by the consumption of two to three serves of phytosterol-enriched foods like margarine spreads, reduced-fat yoghurts, milk and breakfast cereals."
         }
       ],
       nonVegan: [
         {
           name: "Oily Fish",
-          desc: "such as mackerel, sardines, tuna and salmon which contain omega-3 fatty acids"
+          desc:
+            "such as mackerel, sardines, tuna and salmon which contain omega-3 fatty acids"
         }
       ]
-    }
+    },
+    valid: true
   },
   {
-    id: 13,
     searchKey: "dengue",
     sick: "Dengue",
-    image:"https://www.kailashhealthcare.com/UserFiles/HealthTips/429cb41b-89d4-408f-a636-f90f54e9854a.jpg",
+    image:
+      "https://www.kailashhealthcare.com/UserFiles/HealthTips/429cb41b-89d4-408f-a636-f90f54e9854a.jpg",
     goodFoods: {
       vegan: [
         {
           name: "Papaya Leaves",
-          desc: "Just crush the papaya leaves and squeeze them to extract the juice"
+          desc:
+            "Just crush the papaya leaves and squeeze them to extract the juice"
         },
         {
           name: "Broccoli",
-          desc: "Broccoli is an excellent source of Vitamin K which helps to regenerate blood platelets."
+          desc:
+            "Broccoli is an excellent source of Vitamin K which helps to regenerate blood platelets."
         },
         {
           name: "Pomegranate",
-          desc:"Pomegranate is rich in essential nutrients and minerals that provides the body with required energy."
+          desc:
+            "Pomegranate is rich in essential nutrients and minerals that provides the body with required energy."
         }
       ]
-    }
+    },
+    valid: true
   }
 ];

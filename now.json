@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "good-food-guide",
+  "alias": ["good-food-guide.now.sh"],
+  "builds": [
+    { "src": "api/getAllDiseases/*.js", "use": "@now/node" },
+    { "src": "api/getDisease/*.js", "use": "@now/node" },
+    {
+      "src": "www/package.json",
+      "use": "@now/next",
+      "config": { "maxLambdaSize": "15mb" }
+    }
+  ],
+  "env": {
+    "MONGODB_URL": "mongodb://<username>:<password>@ds029605.mlab.com:29605/good-food-guide"
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/www/$1" }
+  ]
+}

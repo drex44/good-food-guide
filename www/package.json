@@ -1,8 +1,7 @@
 {
   "name": "good-food-guide",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -13,11 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "latest",
+    "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
+    "isomorphic-unfetch": "^3.0.0",
     "jss": "latest",
     "next": "^7.0.2",
-    "react": "^16.5.2",
+    "react": "^16.6.3",
     "react-dom": "^16.5.2",
     "react-jss": "latest",
     "react-share": "^2.3.1"
