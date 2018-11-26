@@ -32,7 +32,7 @@ We use [monorepo structure](https://trunkbaseddevelopment.com/monorepos/) to hos
 
 For more, check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
 
-### Continuos Deployments
+### Continuous Deployments
 
 The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
 
