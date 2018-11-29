@@ -30,30 +30,32 @@ class DiseaseCard extends Component {
               <Card
                 raised
                 key={index}
-                style={{ marginBottom: 15, width: "100%" }}
+                style={{ marginBottom: 15, width: "100%", display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
               >
-                <CardActionArea style={{ width: "100%" }}>
-                  <CardMedia
-                    style={{ height: 0, paddingTop: "25%" }}
-                    image={disease.image}
-                    title={disease.sick}
-                  />
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="h2"
-                      color="primary"
-                    >
-                      {disease.sick}
+                <div>
+                  <CardActionArea style={{ width: "100%" }}>
+                    <CardMedia
+                      style={{ height: 0, paddingTop: "25%" }}
+                      image={disease.image}
+                      title={disease.sick}
+                      />
+                    <CardContent>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                        color="primary"
+                        >
+                        {disease.sick}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardContent style={{ background: "#f9f9f9" }}>
+                    <Typography component="p">
+                      <FoodList cardData={disease} />
                     </Typography>
                   </CardContent>
-                </CardActionArea>
-                <CardContent style={{ background: "#f9f9f9" }}>
-                  <Typography component="p">
-                    <FoodList cardData={disease} />
-                  </Typography>
-                </CardContent>
+                </div>
                 <CardActions>
                   <ShareModal
                     shareLink={`https://good-food-guide.netlify.com/disease/${
