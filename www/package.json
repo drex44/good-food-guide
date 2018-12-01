@@ -16,6 +16,7 @@
     "@material-ui/icons": "^3.0.1",
     "isomorphic-unfetch": "^3.0.0",
     "jss": "latest",
+    "ajv": "^6.6.1",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.5.2",

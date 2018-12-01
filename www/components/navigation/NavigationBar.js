@@ -158,7 +158,7 @@ class PrimarySearchAppBar extends React.Component {
             <p>Home</p>
           </MenuItem>
         </Link>
-        <Link href="/foodDetails/banana">
+        <Link href="/foodDetails">
           <MenuItem>
             <IconButton color="inherit">
               <ReceiptIcon />
