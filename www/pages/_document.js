@@ -51,6 +51,12 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
           <link rel="stylesheet" type="text/css" href="/static/app.css" />
+
+          {/* Algolia default stylesheet */}
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css"
+          />
         </Head>
         <body>
           <Main />

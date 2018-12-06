@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import DiseaseCard from "../components/disease/DiseaseCard";
 import Jumbotron from "../components/layout/Jumbotron";
 import { getAllDiseases } from "../modules/api";
+import { Grid } from "@material-ui/core";
 
 class Index extends React.Component {
   constructor(props) {
@@ -28,7 +29,13 @@ class Index extends React.Component {
     return (
       <Layout filterList={this.filterList}>
         <Jumbotron />
-        <DiseaseCard DiseaseData={this.state.items} />
+        <section style={{ padding: 30 }}>
+          <Grid container spacing={8}>
+            {this.state.items.map((disease, index) => (
+              <DiseaseCard disease={disease} index={index} />
+            ))}
+          </Grid>
+        </section>
       </Layout>
     );
   }
