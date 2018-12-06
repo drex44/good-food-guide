@@ -1,0 +1,6 @@
+.contributor {
+  transition: 0.5s;
+}
+.contributor:hover {
+  transform: scale(1.2);
+}

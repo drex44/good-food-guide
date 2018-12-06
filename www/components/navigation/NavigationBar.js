@@ -97,7 +97,7 @@ export const PageLink = props => (
 const Navigation = () => (
   <div>
     <PageLink link="" title="Home" />
-    <PageLink link="foodDetails/banana" title="Food Details" />
+    <PageLink link="foodDetails" title="Food Details" />
     <PageLink link="about" title="About" />
     {/* <LanguageSelect /> */}
   </div>

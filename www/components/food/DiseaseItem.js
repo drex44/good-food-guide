@@ -11,13 +11,13 @@ const styles = {
   }
 };
 
-const DiseaseItem = () => {
+const DiseaseItem = props => {
+  const { diseases } = props;
   return (
     <div>
-      <Chip style={styles.disease} label={"cough"} />
-      <Chip style={styles.disease} label={"cold"} />
-      <Chip style={styles.disease} label={"flu"} />
-      <Chip style={styles.disease} label={"constipation"} />
+      {diseases.map(disease => (
+        <Chip style={styles.disease} label={disease.title} />
+      ))}
     </div>
   );
 };

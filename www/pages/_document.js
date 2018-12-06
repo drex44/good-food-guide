@@ -50,6 +50,7 @@ class MyDocument extends Document {
             }}
           />
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+          <link rel="stylesheet" type="text/css" href="/static/app.css" />
         </Head>
         <body>
           <Main />

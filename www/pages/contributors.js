@@ -50,6 +50,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     width: "60%",
+    padding: "20px",
     flexWrap: "wrap",
     justifyContent: "space-around",
     overflow: "hidden"
@@ -76,21 +77,25 @@ class Contributors extends React.Component {
             align="center"
             className={classes.paragraph}
           >
-            Amazing people who made this project possible
+            Amazing people who helped this project
           </Typography>
         </div>
         <div className={classes.root}>
           {this.props.contributors.map((item, index) => {
             return (
-              <div className={classes.row}>
+              <div key={index} className={classes.row + " contributor"}>
                 <a href={item.html_url} target="_blank">
-                  <Avatar
-                    alt={item.login}
-                    src={item.avatar_url}
-                    className={classNames(classes.avatar, classes.bigAvatar)}
-                    href="https://www.google.com"
-                  />
+                  <center>
+                    <Avatar
+                      alt={item.login}
+                      src={item.avatar_url}
+                      className={classNames(classes.avatar, classes.bigAvatar)}
+                    />
+                  </center>
                 </a>
+                <Typography style={{ textAlign: "center" }}>
+                  {item.login}
+                </Typography>
               </div>
             );
           })}
