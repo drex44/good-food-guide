@@ -19,6 +19,13 @@ const styles = theme => ({
 });
 
 const FoodDetails = props => {
+  if (props.disease.length <= 0) {
+    return (
+      <Layout>
+        <p>Disease not found</p>
+      </Layout>
+    );
+  }
   let data = props.disease[0];
   return (
     <Layout>
