@@ -3,9 +3,9 @@
   "version": "2.0.0",
   "description": "",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "export": "npm run build && next export"
   },
   "keywords": [],
@@ -14,9 +14,10 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
+    "ajv": "^6.6.1",
+    "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "jss": "latest",
-    "ajv": "^6.6.1",
     "next": "^7.0.2",
     "react": "^16.6.3",
     "react-dom": "^16.5.2",
