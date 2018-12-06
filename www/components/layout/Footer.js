@@ -15,12 +15,12 @@ class Footer extends Component {
     return (
       <div id="footer-container">
         <Grid container>
-          <Grid item xs className={classes.partition}>
+          <Grid item lg = {4} md={4} sm= {4} xs={12} style={{textAlign: "center"}} className={classes.partition}>
             <Typography variant="subtitle2" style={{ color: "#ffffff" }}>
               Good Food Guide - An Open Source Project
             </Typography>
           </Grid>
-          <Grid item xs className={classes.partition}>
+          <Grid item lg = {4} md={4} sm= {4} xs={12} style={{textAlign: "center"}} className={classes.partition}>
             <Typography variant="subtitle2" style={{ color: "#ffffff" }}>
               Crafted &lt;&#47;&gt; with love &hearts; by{" "}
               <Link href="/contributors">
@@ -37,7 +37,7 @@ class Footer extends Component {
               </Link>
             </Typography>
           </Grid>
-          <Grid item xs className={classes.partition}>
+          <Grid item lg = {4} md={4} sm= {4} xs={12} style={{textAlign: "center"}} className={classes.partition}>
             <Link href="/terms">
               <a
                 style={{
@@ -57,9 +57,7 @@ class Footer extends Component {
             height: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
             background: #9c27b0;
-            flex-direction: column;
             min-height: 4em;
           }
         `}</style>
