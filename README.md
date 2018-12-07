@@ -15,7 +15,8 @@ If you like this repo then show your support,
 ### Frontend
 
 - Framework: NextJS
-- Hosting: Netlify(currently). It will be changed to Zeit Now soon.
+- Search: Algolia
+- Hosting: Zeit Now.
 
 ### Backend
 
