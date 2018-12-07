@@ -19,20 +19,47 @@ const FoodDetails = props => {
       <Grid container>
         <Grid item xs={12} md={12} lg={12} align="center">
           <Breadcrumb />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={5}
+          lg={5}
+          align="center"
+          style={{ paddingTop: "23px" }}
+        >
+          <Image src={data.image} alt={data.searchKey} />
+        </Grid>
+        <Grid item xs={12} md={6} lg={6} style={{ padding: "15px" }}>
           <Typography
             variant="h4"
             color="primary"
-            style={{ marginBottom: "20px" }}
+            style={{ marginBottom: "15px" }}
           >
-            {data.sick}
+            {data.name}
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={5} lg={5} align="center">
-          <Image src={data.image} alt={data.searchKey} />
-        </Grid>
-        <Grid item xs={12} md={7} lg={7} style={{ padding: "15px" }}>
+          <Typography variant="subtitle1" style={{ marginBottom: "15px" }}>
+            {data.description}
+          </Typography>
+          <Typography variant="h5">Symptoms</Typography>
+          {data.symptoms.map(symps => (
+            <div>
+              <Typography variant="subtitle1" style={{ marginTop: "15px" }}>
+                {symps.description}
+              </Typography>
+              <ul>
+                {symps.symptoms.map(symptoms => (
+                  <li style={{ marginLeft: "25px" }}>
+                    <Typography variant="subtitle1">{symptoms}</Typography>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
           {data.goodFoods.vegan.length > 0 ? (
-            <Typography variant="subtitle1">Veg foods:</Typography>
+            <Typography variant="subtitle1" style={{ marginTop: "20px" }}>
+              Veg foods:
+            </Typography>
           ) : null}
           <FoodList goodFoods={{ vegan: data.goodFoods.vegan }} />
           {data.goodFoods.nonVegan.length > 0 ? (
@@ -46,7 +73,7 @@ const FoodDetails = props => {
           md={12}
           lg={12}
           align="center"
-          style={{ marginTop: "5em" }}
+          style={{ margin: "5em 0em" }}
         >
           <Link href="/">
             <Button variant="contained">Back</Button>

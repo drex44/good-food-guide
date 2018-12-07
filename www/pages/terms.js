@@ -74,8 +74,8 @@ class Terms extends React.Component {
           <p className={classes.paragraph}>
             Please read these Terms and Conditions ("Terms", "Terms and
             Conditions") carefully before using the
-            https://good-food-guide.netlify.com website (the "Service") operated
-            by Good Food Guide ("us", "we", or "our").
+            https://good-food-guide.now.sh website (the "Service") operated by
+            Good Food Guide ("us", "we", or "our").
           </p>
 
           <p className={classes.paragraph}>
@@ -96,14 +96,14 @@ class Terms extends React.Component {
           </Typography>
           <br />
           <p className={classes.paragraph}>
-            All the information on this website -
-            https://good-food-guide.netlify.com/ - is published in good faith
-            and for general information purpose only. Good Food Guide does not
-            make any warranties about the completeness, reliability and accuracy
-            of this information. Any action you take upon the information you
-            find on this website (Good Food Guide), is strictly at your own
-            risk. Good Food Guide will not be liable for any losses and/or
-            damages in connection with the use of our website.
+            All the information on this website - https://good-food-guide.now.sh
+            - is published in good faith and for general information purpose
+            only. Good Food Guide does not make any warranties about the
+            completeness, reliability and accuracy of this information. Any
+            action you take upon the information you find on this website (Good
+            Food Guide), is strictly at your own risk. Good Food Guide will not
+            be liable for any losses and/or damages in connection with the use
+            of our website.
           </p>
 
           <p className={classes.paragraph}>

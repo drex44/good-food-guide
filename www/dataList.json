@@ -1,187 +1,137 @@
 [
   {
-    "id": 0,
+    "goodFoods": {
+      "vegan": [
+        { "name": "Coriander Tea", "desc": "" },
+        { "name": "Eat Raw Garlic & Onion", "desc": "" },
+        { "name": "Honey, Lemon and Ginger Juice", "desc": "" },
+        { "name": "Tulsi(Basil) Leaves", "desc": "" }
+      ],
+      "nonVegan": [
+        { "name": "Bland Diet", "desc": "" },
+        { "name": "Gargle With Salt Water", "desc": "" }
+      ]
+    },
     "searchKey": "viral-fever",
-    "sick": "Viral Fever",
+    "name": "Viral Fever",
+    "description": "Most people have a body temperature of about 98.6°F (37°C). Anything a degree above this is considered a fever. Fevers are often a sign that your body is fighting off some type of bacterial or viral infection. A viral fever is any fever that’s caused by an underlying viral illness.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "chills",
+          "sweating",
+          "dehydration",
+          "headache",
+          "muscle aches and pains",
+          "a feeling of weakness",
+          "loss of appetite"
+        ]
+      }
+    ],
     "image": "https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-q4pm8e3cu6jvjkglehjef9lvd3-20170619023343.Medi.jpeg",
-    "goodFoods": {
-      "vegan": [
-        {
-          "name": "Coriander Tea",
-          "desc": ""
-        },
-        {
-          "name": "Eat Raw Garlic & Onion",
-          "desc": ""
-        },
-        {
-          "name": "Honey, Lemon and Ginger Juice",
-          "desc": ""
-        },
-        {
-          "name": "Tulsi(Basil) Leaves",
-          "desc": ""
-        }
-      ],
-      "nonVegan": [
-        {
-          "name": "Bland Diet",
-          "desc": ""
-        },
-        {
-          "name": "Gargle With Salt Water",
-          "desc": ""
-        }
-      ]
-    }
+    "valid": true
   },
   {
-    "id": 1,
+    "goodFoods": {
+      "vegan": [
+        { "name": "Russet Potato", "desc": "" },
+        { "name": "Cucumber", "desc": "" },
+        { "name": "Cherries", "desc": "" },
+        { "name": "Fortified Whole Grain Cereal", "desc": "" },
+        { "name": "Hot Peppers", "desc": "" },
+        { "name": "Pumpkin Seeds", "desc": "" },
+        { "name": "Oatmeal", "desc": "" },
+        { "name": "Brown Rice", "desc": "" }
+      ],
+      "nonVegan": []
+    },
     "searchKey": "headache",
-    "sick": "Headache",
+    "name": "Headache",
+    "description": "A headache is pain in the head or upper neck. They may be primary (not associated with a medical condition) or secondary (caused by an injury or medical condition). Primary headaches include tension, migraine and cluster headaches. Most headaches are not indicative of a serious medical problem. However, you should seek medical attention if it is severe or unusual, does not respond to treatment and worsens over time, frequently recurs or is accompanied by injury, seizures, vomiting or fever or by changes in speech, vision or behavior.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Dull, aching head pain",
+          "Sensation of tightness or pressure across your forehead or on the sides and back of your head",
+          "Tenderness on your scalp, neck and shoulder muscles"
+        ]
+      }
+    ],
     "image": "https://cdn1.medicalnewstoday.com/content/images/articles/073/73936/headache.jpg",
-    "goodFoods": {
-      "vegan": [
-        {
-          "name": "Russet Potato",
-          "desc": ""
-        },
-        {
-          "name": "Cucumber",
-          "desc": ""
-        },
-        {
-          "name": "Cherries",
-          "desc": ""
-        },
-        {
-          "name": "Fortified Whole Grain Cereal",
-          "desc": ""
-        },
-        {
-          "name": "Hot Peppers",
-          "desc": ""
-        },
-        {
-          "name": "Pumpkin Seeds",
-          "desc": ""
-        },
-        {
-          "name": "Oatmeal",
-          "desc": ""
-        },
-        {
-          "name": "Brown Rice",
-          "desc": ""
-        }
-      ],
-      "nonVegan": []
-    }
+    "valid": true
   },
   {
-    "id": 2,
+    "goodFoods": {
+      "vegan": [
+        { "name": "Bananas", "desc": "" },
+        { "name": "Rice", "desc": "" },
+        { "name": "Applesauce", "desc": "" },
+        { "name": "Toast", "desc": "" },
+        { "name": "Flat ginger ale", "desc": "" },
+        { "name": "Coke", "desc": "" },
+        { "name": "Saltines", "desc": "" }
+      ],
+      "nonVegan": []
+    },
     "searchKey": "flu",
-    "sick": "Flu",
+    "name": "Flu",
+    "description": "Influenza, or flu, is a respiratory illness caused by a virus. Flu is highly contagious and is normally spread by the coughs and sneezes of an infected person. You can also catch flu by touching an infected person, for instance, shaking hands. Adults are contagious 1-2 days before getting symptoms and up to 7 days after becoming ill. This means that you can spread the influenza virus before you even know you are infected.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "high temperature",
+          "cold sweats and shivers",
+          "headache",
+          "aching joints and limbs",
+          "fatigue, feeling exhausted"
+        ]
+      }
+    ],
     "image": "https://cdn.shopify.com/s/files/1/0470/7525/articles/flu_1024x1024.jpg",
-    "goodFoods": {
-      "vegan": [
-        {
-          "name": "Bananas",
-          "desc": ""
-        },
-        {
-          "name": "Rice",
-          "desc": ""
-        },
-        {
-          "name": "Applesauce",
-          "desc": ""
-        },
-        {
-          "name": "Toast",
-          "desc": ""
-        },
-        {
-          "name": "Flat ginger ale",
-          "desc": ""
-        },
-        {
-          "name": "Coke",
-          "desc": ""
-        },
-        {
-          "name": "Saltines",
-          "desc": ""
-        }
-      ],
-      "nonVegan": []
-    }
+    "valid": true
   },
   {
-    "id": 3,
+    "goodFoods": {
+      "vegan": [
+        { "name": "Broths", "desc": "" },
+        { "name": "Garlic", "desc": "" },
+        { "name": "Coconut Water", "desc": "" },
+        { "name": "Hot Tea", "desc": "" },
+        { "name": "Honey", "desc": "" },
+        { "name": "Ginger", "desc": "" },
+        { "name": "Spicy Foods", "desc": "" },
+        { "name": "Bananas", "desc": "" },
+        { "name": "Oatmeal", "desc": "" },
+        { "name": "Yogurt", "desc": "" },
+        { "name": "Avocados", "desc": "" }
+      ],
+      "nonVegan": [{ "name": "Chicken Soup", "desc": "" }]
+    },
     "searchKey": "common-cold",
-    "sick": "Common Cold",
+    "name": "Common Cold",
+    "description": "The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold. Children younger than six are at greatest risk of colds, but healthy adults can also expect to have two or three colds annually. Most people recover from a common cold in a week or 10 days. Symptoms might last longer in people who smoke. If symptoms don't improve, see your doctor.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Runny or stuffy nose",
+          "Sore throat",
+          "Cough",
+          "Congestion",
+          "Slight body aches or a mild headache",
+          "Sneezing",
+          "Low-grade fever",
+          "Generally feeling unwell (malaise)"
+        ]
+      }
+    ],
     "image": "https://www.findatopdoc.com/var/fatd/storage/images/healthy-living/the-common-cold-symptoms-and-management/67599-1-eng-US/The-Common-Cold-Symptoms-and-Management_article_main.jpg",
-    "goodFoods": {
-      "vegan": [
-        {
-          "name": "Broths",
-          "desc": ""
-        },
-        {
-          "name": "Garlic",
-          "desc": ""
-        },
-        {
-          "name": "Coconut Water",
-          "desc": ""
-        },
-        {
-          "name": "Hot Tea",
-          "desc": ""
-        },
-        {
-          "name": "Honey",
-          "desc": ""
-        },
-        {
-          "name": "Ginger",
-          "desc": ""
-        },
-        {
-          "name": "Spicy Foods",
-          "desc": ""
-        },
-        {
-          "name": "Bananas",
-          "desc": ""
-        },
-        {
-          "name": "Oatmeal",
-          "desc": ""
-        },
-        {
-          "name": "Yogurt",
-          "desc": ""
-        },
-        {
-          "name": "Avocados",
-          "desc": ""
-        }
-      ],
-      "nonVegan": [
-        {
-          "name": "Chicken Soup",
-          "desc": ""
-        }
-      ]
-    }
+    "valid": true
   },
   {
-    "id": 4,
-    "searchKey": "hurts-to-swallow",
-    "sick": "It hurts to swallow",
-    "image": "https://cdn1.medicalnewstoday.com/content/images/articles/320/320621/throat-ulcers.jpg",
     "goodFoods": {
       "vegan": [
         {
@@ -192,36 +142,62 @@
           "name": "Manuka honey",
           "desc": "Known for its wound-healing properties"
         },
-        {
-          "name": "Soft creamy foods such as cream soups",
-          "desc": ""
-        },
-        {
-          "name": "Mashed Potatoes",
-          "desc": ""
-        },
-        {
-          "name": "Yogurt",
-          "desc": ""
-        },
-        {
-          "name": "Custards",
-          "desc": "Also soothing"
-        }
+        { "name": "Soft creamy foods such as cream soups", "desc": "" },
+        { "name": "Mashed Potatoes", "desc": "" },
+        { "name": "Yogurt", "desc": "" },
+        { "name": "Custards", "desc": "Also soothing" }
       ],
-      "nonVegan": [
-        {
-          "name": "Scrambled eggs",
-          "desc": ""
-        }
-      ]
-    }
+      "nonVegan": [{ "name": "Scrambled eggs", "desc": "" }]
+    },
+    "searchKey": "hurts-to-swallow",
+    "name": "It hurts to swallow",
+    "description": "Painful swallowing is relatively common. People of all ages may experience it. This symptom has many possible causes. Difficulty swallowing along with pain is generally a symptom of an infection or an allergic reaction. See your doctor if the pain is severe or if it interferes with eating, drinking, or breathing.",
+    "symptoms": [
+      {
+        "description": "You may experience the following symptoms along with painful swallowing if you have an infection",
+        "symptoms": [
+          "a fever",
+          "chills",
+          "a headache",
+          "a dry cough",
+          "sweating",
+          "red, inflamed tonsils"
+        ]
+      },
+      {
+        "description": "Call your child’s pediatrician if they experience the following symptoms along with painful swallowing",
+        "symptoms": [
+          "difficulty breathing",
+          "problems swallowing",
+          "an unusual or significant amount of drooling",
+          "a visibly swollen throat"
+        ]
+      },
+      {
+        "description": "Go to the hospital right away if you’re an adult and experience the following symptoms",
+        "symptoms": [
+          "difficulty opening your mouth",
+          "problems swallowing",
+          "extreme throat pain that gets worse",
+          "trouble breathing"
+        ]
+      },
+      {
+        "description": "Schedule an appointment with your doctor if your painful swallowing occurs along with any of the following",
+        "symptoms": [
+          "blood when you cough",
+          "symptoms that last one week or longer",
+          "a hoarse voice that lasts longer than two weeks",
+          "joint pain",
+          "a lump in your neck",
+          "a rash"
+        ]
+      }
+    ],
+    "image": "https://cdn1.medicalnewstoday.com/content/images/articles/320/320621/throat-ulcers.jpg",
+    "valid": true
   },
   {
-    "id": 5,
-    "searchKey": "runny-nose",
-    "sick": "Runny nose",
-    "image": "https://www.thespruceeats.com/thmb/hh7q_4n69WWWKpHxIAgRao_oatA=/2048x1365/filters:no_upscale():max_bytes(150000):strip_icc()/homemade-ginger-tea-3377239-5-5_preview-5afd9c53c06471003692829d.jpeg",
     "goodFoods": {
       "vegan": [
         {
@@ -230,13 +206,15 @@
         }
       ],
       "nonVegan": []
-    }
+    },
+    "searchKey": "runny-nose",
+    "name": "Runny nose",
+    "description": "A runny nose is never any fun, especially when it comes with a cold or allergies. It can interrupt your daily life, making you reach for the tissue box every few minutes. But what is a runny nose exactly? A runny nose is a nasal discharge of mucus. Your doctor might use the term “rhinorrhea” to diagnose the runny nose. “Rhino” is a Greek prefix meaning “nose,” and “–rrhea” means “flow” or “discharge.”",
+    "symptoms": [],
+    "image": "https://www.thespruceeats.com/thmb/hh7q_4n69WWWKpHxIAgRao_oatA=/2048x1365/filters:no_upscale():max_bytes(150000):strip_icc()/homemade-ginger-tea-3377239-5-5_preview-5afd9c53c06471003692829d.jpeg",
+    "valid": true
   },
   {
-    "id": 6,
-    "searchKey": "gastritis",
-    "sick": "Gastritis",
-    "image": "https://www.seasonsmedical.com/wp-content/uploads/Gastritis-1024x860.jpeg",
     "goodFoods": {
       "vegan": [
         { "name": "apples", "desc": "Try high-fiber food" },
@@ -250,63 +228,93 @@
         }
       ],
       "nonVegan": [
-        {
-          "name": "fish",
-          "desc": "Try low-fat food"
-        },
-        {
-          "name": "chicken",
-          "desc": "Try low-fat food"
-        },
-        {
-          "name": "turkey breast",
-          "desc": "Try low-fat food"
-        }
+        { "name": "fish", "desc": "Try low-fat food" },
+        { "name": "chicken", "desc": "Try low-fat food" },
+        { "name": "turkey breast", "desc": "Try low-fat food" }
       ]
-    }
+    },
+    "searchKey": "gastritis",
+    "name": "Gastritis",
+    "description": "Gastritis is a general term for a group of conditions with one thing in common: inflammation of the lining of the stomach. The inflammation of gastritis is most often the result of infection with the same bacterium that causes most stomach ulcers. Regular use of certain pain relievers and drinking too much alcohol also can contribute to gastritis. Gastritis may occur suddenly (acute gastritis), or appear slowly over time (chronic gastritis). In some cases, gastritis can lead to ulcers and an increased risk of stomach cancer. For most people, however, gastritis isn't serious and improves quickly with treatment.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Gnawing or burning ache or pain (indigestion) in your upper abdomen that may become either worse or better with eating",
+          "Nausea",
+          "Vomiting",
+          "A feeling of fullness in your upper abdomen after eating"
+        ]
+      }
+    ],
+    "image": "https://www.seasonsmedical.com/wp-content/uploads/Gastritis-1024x860.jpeg",
+    "valid": true
   },
   {
-    "id": 7,
-    "searchKey": "stress",
-    "sick": "Stress",
-    "image": "https://www.helpguide.org/images/stress/young-woman-fingers-to-temples-500.jpg",
     "goodFoods": {
       "vegan": [
         { "name": "tea", "desc": "It calms frazzled nerves" },
-        {
-          "name": "Wholee-Wheat Pretzels",
-          "desc": ""
-        },
-        {
-          "name": "Carrots",
-          "desc": ""
-        },
-        {
-          "name": "Milk",
-          "desc": ""
-        },
-        {
-          "name": "Yogurt",
-          "desc": ""
-        },
-        {
-          "name": "Nut",
-          "desc": ""
-        }
+        { "name": "Wholee-Wheat Pretzels", "desc": "" },
+        { "name": "Carrots", "desc": "" },
+        { "name": "Milk", "desc": "" },
+        { "name": "Yogurt", "desc": "" },
+        { "name": "Nut", "desc": "" }
       ],
-      "nonVegan": [
-        {
-          "name": "Fish",
-          "desc": ""
-        }
-      ]
-    }
+      "nonVegan": [{ "name": "Fish", "desc": "" }]
+    },
+    "searchKey": "stress",
+    "name": "Stress",
+    "description": "Stress is your body’s way of responding to any kind of demand or threat. When you sense danger—whether it’s real or imagined—the body's defenses kick into high gear in a rapid, automatic process known as the “fight-or-flight” reaction or the 'stress response.' The stress response is the body’s way of protecting you. When working properly, it helps you stay focused, energetic, and alert. In emergency situations, stress can save your life—giving you extra strength to defend yourself, for example, or spurring you to slam on the brakes to avoid an accident.",
+    "symptoms": [
+      {
+        "description": "Cognitive symptoms",
+        "symptoms": [
+          "Memory problems",
+          "Inability to concentrate",
+          "Poor judgment",
+          "Seeing only the negative",
+          "Anxious or racing thoughts",
+          "Constant worrying"
+        ]
+      },
+      {
+        "description": "Emotional symptoms",
+        "symptoms": [
+          "Depression or general unhappiness",
+          "Anxiety and agitation",
+          "Moodiness, irritability, or anger",
+          "Feeling overwhelmed",
+          "Loneliness and isolation",
+          "Other mental or emotional health problems"
+        ]
+      },
+      {
+        "description": "Physical symptoms",
+        "symptoms": [
+          "Aches and pains",
+          "Diarrhea or constipation",
+          "Nausea, dizziness",
+          "Chest pain, rapid heart rate",
+          "Loss of sex drive",
+          "Frequent colds or flu"
+        ]
+      },
+      {
+        "description": "Behavioral symptoms",
+        "symptoms": [
+          "Eating more or less",
+          "Sleeping too much or too little",
+          "Withdrawing from others",
+          "Procrastinating or neglecting responsibilities",
+          "Using alcohol, cigarettes, or drugs to relax",
+          "Nervous habits (e.g. nail biting, pacing)"
+        ]
+      }
+    ],
+    "image": "https://www.helpguide.org/images/stress/young-woman-fingers-to-temples-500.jpg",
+    "valid": true
   },
   {
-    "id": 8,
-    "searchKey": "high-blood-pressure",
-    "sick": "High blood pressure",
-    "image": "https://cdn.images.express.co.uk/img/dynamic/11/590x/high-blood-pressure-symptom-stroke-diet-supplement-956307.jpg",
     "goodFoods": {
       "vegan": [
         {
@@ -327,31 +335,35 @@
           "desc": "fish with omega-3s also good for high blood pressure"
         }
       ]
-    }
+    },
+    "searchKey": "high-blood-pressure",
+    "name": "High blood pressure",
+    "description": "High blood pressure, or hypertension, occurs when your blood pressure increases to unhealthy levels. Your blood pressure measurement takes into account how much blood is passing through your blood vessels and the amount of resistance the blood meets while the heart is pumping. Narrow arteries increase resistance. The narrower your arteries are, the higher your blood pressure will be. Over the long term, increased pressure can cause health issues, including heart disease.",
+    "symptoms": [
+      {
+        "description": "Symptoms of severe hypertension",
+        "symptoms": [
+          "headaches",
+          "shortness of breath",
+          "nosebleeds",
+          "flushing",
+          "dizziness",
+          "chest pain",
+          "visual changes",
+          "blood in the urine"
+        ]
+      }
+    ],
+    "image": "https://cdn.images.express.co.uk/img/dynamic/11/590x/high-blood-pressure-symptom-stroke-diet-supplement-956307.jpg",
+    "valid": true
   },
   {
-    "id": 9,
-    "searchKey": "constipation",
-    "sick": "Constipation",
-    "image": "https://cdn.24.co.za/files/Cms/General/d/6736/4edcc78735b94f1dbb4040820fd71419.png",
     "goodFoods": {
       "vegan": [
-        {
-          "name": "prunes( Dried plums)",
-          "desc": "rich in fibers"
-        },
-        {
-          "name": "Apples",
-          "desc": "rich in fibers"
-        },
-        {
-          "name": "Pears",
-          "desc": "rich in fibers"
-        },
-        {
-          "name": "Kiwifruit",
-          "desc": "rich in fibers"
-        },
+        { "name": "prunes( Dried plums)", "desc": "rich in fibers" },
+        { "name": "Apples", "desc": "rich in fibers" },
+        { "name": "Pears", "desc": "rich in fibers" },
+        { "name": "Kiwifruit", "desc": "rich in fibers" },
         {
           "name": "Artichokes",
           "desc": "it have a prebiotic effect, promoting good gut health and regularity"
@@ -362,13 +374,27 @@
         }
       ],
       "nonVegan": []
-    }
+    },
+    "searchKey": "constipation",
+    "name": "Constipation",
+    "description": "Chronic constipation is infrequent bowel movements or difficult passage of stools that persists for several weeks or longer. Constipation is generally described as having fewer than three bowel movements a week. Though occasional constipation is very common, some people experience chronic constipation that can interfere with their ability to go about their daily tasks. Chronic constipation may also cause excessive straining to have a bowel movement and other signs and symptoms. Treatment for chronic constipation depends in part on the underlying cause. However, in some cases, a cause is never found.",
+    "symptoms": [
+      {
+        "description": "Signs and symptoms of chronic constipation",
+        "symptoms": [
+          "Passing fewer than three stools a week",
+          "Having lumpy or hard stools",
+          "Straining to have bowel movements",
+          "Feeling as though there's a blockage in your rectum that prevents bowel movements",
+          "Feeling as though you can't completely empty the stool from your rectum",
+          "Needing help to empty your rectum, such as using your hands to press on your abdomen and using a finger to remove stool from your rectum"
+        ]
+      }
+    ],
+    "image": "https://cdn.24.co.za/files/Cms/General/d/6736/4edcc78735b94f1dbb4040820fd71419.png",
+    "valid": true
   },
   {
-    "id": 10,
-    "searchKey": "diabetes",
-    "sick": "Diabetes",
-    "image": "https://rotasaude.lusiadas.pt/wp-content/uploads/2015/11/tipos-de-diabetes.jpg",
     "goodFoods": {
       "vegan": [
         { "name": "avocado", "desc": "it can help regulate appetite" },
@@ -378,23 +404,35 @@
         }
       ],
       "nonVegan": []
-    }
+    },
+    "searchKey": "diabetes",
+    "name": "Diabetes",
+    "description": "Diabetes is a condition that reduces a person's ability to use insulin to process glucose in the blood. The condition takes different forms, and each type produces varying symptoms. Some types may not produce any symptoms, making them harder to detect. People with type 1 diabetes do not produce insulin at all, and those with type 2 diabetes do not make enough insulin and have cells that do not use the hormone as effectively. Gestational diabetes can also occur in women during pregnancy. Recognizing the symptoms of diabetes early can help prevent its more severe complications as well as minimize the effects of excessively high blood sugar.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "blurred vision",
+          "fatigue",
+          "increased hunger and thirst",
+          "frequent urination",
+          "numbness or tingling in the hands and feet",
+          "sores that do not heal",
+          "unexplained weight loss"
+        ]
+      }
+    ],
+    "image": "https://rotasaude.lusiadas.pt/wp-content/uploads/2015/11/tipos-de-diabetes.jpg",
+    "valid": true
   },
   {
-    "id": 11,
-    "searchKey": "menstrual-cramps",
-    "sick": "Menstrual Cramps",
-    "image": "https://cdn2.stylecraze.com/wp-content/uploads/2014/07/Top-10-Foods-To-Relieve-Menstrual-Cramps-1.jpg",
     "goodFoods": {
       "vegan": [
         {
           "name": "Chamomile Tea",
           "desc": "relief abdominal cramp and calm you down"
         },
-        {
-          "name": "Ginger Tea",
-          "desc": "relief abdominal cramp"
-        },
+        { "name": "Ginger Tea", "desc": "relief abdominal cramp" },
         {
           "name": "Dark Leafy Vegetables",
           "desc": "full of iron, which helps when you are losing iron during menstruation"
@@ -406,6 +444,174 @@
           "desc": "Omega-3 will reduce imflammation and pain"
         }
       ]
-    }
+    },
+    "searchKey": "menstrual-cramps",
+    "name": "Menstrual Cramps",
+    "description": "Menstrual cramps (dysmenorrhea) are throbbing or cramping pains in the lower abdomen. Many women have menstrual cramps just before and during their menstrual periods. For some women, the discomfort is merely annoying. For others, menstrual cramps can be severe enough to interfere with everyday activities for a few days every month. Conditions such as endometriosis or uterine fibroids can cause menstrual cramps. Treating the cause is key to reducing the pain. Menstrual cramps that aren't caused by another condition tend to lessen with age and often improve after giving birth.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Throbbing or cramping pain in your lower abdomen that can be intense",
+          "Pain that starts 1 to 3 days before your period, peaks 24 hours after the onset of your period and subsides in 2 to 3 days",
+          "Dull, continuous ache",
+          "Pain that radiates to your lower back and thighs"
+        ]
+      },
+      {
+        "description": "Some women also have these symptoms",
+        "symptoms": ["Nausea", "Loose stools", "Headache", "Dizziness"]
+      }
+    ],
+    "image": "https://cdn2.stylecraze.com/wp-content/uploads/2014/07/Top-10-Foods-To-Relieve-Menstrual-Cramps-1.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        {
+          "name": "Legumes and Soy",
+          "desc": "oy protein has been shown to lower LDL cholesterol levels, especially if blood cholesterol levels are high"
+        },
+        {
+          "name": "Tea",
+          "desc": "some evidence suggests that the antioxidants in tea can help prevent the build-up of fatty deposits in the arteries."
+        },
+        {
+          "name": "Nuts and Seeds",
+          "desc": "hey should be eaten in small quantities, as they are high in kilojoules"
+        },
+        {
+          "name": "Some vegetables oils ",
+          "desc": "such as corn, soy and safflower, which contain omega-6 fatty acids, and those containing omega-3 fatty acids such as canola and olive oil."
+        },
+        {
+          "name": "Garlic",
+          "desc": "a compound in fresh garlic called allicin has been found in some studies to lower blood cholesterol"
+        },
+        {
+          "name": "Fods enriched with plant sterols",
+          "desc": " daily intake of 2–3 g of phytosterols/stanols lowers LDL cholesterol levels by approximately ten per cent in healthy people and in those with high cholesterol and those with diabetes. This intake can be achieved by the consumption of two to three serves of phytosterol-enriched foods like margarine spreads, reduced-fat yoghurts, milk and breakfast cereals."
+        }
+      ],
+      "nonVegan": [
+        {
+          "name": "Oily Fish",
+          "desc": "such as mackerel, sardines, tuna and salmon which contain omega-3 fatty acids"
+        }
+      ]
+    },
+    "searchKey": "heart-disease",
+    "name": "Heart Disease",
+    "description": "Heart disease describes a range of conditions that affect your heart. Diseases under the heart disease umbrella include blood vessel diseases, such as coronary artery disease; heart rhythm problems (arrhythmias); and heart defects you're born with (congenital heart defects), among others. The term 'heart disease' is often used interchangeably with the term 'cardiovascular disease.' Cardiovascular disease generally refers to conditions that involve narrowed or blocked blood vessels that can lead to a heart attack, chest pain (angina) or stroke. Other heart conditions, such as those that affect your heart's muscle, valves or rhythm, also are considered forms of heart disease.",
+    "symptoms": [
+      {
+        "description": "Symptoms of heart disease in your blood vessels",
+        "symptoms": [
+          "Chest pain, chest tightness, chest pressure and chest discomfort (angina)",
+          "Shortness of breath",
+          "Pain, numbness, weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed",
+          "Pain in the neck, jaw, throat, upper abdomen or back"
+        ]
+      },
+      {
+        "description": "Heart disease symptoms caused by abnormal heartbeats",
+        "symptoms": [
+          "Fluttering in your chest",
+          "Racing heartbeat (tachycardia)",
+          "Slow heartbeat (bradycardia)",
+          "Chest pain or discomfort",
+          "Shortness of breath",
+          "Lightheadedness",
+          "Dizziness",
+          "Fainting (syncope) or near fainting"
+        ]
+      },
+      {
+        "description": "Heart disease symptoms caused by heart defects",
+        "symptoms": [
+          "Pale gray or blue skin color (cyanosis)",
+          "Swelling in the legs, abdomen or areas around the eyes",
+          "In an infant, shortness of breath during feedings, leading to poor weight gain"
+        ]
+      },
+      {
+        "description": "Heart disease symptoms caused by weak heart muscle",
+        "symptoms": [
+          "Breathlessness with exertion or at rest",
+          "Swelling of the legs, ankles and feet",
+          "Fatigue",
+          "Irregular heartbeats that feel rapid, pounding or fluttering",
+          "Dizziness, lightheadedness and fainting"
+        ]
+      },
+      {
+        "description": "Heart disease symptoms caused by heart infections",
+        "symptoms": [
+          "Fever",
+          "Shortness of breath",
+          "Weakness or fatigue",
+          "Swelling in your legs or abdomen",
+          "Changes in your heart rhythm",
+          "Dry or persistent cough",
+          "Skin rashes or unusual spots"
+        ]
+      },
+      {
+        "description": "Heart disease symptoms caused by valvular heart disease",
+        "symptoms": [
+          "Fatigue",
+          "Shortness of breath",
+          "Irregular heartbeat",
+          "Swollen feet or ankles",
+          "Chest pain",
+          "Fainting (syncope)"
+        ]
+      },
+      {
+        "description": "Seek emergency medical care if you have these heart disease symptoms",
+        "symptoms": ["Chest pain", "Shortness of breath", "Fainting"]
+      }
+    ],
+    "image": "https://secure.i.telegraph.co.uk/multimedia/archive/02943/meddiet_2943573b.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        {
+          "name": "Papaya Leaves",
+          "desc": "Just crush the papaya leaves and squeeze them to extract the juice"
+        },
+        {
+          "name": "Broccoli",
+          "desc": "Broccoli is an excellent source of Vitamin K which helps to regenerate blood platelets."
+        },
+        {
+          "name": "Pomegranate",
+          "desc": "Pomegranate is rich in essential nutrients and minerals that provides the body with required energy."
+        }
+      ],
+      "nonVegan": []
+    },
+    "searchKey": "dengue",
+    "name": "Dengue",
+    "description": "Dengue (DENG-gey) fever is a mosquito-borne disease that occurs in tropical and subtropical areas of the world. Mild dengue fever causes a high fever, rash, and muscle and joint pain. A severe form of dengue fever, also called dengue hemorrhagic fever, can cause severe bleeding, a sudden drop in blood pressure (shock) and death. Millions of cases of dengue infection occur worldwide each year. Dengue fever is most common in Southeast Asia and the western Pacific islands, but the disease has been increasing rapidly in Latin America and the Caribbean. Researchers are working on dengue fever vaccines. For now the best prevention is to reduce mosquito habitat in areas where dengue fever is common.",
+    "symptoms": [
+      {
+        "description": "Dengue fever causes a high fever — 104 F degrees — and at least two of the following symptoms",
+        "symptoms": [
+          "Headache",
+          "Muscle, bone and joint pain",
+          "Nausea",
+          "Vomiting",
+          "Pain behind the eyes",
+          "Swollen glands",
+          "Rash"
+        ]
+      }
+    ],
+    "image": "https://www.kailashhealthcare.com/UserFiles/HealthTips/429cb41b-89d4-408f-a636-f90f54e9854a.jpg",
+    "valid": true
   }
 ]

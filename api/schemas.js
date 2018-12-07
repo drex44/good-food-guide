@@ -5,9 +5,16 @@ var food = {
   desc: String
 };
 
+var symptoms = {
+  description: String,
+  symptoms: [String]
+};
+
 var diseaseSchema = new mongoose.Schema({
   searchKey: String,
-  sick: String,
+  name: String,
+  description: String,
+  symptoms: [symptoms],
   image: String,
   goodFoods: {
     vegan: [food],
