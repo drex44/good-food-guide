@@ -69,7 +69,6 @@ class SearchBox2 extends React.Component {
   renderSuggestion(hit) {
     return (
       <Link
-        as={`/disease/${hit.searchKey}`}
         href={{
           pathname: "/disease",
           query: { disease: hit.searchKey }
