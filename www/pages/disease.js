@@ -1,5 +1,3 @@
-import { withRouter } from "next/router";
-import Data from "../components/dataList";
 import Layout from "../components/layout/Layout";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
@@ -9,41 +7,38 @@ import Breadcrumb from "../components/layout/Breadcrumb";
 import Link from "next/link";
 import Button from "@material-ui/core/Button";
 import { getDisease } from "../modules/api";
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    width: "100%",
-    maxWidth: 500
-  }
-});
+import Error404 from "../components/Error/Error404";
 
 const FoodDetails = props => {
   if (props.disease.length <= 0) {
-    return (
-      <Layout>
-        <p>Disease not found</p>
-      </Layout>
-    );
+    return <Error404 />;
   }
   let data = props.disease[0];
   return (
     <Layout>
-      <Breadcrumb />
-      <Grid container spacing={8}>
+      <Grid container>
+        <Grid
+          container
+          xs={12}
+          style={{ paddingLeft: "2em", margin: "3em 0em 0em 3em" }}
+        >
+          <Breadcrumb />
+        </Grid>
         <Grid item xs={12} align="center">
-          <Image src={data} />
-          <Typography
-            variant="subtitle1"
-            gutterBottom
-            color="primary"
-            style={{ fontSize: "30px" }}
-          >
+          <Typography variant="h4" color="primary" style={{ margin: "1em" }}>
             {data.sick}
           </Typography>
-          <Typography variant="body1" gutterBottom>
-            <FoodList cardData={data} />
-          </Typography>
+        </Grid>
+        <Grid item xs={5} align="center">
+          <Image src={data.image} alt={data.searchKey} />
+        </Grid>
+        <Grid item xs={7}>
+          <Typography variant="subtitle1">Veg foods:</Typography>
+          <FoodList goodFoods={{ vegan: data.goodFoods.vegan }} />
+          <Typography variant="subtitle1">Non Veg foods:</Typography>
+          <FoodList goodFoods={{ nonVegan: data.goodFoods.nonVegan }} />
+        </Grid>
+        <Grid item xs={12} align="center" style={{ marginTop: "5em" }}>
           <Link href="/">
             <Button variant="contained">Back</Button>
           </Link>

@@ -52,7 +52,7 @@ class DiseaseCard extends Component {
           </CardActionArea>
           <CardContent style={{ background: "#f9f9f9" }}>
             <Typography component="p">
-              <FoodList cardData={disease} />
+              <FoodList goodFoods={disease.goodFoods} />
             </Typography>
           </CardContent>
         </div>

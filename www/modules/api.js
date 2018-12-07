@@ -8,7 +8,6 @@ export const getAllDiseases = async () => {
   try {
     const res = await fetch(baseUrl + "/getAllDiseases");
     const data = await res.json();
-    console.log("res", data);
     return data;
   } catch (err) {
     console.log(err);
@@ -19,9 +18,7 @@ export const getAllDiseases = async () => {
 export const getDisease = async disease => {
   try {
     const res = await fetch(baseUrl + `/getDisease?searchKey=${disease}`);
-
     const data = await res.json();
-    console.log("res", data);
     return data;
   } catch (err) {
     console.log(err);

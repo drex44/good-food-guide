@@ -4,11 +4,11 @@ import { Chip, Tooltip } from "@material-ui/core";
 import deepOrange from "@material-ui/core/colors/deepOrange";
 import green from "@material-ui/core/colors/green";
 
-const FoodList = ({ cardData }) => {
+const FoodList = ({ goodFoods }) => {
   return (
     <div>
-      {Object.keys(cardData.goodFoods).map(type =>
-        cardData.goodFoods[type].map(food => (
+      {Object.keys(goodFoods).map(type =>
+        goodFoods[type].map(food => (
           <FoodListItem key={food.name} type={type} food={food} />
         ))
       )}
