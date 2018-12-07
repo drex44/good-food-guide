@@ -17,28 +17,37 @@ const FoodDetails = props => {
   return (
     <Layout>
       <Grid container>
-        <Grid
-          container
-          xs={12}
-          style={{ paddingLeft: "2em", margin: "3em 0em 0em 3em" }}
-        >
+        <Grid item xs={12} md={12} lg={12} align="center">
           <Breadcrumb />
-        </Grid>
-        <Grid item xs={12} align="center">
-          <Typography variant="h4" color="primary" style={{ margin: "1em" }}>
+          <Typography
+            variant="h4"
+            color="primary"
+            style={{ marginBottom: "20px" }}
+          >
             {data.sick}
           </Typography>
         </Grid>
-        <Grid item xs={5} align="center">
+        <Grid item xs={12} md={5} lg={5} align="center">
           <Image src={data.image} alt={data.searchKey} />
         </Grid>
-        <Grid item xs={7}>
-          <Typography variant="subtitle1">Veg foods:</Typography>
+        <Grid item xs={12} md={7} lg={7} style={{ padding: "15px" }}>
+          {data.goodFoods.vegan.length > 0 ? (
+            <Typography variant="subtitle1">Veg foods:</Typography>
+          ) : null}
           <FoodList goodFoods={{ vegan: data.goodFoods.vegan }} />
-          <Typography variant="subtitle1">Non Veg foods:</Typography>
+          {data.goodFoods.nonVegan.length > 0 ? (
+            <Typography variant="subtitle1">Non Veg foods:</Typography>
+          ) : null}
           <FoodList goodFoods={{ nonVegan: data.goodFoods.nonVegan }} />
         </Grid>
-        <Grid item xs={12} align="center" style={{ marginTop: "5em" }}>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={12}
+          align="center"
+          style={{ marginTop: "5em" }}
+        >
           <Link href="/">
             <Button variant="contained">Back</Button>
           </Link>

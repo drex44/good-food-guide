@@ -44,13 +44,26 @@ const styles = theme => ({
   }
 });
 
+function getQueryStringValue(key) {
+  return decodeURIComponent(
+    window.location.search.replace(
+      new RegExp(
+        "^(?:.*[&\\?]" +
+          encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
+          "(?:\\=([^&]*))?)?.*$",
+        "i"
+      ),
+      "$1"
+    )
+  );
+}
+
 class Breadcrumb extends React.Component {
   state = {
     sickName: ""
   };
   componentDidMount() {
-    const path = window.location.pathname.split("/");
-    this.setState({ sickName: path[2].replace(/[|&;$%@"<>()+,-]/g, " ") });
+    this.setState({ sickName: getQueryStringValue("disease") });
   }
   render() {
     const { classes } = this.props;

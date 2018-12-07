@@ -58,12 +58,11 @@ class DiseaseCard extends Component {
         </div>
         <CardActions>
           <ShareModal
-            shareLink={`https://good-food-guide.netlify.com/disease/${
+            shareLink={`https://good-food-guide.now.sh/disease?disease=${
               disease.searchKey
             }`}
           />
           <Link
-            as={`/disease/${disease.searchKey}`}
             href={{
               pathname: "/disease",
               query: { disease: disease.searchKey }
