@@ -55,7 +55,7 @@ class MyDocument extends Document {
           {/* Algolia default stylesheet */}
           <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/algolia-min.css"
+            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/reset-min.css"
           />
         </Head>
         <body>

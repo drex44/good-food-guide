@@ -1,16 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  InstantSearch,
-  Hits,
-  SearchBox,
-  Highlight,
-  RefinementList,
-  CurrentRefinements,
-  ClearRefinements,
-  Pagination
-} from "react-instantsearch-dom";
-import DiseaseCard from "../disease/DiseaseCard";
+import { InstantSearch, Highlight } from "react-instantsearch/dom";
+import { Button, InputBase } from "@material-ui/core";
+import Autosuggest from "react-autosuggest";
+import { connectAutoComplete } from "react-instantsearch/connectors";
+import Link from "next/link";
 
 const Search = () => (
   <InstantSearch
@@ -25,22 +19,93 @@ const Search = () => (
 const Result = () => {
   return (
     <div>
-      <CurrentRefinements />
-      <ClearRefinements />
-      <SearchBox />
-      <RefinementList attribute="category" />
-      <Hits hitComponent={Product} />
-      <Pagination />
+      <ConnectedSearchBox />
     </div>
   );
 };
 
-function Product({ hit }) {
+function InputComponent(inputProps) {
+  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
+
   return (
-    <div style={{ marginTop: "10px" }}>
-      <DiseaseCard disease={hit} searchable />
-    </div>
+    <InputBase
+      style={{ color: "white" }}
+      fullWidth
+      InputProps={{
+        inputRef: node => {
+          ref(node);
+          inputRef(node);
+        }
+      }}
+      {...other}
+    />
   );
 }
+
+class SearchBox2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+  }
+
+  onChange = (event, { newValue }) => {
+    this.setState({
+      value: newValue
+    });
+  };
+
+  onSuggestionsFetchRequested = ({ value }) => {
+    this.props.refine(value);
+  };
+
+  onSuggestionsClearRequested = () => {
+    this.props.refine();
+  };
+
+  getSuggestionValue(hit) {
+    return hit.sick;
+  }
+
+  renderSuggestion(hit) {
+    return (
+      <Link
+        as={`/disease/${hit.searchKey}`}
+        href={{
+          pathname: "/disease",
+          query: { disease: hit.searchKey }
+        }}
+      >
+        <Button>
+          <Highlight attribute="sick" hit={hit} tagName="mark" />
+        </Button>
+      </Link>
+    );
+  }
+
+  render() {
+    const { hits } = this.props;
+    const { value } = this.state;
+
+    const inputProps = {
+      placeholder: "Search disease or food...",
+      onChange: this.onChange,
+      value
+    };
+
+    return (
+      <Autosuggest
+        renderInputComponent={InputComponent}
+        suggestions={hits}
+        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+        getSuggestionValue={this.getSuggestionValue}
+        renderSuggestion={this.renderSuggestion}
+        inputProps={inputProps}
+      />
+    );
+  }
+}
+
+const ConnectedSearchBox = connectAutoComplete(SearchBox2);
 
 export default Search;

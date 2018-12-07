@@ -32,7 +32,16 @@ class Index extends React.Component {
         <section style={{ padding: 30 }}>
           <Grid container spacing={8}>
             {this.state.items.map((disease, index) => (
-              <DiseaseCard disease={disease} index={index} />
+              <Grid
+                key={disease.searchKey}
+                item
+                style={{ display: "flex" }}
+                xs={12}
+                md={6}
+                lg={3}
+              >
+                <DiseaseCard disease={disease} index={index} />
+              </Grid>
             ))}
           </Grid>
         </section>

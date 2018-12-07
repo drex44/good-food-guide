@@ -17,6 +17,7 @@ import ReceiptIcon from "@material-ui/icons/Receipt";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
 import LanguageSelect from "./LanguageSelect";
+import Search from "./Search";
 
 const styles = theme => ({
   root: {
@@ -205,7 +206,7 @@ class PrimarySearchAppBar extends React.Component {
               </Link>
             </div>
             <div className={classes.search}>
-              <div className={classes.searchIcon}>
+              {/* <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
               <InputBase
@@ -215,7 +216,8 @@ class PrimarySearchAppBar extends React.Component {
                   input: classes.inputInput
                 }}
                 onChange={this.props.filterList}
-              />
+              /> */}
+              <Search />
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
