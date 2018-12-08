@@ -29,7 +29,6 @@ function InputComponent(inputProps) {
 
   return (
     <InputBase
-      style={{ color: "white" }}
       fullWidth
       InputProps={{
         inputRef: node => {
@@ -63,7 +62,7 @@ class SearchBox2 extends React.Component {
   };
 
   getSuggestionValue(hit) {
-    return hit.sick;
+    return hit.name;
   }
 
   renderSuggestion(hit) {
@@ -75,7 +74,7 @@ class SearchBox2 extends React.Component {
         }}
       >
         <Button>
-          <Highlight attribute="sick" hit={hit} tagName="mark" />
+          <Highlight attribute="name" hit={hit} tagName="mark" />
         </Button>
       </Link>
     );
