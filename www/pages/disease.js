@@ -42,14 +42,14 @@ const FoodDetails = props => {
             {data.description}
           </Typography>
           <Typography variant="h5">Symptoms</Typography>
-          {data.symptoms.map(symps => (
-            <div>
+          {data.symptoms.map((symps, index) => (
+            <div key={index}>
               <Typography variant="subtitle1" style={{ marginTop: "15px" }}>
                 {symps.description}
               </Typography>
               <ul>
-                {symps.symptoms.map(symptoms => (
-                  <li style={{ marginLeft: "25px" }}>
+                {symps.symptoms.map((symptoms, index) => (
+                  <li key={index} style={{ marginLeft: "25px" }}>
                     <Typography variant="subtitle1">{symptoms}</Typography>
                   </li>
                 ))}

@@ -94,19 +94,7 @@ RenderHit.propTypes = {
 
 const InputComponent = inputProps => {
   const { classes, inputRef = () => {}, ref, ...other } = inputProps;
-  return (
-    <InputBase
-      style={{ color: "white" }}
-      fullWidth
-      InputProps={{
-        inputRef: node => {
-          ref(node);
-          inputRef(node);
-        }
-      }}
-      {...other}
-    />
-  );
+  return <InputBase style={{ color: "white" }} fullWidth {...other} />;
 };
 
 export default Search;

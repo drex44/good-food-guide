@@ -76,7 +76,7 @@ FoodDetails.defaultProps = {
 
 const PageSection = props => {
   return (
-    <Grid xs={12} item align="center">
+    <Grid item xs={12} align="center">
       {props.children}
     </Grid>
   );
@@ -91,8 +91,8 @@ const DiseaseList = props => {
   return (
     <Grid lg={3} md={4} sm={8} xs={10}>
       <List component="nav">
-        {diseases.map(disease => (
-          <DiseaseListItem disease={disease} />
+        {diseases.map((disease, index) => (
+          <DiseaseListItem key={index} disease={disease} />
         ))}
       </List>
     </Grid>

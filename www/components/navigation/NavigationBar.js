@@ -117,7 +117,7 @@ const DesktopMenuItem = props => {
 
 DesktopMenuItem.propTypes = {
   href: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired
 };
 
 const MobileMenuItem = props => {
@@ -164,8 +164,8 @@ class NavigationBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
-        {this.props.links.map(link => (
-          <MobileMenuItem href={link.href} icon={link.icon}>
+        {this.props.links.map((link, index) => (
+          <MobileMenuItem key={index} href={link.href} icon={link.icon}>
             {link.title}
           </MobileMenuItem>
         ))}
@@ -174,8 +174,8 @@ class NavigationBar extends React.Component {
 
     const DesktopMenu = (
       <React.Fragment>
-        {this.props.links.map(link => (
-          <DesktopMenuItem href={link.href} icon={link.icon}>
+        {this.props.links.map((link, index) => (
+          <DesktopMenuItem key={index} href={link.href} icon={link.icon}>
             {link.title}
           </DesktopMenuItem>
         ))}
@@ -187,8 +187,10 @@ class NavigationBar extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <WebsiteHeader>
-              <div className={classes.desktopSection}>Good Food Guide</div>
-              <div className={classes.mobileSection}>GFG</div>
+              <React.Fragment>
+                <div className={classes.desktopSection}>Good Food Guide</div>
+                <div className={classes.mobileSection}>GFG</div>
+              </React.Fragment>
             </WebsiteHeader>
             <div className={classes.search}>
               <Search />
