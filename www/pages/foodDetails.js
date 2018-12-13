@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import FoodCard from "../components/food/FoodCard";
+import FoodDetails from "../components/food/FoodDetails";
 import { withRouter } from "next/router";
 import { Typography } from "@material-ui/core";
 
@@ -11,10 +11,7 @@ class FoodTreatment extends React.Component {
   render() {
     return (
       <Layout>
-        <Typography style={{ fontSize: "20px" }}>
-          Development in progress
-        </Typography>
-        <FoodCard food={this.props.router.query.food} />
+        <FoodDetails food={this.props.router.query.food} />
       </Layout>
     );
   }

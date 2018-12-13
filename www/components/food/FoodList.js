@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { Chip, Tooltip } from "@material-ui/core";
 import deepOrange from "@material-ui/core/colors/deepOrange";
 import green from "@material-ui/core/colors/green";
@@ -14,6 +14,10 @@ const FoodList = ({ goodFoods }) => {
       )}
     </div>
   );
+};
+
+FoodList.prototype = {
+  goodFoods: PropTypes.array
 };
 
 const styles = {
@@ -36,5 +40,10 @@ const FoodListItem = ({ food, type }) => (
     <Chip style={styles[type]} label={food.name} />
   </Tooltip>
 );
+
+FoodListItem.prototype = {
+  food: PropTypes.object,
+  type: PropTypes.string
+};
 
 export default FoodList;

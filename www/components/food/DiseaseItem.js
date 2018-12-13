@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import { Chip } from "@material-ui/core";
 
 const styles = {
@@ -14,12 +14,16 @@ const styles = {
 const DiseaseItem = props => {
   const { diseases } = props;
   return (
-    <div>
+    <React.Fragment>
       {diseases.map(disease => (
         <Chip style={styles.disease} label={disease.title} />
       ))}
-    </div>
+    </React.Fragment>
   );
+};
+
+DiseaseItem.prototype = {
+  diseases: PropTypes.array.isRequired
 };
 
 export default DiseaseItem;
