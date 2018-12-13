@@ -3,6 +3,11 @@ import Footer from "./Footer";
 import NavigationBar from "../navigation/NavigationBar";
 import { withStyles } from "@material-ui/core/styles";
 
+import MenuIcon from "@material-ui/icons/Menu";
+import AboutIcon from "@material-ui/icons/Info";
+import HomeIcon from "@material-ui/icons/Home";
+import ReceiptIcon from "@material-ui/icons/Receipt";
+
 const styles = () => ({
   content: {
     display: "flex",
@@ -15,10 +20,16 @@ const styles = () => ({
 
 const Layout = props => {
   const { classes } = props;
+  const navigationLinks = [
+    { title: "home", href: "/", icon: HomeIcon },
+    { title: "Food Details", href: "/foodDetails", icon: ReceiptIcon },
+    { title: "About", href: "/about", icon: AboutIcon }
+  ];
+
   return (
     <div>
       <WebsiteHead />
-      <NavigationBar />
+      <NavigationBar links={navigationLinks} />
       <div className={classes.content}>{props.children}</div>
       <Footer />
     </div>

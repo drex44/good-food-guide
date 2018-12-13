@@ -1,22 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import { fade } from "@material-ui/core/styles/colorManipulator";
-import { withStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
-import SearchIcon from "@material-ui/icons/Search";
-import AboutIcon from "@material-ui/icons/Info";
-import HomeIcon from "@material-ui/icons/Home";
-import ReceiptIcon from "@material-ui/icons/Receipt";
-import Button from "@material-ui/core/Button";
 import Link from "next/link";
-import LanguageSelect from "./LanguageSelect";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  MenuItem,
+  Menu,
+  withStyles,
+  Button
+} from "@material-ui/core";
+import { fade } from "@material-ui/core/styles/colorManipulator";
+import MenuIcon from "@material-ui/icons/Menu";
 import Search from "./Search";
 
 const styles = theme => ({
@@ -75,13 +71,13 @@ const styles = theme => ({
       width: 200
     }
   },
-  sectionDesktop: {
+  desktopSection: {
     display: "none",
     [theme.breakpoints.up("md")]: {
       display: "flex"
     }
   },
-  sectionMobile: {
+  mobileSection: {
     display: "flex",
     [theme.breakpoints.up("md")]: {
       display: "none"
@@ -89,34 +85,62 @@ const styles = theme => ({
   }
 });
 
-export const PageLink = props => (
-  <Link href={`/${props.link}`}>
-    <Button color="inherit">{props.title}</Button>
-  </Link>
-);
+const WebsiteHeader = props => {
+  return (
+    <Link href="/">
+      <Button color="inherit">
+        <Typography variant="h6" color="inherit">
+          {props.children}
+        </Typography>
+      </Button>
+    </Link>
+  );
+};
 
-const Navigation = () => (
-  <div>
-    <PageLink link="" title="Home" />
-    <PageLink link="foodDetails" title="Food Details" />
-    <PageLink link="about" title="About" />
-    {/* <LanguageSelect /> */}
-  </div>
-);
+WebsiteHeader.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
-class PrimarySearchAppBar extends React.Component {
+const DesktopMenuItem = props => {
+  const Icon = props.icon;
+  return (
+    <Link href={props.href}>
+      <Button color="inherit">
+        <Icon />
+        <Typography color="inherit" style={{ marginLeft: "7px" }}>
+          {props.children}
+        </Typography>
+      </Button>
+    </Link>
+  );
+};
+
+DesktopMenuItem.propTypes = {
+  href: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
+};
+
+const MobileMenuItem = props => {
+  const Icon = props.icon;
+  return (
+    <Link href={props.href}>
+      <MenuItem>
+        <IconButton color="inherit">
+          <Icon />
+        </IconButton>
+        {props.children}
+      </MenuItem>
+    </Link>
+  );
+};
+
+MobileMenuItem.propTypes = {
+  href: PropTypes.string.isRequired
+};
+
+class NavigationBar extends React.Component {
   state = {
-    anchorEl: null,
     mobileMoreAnchorEl: null
-  };
-
-  handleProfileMenuOpen = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleMenuClose = () => {
-    this.setState({ anchorEl: null });
-    this.handleMobileMenuClose();
   };
 
   handleMobileMenuOpen = event => {
@@ -128,22 +152,11 @@ class PrimarySearchAppBar extends React.Component {
   };
 
   render() {
-    const { anchorEl, mobileMoreAnchorEl } = this.state;
+    const { mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
-    const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-    const renderMenu = (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
-        open={isMenuOpen}
-        onClose={this.handleMenuClose}
-      />
-    );
-
-    const renderMobileMenu = (
+    const MobileMenu = (
       <Menu
         anchorEl={mobileMoreAnchorEl}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -151,79 +164,38 @@ class PrimarySearchAppBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
-        <Link href="/">
-          <MenuItem>
-            <IconButton color="inherit">
-              <HomeIcon />
-            </IconButton>
-            <p>Home</p>
-          </MenuItem>
-        </Link>
-        <Link href="/foodDetails">
-          <MenuItem>
-            <IconButton color="inherit">
-              <ReceiptIcon />
-            </IconButton>
-            <p>Food Details</p>
-          </MenuItem>
-        </Link>
-        <Link href="/about">
-          <MenuItem>
-            <IconButton color="inherit">
-              <AboutIcon />
-            </IconButton>
-            <p>About</p>
-          </MenuItem>
-        </Link>
+        {this.props.links.map(link => (
+          <MobileMenuItem href={link.href} icon={link.icon}>
+            {link.title}
+          </MobileMenuItem>
+        ))}
       </Menu>
+    );
+
+    const DesktopMenu = (
+      <React.Fragment>
+        {this.props.links.map(link => (
+          <DesktopMenuItem href={link.href} icon={link.icon}>
+            {link.title}
+          </DesktopMenuItem>
+        ))}
+      </React.Fragment>
     );
 
     return (
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <div className={classes.sectionDesktop}>
-              <Link href="/">
-                <Button color="inherit">
-                  <Typography
-                    className={classes.title}
-                    variant="h6"
-                    color="inherit"
-                    noWrap
-                  >
-                    Good Food Guide
-                  </Typography>
-                </Button>
-              </Link>
-            </div>
-            <div className={classes.sectionMobile}>
-              <Link href="/">
-                <Button color="inherit">
-                  <Typography variant="h6" color="inherit">
-                    GFG
-                  </Typography>
-                </Button>
-              </Link>
-            </div>
+            <WebsiteHeader>
+              <div className={classes.desktopSection}>Good Food Guide</div>
+              <div className={classes.mobileSection}>GFG</div>
+            </WebsiteHeader>
             <div className={classes.search}>
-              {/* <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput
-                }}
-                onChange={this.props.filterList}
-              /> */}
               <Search />
             </div>
             <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              <Navigation />
-            </div>
-            <div className={classes.sectionMobile}>
+            <div className={classes.desktopSection}>{DesktopMenu}</div>
+            <div className={classes.mobileSection}>
               <IconButton
                 aria-haspopup="true"
                 onClick={this.handleMobileMenuOpen}
@@ -231,18 +203,18 @@ class PrimarySearchAppBar extends React.Component {
               >
                 <MenuIcon />
               </IconButton>
+              {MobileMenu}
             </div>
           </Toolbar>
         </AppBar>
-        {renderMenu}
-        {renderMobileMenu}
       </div>
     );
   }
 }
 
-PrimarySearchAppBar.propTypes = {
-  classes: PropTypes.object.isRequired
+NavigationBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+  links: PropTypes.array.isRequired
 };
 
-export default withStyles(styles)(PrimarySearchAppBar);
+export default withStyles(styles)(NavigationBar);

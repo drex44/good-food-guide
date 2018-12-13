@@ -1,45 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { InstantSearch, Highlight } from "react-instantsearch/dom";
 import { Button, InputBase } from "@material-ui/core";
 import Autosuggest from "react-autosuggest";
 import { connectAutoComplete } from "react-instantsearch/connectors";
 import Link from "next/link";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 const Search = () => (
   <InstantSearch
-    appId="V70A8UKIUV"
-    apiKey="156a366b7911117264aabb41fb7b45dc"
-    indexName="food_data"
+    appId={publicRuntimeConfig.SearchAppId}
+    apiKey={publicRuntimeConfig.SearchApiKey}
+    indexName={publicRuntimeConfig.SearchIndexName}
   >
-    <Result />
+    <ConnectedSearchBox />
   </InstantSearch>
 );
-
-const Result = () => {
-  return (
-    <div>
-      <ConnectedSearchBox />
-    </div>
-  );
-};
-
-function InputComponent(inputProps) {
-  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
-
-  return (
-    <InputBase
-      fullWidth
-      InputProps={{
-        inputRef: node => {
-          ref(node);
-          inputRef(node);
-        }
-      }}
-      {...other}
-    />
-  );
-}
 
 class SearchBox2 extends React.Component {
   constructor(props) {
@@ -47,7 +23,7 @@ class SearchBox2 extends React.Component {
     this.state = { value: "" };
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (_, { newValue }) => {
     this.setState({
       value: newValue
     });
@@ -66,18 +42,7 @@ class SearchBox2 extends React.Component {
   }
 
   renderSuggestion(hit) {
-    return (
-      <Link
-        href={{
-          pathname: "/disease",
-          query: { disease: hit.searchKey }
-        }}
-      >
-        <Button>
-          <Highlight attribute="name" hit={hit} tagName="mark" />
-        </Button>
-      </Link>
-    );
+    return <RenderHit hit={hit} />;
   }
 
   render() {
@@ -105,5 +70,38 @@ class SearchBox2 extends React.Component {
 }
 
 const ConnectedSearchBox = connectAutoComplete(SearchBox2);
+
+const RenderHit = props => {
+  const { hit } = props;
+  return (
+    <Link
+      href={{
+        pathname: "/disease",
+        query: { disease: hit.searchKey }
+      }}
+    >
+      <Button>
+        <Highlight attribute="name" hit={hit} tagName="mark" />
+      </Button>
+    </Link>
+  );
+};
+
+const InputComponent = inputProps => {
+  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
+  return (
+    <InputBase
+      style={{ color: "white" }}
+      fullWidth
+      InputProps={{
+        inputRef: node => {
+          ref(node);
+          inputRef(node);
+        }
+      }}
+      {...other}
+    />
+  );
+};
 
 export default Search;
