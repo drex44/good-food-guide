@@ -38,25 +38,11 @@ const styles = theme => ({
       margin: "0 10px"
     },
 
-    "& .sickName": {
+    "& .breadcrumbTitle": {
       textTransform: "capitalize"
     }
   }
 });
-
-function getQueryStringValue(key) {
-  return decodeURIComponent(
-    window.location.search.replace(
-      new RegExp(
-        "^(?:.*[&\\?]" +
-          encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
-          "(?:\\=([^&]*))?)?.*$",
-        "i"
-      ),
-      "$1"
-    )
-  );
-}
 
 class Breadcrumb extends React.Component {
   state = {
@@ -73,16 +59,14 @@ class Breadcrumb extends React.Component {
       return (
         <div className={classes.root}>
           <Link href="/">
-            <a>
-              <Tooltip title="Home" placement="left">
-                <Icon className="homeIcon">home</Icon>
-              </Tooltip>
-            </a>
+            <Tooltip title="Home" placement="left">
+              <Icon className="homeIcon">home</Icon>
+            </Tooltip>
           </Link>
-          <Typography className="slash">/</Typography>
-          <Typography>Disease</Typography>
-          <Typography className="slash">/</Typography>
-          <Typography className="sickName">{sickName}</Typography>
+          <BreadcrumbSlash />
+          <BreadcrumbTitle>disease</BreadcrumbTitle>
+          <BreadcrumbSlash />
+          <BreadcrumbTitle>{sickName}</BreadcrumbTitle>
         </div>
       );
     } else {
@@ -94,5 +78,25 @@ class Breadcrumb extends React.Component {
 Breadcrumb.propTypes = {
   classes: PropTypes.object.isRequired
 };
+
+function getQueryStringValue(key) {
+  return decodeURIComponent(
+    window.location.search.replace(
+      new RegExp(
+        "^(?:.*[&\\?]" +
+          encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
+          "(?:\\=([^&]*))?)?.*$",
+        "i"
+      ),
+      "$1"
+    )
+  );
+}
+
+const BreadcrumbTitle = props => (
+  <Typography className="breadcrumbTitle">{props.children}</Typography>
+);
+
+const BreadcrumbSlash = () => <Typography className="slash">/</Typography>;
 
 export default withStyles(styles)(Breadcrumb);
