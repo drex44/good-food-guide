@@ -109,8 +109,6 @@ class SimpleModal extends React.Component {
               >
                 <LinkedinIcon size={38} round={true} />
               </LinkedinShareButton>
-
-              {/*<EmailShareButton url={shareUrl} subject={title} body={body}><EmailIcon size={38} round={true}></EmailIcon></EmailShareButton>*/}
             </Grid>
           </div>
         </Modal>
@@ -124,6 +122,4 @@ SimpleModal.propTypes = {
 };
 
 // We need an intermediary variable for handling the recursive nesting.
-const SimpleModalWrapped = withStyles(styles)(SimpleModal);
-
-export default SimpleModalWrapped;
+export default withStyles(styles)(SimpleModal);

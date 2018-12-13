@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import Link from "next/link";
 import Typography from "@material-ui/core/Typography";
 import { Grid, withStyles } from "@material-ui/core";
@@ -14,7 +15,7 @@ const styles = () => ({
   }
 });
 
-class Footer extends Component {
+class Footer extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -38,17 +39,29 @@ class Footer extends Component {
   }
 }
 
+Footer.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
 const FooterColumn = props => (
   <Grid item lg={4} md={4} sm={4} xs={12} style={{ textAlign: "center" }}>
     {props.children}
   </Grid>
 );
 
+FooterColumn.prototype = {
+  children: PropTypes.object.isRequired
+};
+
 const FooterTitle = props => (
   <Typography variant="subtitle2" style={{ color: "#ffffff" }}>
     {props.children}
   </Typography>
 );
+
+FooterTitle.prototype = {
+  children: PropTypes.object.isRequired
+};
 
 const FooterLink = props => (
   <Link href={props.href}>
@@ -64,5 +77,10 @@ const FooterLink = props => (
     </a>
   </Link>
 );
+
+FooterLink.prototype = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.object.isRequired
+};
 
 export default withStyles(styles)(Footer);

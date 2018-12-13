@@ -97,6 +97,10 @@ const BreadcrumbTitle = props => (
   <Typography className="breadcrumbTitle">{props.children}</Typography>
 );
 
+BreadcrumbTitle.propTypes = {
+  children: PropTypes.object.isRequired
+};
+
 const BreadcrumbSlash = () => <Typography className="slash">/</Typography>;
 
 export default withStyles(styles)(Breadcrumb);

@@ -42,6 +42,7 @@ const FoodListItem = ({ food, type }) => (
 );
 
 FoodListItem.prototype = {
+  classes: PropTypes.object.isRequired,
   food: PropTypes.object,
   type: PropTypes.string
 };

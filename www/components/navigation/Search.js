@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { InstantSearch, Highlight } from "react-instantsearch/dom";
 import { Button, InputBase } from "@material-ui/core";
 import Autosuggest from "react-autosuggest";
@@ -85,6 +86,10 @@ const RenderHit = props => {
       </Button>
     </Link>
   );
+};
+
+RenderHit.propTypes = {
+  hit: PropTypes.object.isRequired
 };
 
 const InputComponent = inputProps => {

@@ -23,6 +23,7 @@ const DiseaseItem = props => {
 };
 
 DiseaseItem.prototype = {
+  classes: PropTypes.object.isRequired,
   diseases: PropTypes.array.isRequired
 };
 

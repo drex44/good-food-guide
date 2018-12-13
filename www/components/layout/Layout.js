@@ -1,9 +1,8 @@
+import PropTypes from "prop-types";
 import Head from "next/head";
 import Footer from "./Footer";
 import NavigationBar from "../navigation/NavigationBar";
 import { withStyles } from "@material-ui/core/styles";
-
-import MenuIcon from "@material-ui/icons/Menu";
 import AboutIcon from "@material-ui/icons/Info";
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
@@ -27,13 +26,17 @@ const Layout = props => {
   ];
 
   return (
-    <div>
+    <React.Fragment>
       <WebsiteHead />
       <NavigationBar links={navigationLinks} />
       <div className={classes.content}>{props.children}</div>
       <Footer />
-    </div>
+    </React.Fragment>
   );
+};
+
+Layout.propTypes = {
+  classes: PropTypes.object.isRequired
 };
 
 const WebsiteHead = () => (
