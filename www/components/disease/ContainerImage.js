@@ -46,7 +46,9 @@ class ContainerImage extends React.Component {
 }
 
 ContainerImage.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  src:Proptypes.string.isRequired,
+  alt:Proptypes.string.isRequired
 };
 
 export default withStyles(styles)(ContainerImage);

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import FoodList from "../food/FoodList";
 import {
   Card,
@@ -8,30 +9,37 @@ import {
   Grid,
   Typography,
   CardActions,
-  Button
+  Button,
+  withStyles
 } from "@material-ui/core";
 import Link from "next/link";
 import ShareModal from "../ShareModal";
 import Highlight from "react-instantsearch-dom/dist/cjs/widgets/Highlight";
 
-function shortenText(text, startingPoint, maxLength) {
-  return text.length > maxLength ? text.slice(startingPoint, maxLength) : text;
-}
+const styles = theme => ({
+  container: {
+    marginBottom: 15,
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between"
+  },
+  cardHeader: { width: "100%" },
+  cardContent: {
+    background: "rgb(241, 241, 241)",
+    minHeight: "300px"
+  },
+  cardImage: {
+    height: 0,
+    paddingTop: "25%"
+  }
+});
 
 class DiseaseCard extends Component {
   render() {
-    const { disease } = this.props;
+    const { disease, classes } = this.props;
     return (
-      <Card
-        raised
-        style={{
-          marginBottom: 15,
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between"
-        }}
-      >
+      <Card raised className={classes.container}>
         <div>
           <Link
             href={{
@@ -39,9 +47,9 @@ class DiseaseCard extends Component {
               query: { disease: disease.searchKey }
             }}
           >
-            <CardActionArea style={{ width: "100%" }}>
+            <CardActionArea className={classes.cardHeader}>
               <CardMedia
-                style={{ height: 0, paddingTop: "25%" }}
+                className={classes.cardImage}
                 image={disease.image}
                 title={disease.name}
               />
@@ -61,12 +69,7 @@ class DiseaseCard extends Component {
               </CardContent>
             </CardActionArea>
           </Link>
-          <CardContent
-            style={{
-              background: "rgb(241, 241, 241)",
-              minHeight: "300px"
-            }}
-          >
+          <CardContent className={classes.cardContent}>
             <Typography variant="subtitle1" align="justify">
               {shortenText(disease.description, 0, 200) + " . . ."}
             </Typography>
@@ -75,30 +78,62 @@ class DiseaseCard extends Component {
             </Typography>
           </CardContent>
         </div>
-        <CardActions>
-          <Grid container align="center">
-            <Grid xs={6} item>
-              <ShareModal
-                shareLink={`https://good-food-guide.now.sh/disease?disease=${
-                  disease.searchKey
-                }`}
-              />
-            </Grid>
-            <Grid xs={6} item>
-              <Link
-                href={{
-                  pathname: "/disease",
-                  query: { disease: disease.searchKey }
-                }}
-              >
-                <Button color="primary">Learn More</Button>
-              </Link>
-            </Grid>
-          </Grid>
-        </CardActions>
+        <DiseaseCardAction>
+          <DiseaseCardLink>
+            <ShareModal
+              shareLink={`https://good-food-guide.now.sh/disease?disease=${
+                disease.searchKey
+              }`}
+            />
+          </DiseaseCardLink>
+          <DiseaseCardLink>
+            <Link
+              href={{
+                pathname: "/disease",
+                query: { disease: disease.searchKey }
+              }}
+            >
+              <Button color="primary">Learn More</Button>
+            </Link>
+          </DiseaseCardLink>
+        </DiseaseCardAction>
       </Card>
     );
   }
 }
 
-export default DiseaseCard;
+DiseaseCard.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+const shortenText = (text, startingPoint, maxLength) => {
+  return text.length > maxLength ? text.slice(startingPoint, maxLength) : text;
+};
+
+const DiseaseCardAction = props => {
+  return (
+    <CardActions>
+      <Grid container align="center">
+        {props.children}
+      </Grid>
+    </CardActions>
+  );
+};
+
+DiseaseCardAction.propTypes = {
+  children: PropTypes.array.isRequired
+};
+
+const DiseaseCardLink = props => {
+  return (
+    <Grid xs={6} item>
+      {props.children}
+    </Grid>
+  );
+};
+
+DiseaseCardLink.propTypes = {
+  children: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(DiseaseCard);
