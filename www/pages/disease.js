@@ -1,15 +1,20 @@
 import Layout from "../components/layout/Layout";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import FoodList from "../components/food/FoodList";
-import Image from "../components/disease/ContainerImage";
+import Image from "../components/disease/ImageContainer";
 import Breadcrumb from "../components/layout/Breadcrumb";
-import Link from "next/link";
-import Button from "@material-ui/core/Button";
 import { getDisease } from "../modules/api";
 import Error404 from "../components/Error/Error404";
+import {
+  BackButton,
+  StyledParagraph,
+  StyledParagraphTitle,
+  PageSection,
+  StyledPageTitle
+} from "../components/layout/Commons";
+import PropTypes from "prop-types";
 
-const FoodDetails = props => {
+const DiseaseDetails = props => {
   if (props.disease.length <= 0) {
     return <Error404 />;
   }
@@ -17,9 +22,10 @@ const FoodDetails = props => {
   return (
     <Layout>
       <Grid container>
-        <Grid item xs={12} md={12} lg={12} align="center">
+        <PageSection>
           <Breadcrumb />
-        </Grid>
+        </PageSection>
+
         <Grid
           item
           xs={12}
@@ -30,64 +36,92 @@ const FoodDetails = props => {
         >
           <Image src={data.image} alt={data.searchKey} />
         </Grid>
+
         <Grid item xs={12} md={6} lg={6} style={{ padding: "15px" }}>
-          <Typography
-            variant="h4"
-            color="primary"
-            style={{ marginBottom: "15px" }}
-          >
-            {data.name}
-          </Typography>
-          <Typography variant="subtitle1" style={{ marginBottom: "15px" }}>
-            {data.description}
-          </Typography>
-          <Typography variant="h5">Symptoms</Typography>
-          {data.symptoms.map((symps, index) => (
-            <div key={index}>
-              <Typography variant="subtitle1" style={{ marginTop: "15px" }}>
-                {symps.description}
-              </Typography>
-              <ul>
-                {symps.symptoms.map((symptoms, index) => (
-                  <li key={index} style={{ marginLeft: "25px" }}>
-                    <Typography variant="subtitle1">{symptoms}</Typography>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <StyledPageTitle align="left">{data.name}</StyledPageTitle>
+          <StyledParagraph>{data.description}</StyledParagraph>
+
+          <br />
+          <StyledParagraphTitle>Symptomps</StyledParagraphTitle>
+          {data.symptoms.map((symptomps, index) => (
+            <Symptomps key={index} symptomps={symptomps} />
           ))}
-          {data.goodFoods.vegan.length > 0 ? (
-            <Typography variant="subtitle1" style={{ marginTop: "20px" }}>
-              Veg foods:
-            </Typography>
-          ) : null}
-          <FoodList goodFoods={{ vegan: data.goodFoods.vegan }} />
-          {data.goodFoods.nonVegan.length > 0 ? (
-            <Typography variant="subtitle1">Non Veg foods:</Typography>
-          ) : null}
-          <FoodList goodFoods={{ nonVegan: data.goodFoods.nonVegan }} />
+
+          <br />
+          <StyledParagraphTitle>Good Foods</StyledParagraphTitle>
+          <GoodFoods goodFoods={data.goodFoods} />
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={12}
-          lg={12}
-          align="center"
-          style={{ margin: "5em 0em" }}
-        >
-          <Link href="/">
-            <Button variant="contained">Back</Button>
-          </Link>
-        </Grid>
+
+        <PageSection>
+          <BackButton href="/" />
+        </PageSection>
       </Grid>
     </Layout>
   );
 };
 
-FoodDetails.getInitialProps = async function(context) {
+DiseaseDetails.propTypes = {
+  disease: PropTypes.object.isRequired
+};
+
+DiseaseDetails.getInitialProps = async function(context) {
   const { disease } = context.query;
   let data = await getDisease(disease);
   return { disease: data };
 };
 
-export default FoodDetails;
+const Symptomps = props => {
+  const { symptomps } = props;
+  return (
+    <React.Fragment>
+      <StyledParagraph>{symptomps.description}</StyledParagraph>
+      <StyledParagraph>
+        <ul>
+          {symptomps.symptoms.map((symptom, index) => (
+            <li key={index} style={{ marginLeft: "10px" }}>
+              {symptom}
+            </li>
+          ))}
+        </ul>
+      </StyledParagraph>
+    </React.Fragment>
+  );
+};
+
+Symptomps.propTypes = {
+  symptomps: PropTypes.object.isRequired
+};
+
+const GoodFoods = props => {
+  const { goodFoods } = props;
+  return (
+    <React.Fragment>
+      <GoodFoodList title="Veg Foods:" foods={{ vegan: goodFoods.vegan }} />
+      <GoodFoodList
+        title="Non veg Foods:"
+        foods={{ nonVegan: goodFoods.nonVegan }}
+      />
+    </React.Fragment>
+  );
+};
+
+GoodFoods.propTypes = { goodFoods: PropTypes.object.isRequired };
+
+const GoodFoodList = props => {
+  const { title, foods } = props;
+  return (
+    <React.Fragment>
+      {foods[Object.keys(foods)].length > 0 && (
+        <StyledParagraph>{title}</StyledParagraph>
+      )}
+      <FoodList goodFoods={foods} />
+    </React.Fragment>
+  );
+};
+
+GoodFoodList.propTypes = {
+  title: PropTypes.string.isRequired,
+  foods: PropTypes.object.isRequired
+};
+
+export default DiseaseDetails;

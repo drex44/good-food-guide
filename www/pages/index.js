@@ -2,44 +2,40 @@ import Layout from "../components/layout/Layout";
 import DiseaseCard from "../components/disease/DiseaseCard";
 import Jumbotron from "../components/layout/Jumbotron";
 import { getAllDiseases } from "../modules/api";
-import { Grid } from "@material-ui/core";
+import { Grid, withStyles } from "@material-ui/core";
 
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      initialItems: props.FoodData,
-      items: []
-    };
+const styles = () => ({
+  container: {
+    padding: "2%",
+    width: "100%"
+  },
+  diseaseCard: {
+    display: "flex"
   }
-  componentDidMount = () => {
-    this.setState({ items: this.state.initialItems });
-  };
+});
 
-  render() {
-    return (
-      <Layout>
-        <Jumbotron />
-        <section style={{ padding: 30 }}>
-          <Grid container spacing={8}>
-            {this.state.items.map((disease, index) => (
-              <Grid
-                key={disease.searchKey}
-                item
-                style={{ display: "flex" }}
-                xs={12}
-                md={6}
-                lg={3}
-              >
-                <DiseaseCard disease={disease} index={index} />
-              </Grid>
-            ))}
+const Index = props => {
+  const { classes } = props;
+  return (
+    <Layout>
+      <Jumbotron />
+      <Grid container spacing={8} className={classes.container}>
+        {props.FoodData.map((disease, index) => (
+          <Grid
+            item
+            key={disease.searchKey}
+            xs={12}
+            md={6}
+            lg={3}
+            className={classes.diseaseCard}
+          >
+            <DiseaseCard disease={disease} index={index} />
           </Grid>
-        </section>
-      </Layout>
-    );
-  }
-}
+        ))}
+      </Grid>
+    </Layout>
+  );
+};
 
 Index.getInitialProps = async () => {
   const data = await getAllDiseases();
@@ -48,4 +44,4 @@ Index.getInitialProps = async () => {
   };
 };
 
-export default Index;
+export default withStyles(styles)(Index);

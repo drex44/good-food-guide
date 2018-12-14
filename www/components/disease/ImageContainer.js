@@ -29,7 +29,7 @@ const styles = theme => ({
   }
 });
 
-class ContainerImage extends React.Component {
+class ImageContainer extends React.Component {
   render() {
     const { classes } = this.props;
 
@@ -45,10 +45,10 @@ class ContainerImage extends React.Component {
   }
 }
 
-ContainerImage.propTypes = {
+ImageContainer.propTypes = {
   classes: PropTypes.object.isRequired,
-  src:Proptypes.string.isRequired,
-  alt:Proptypes.string.isRequired
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(ContainerImage);
+export default withStyles(styles)(ImageContainer);

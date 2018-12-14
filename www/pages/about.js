@@ -1,13 +1,11 @@
 import Layout from "../components/layout/Layout";
 import React from "react";
 import PropTypes from "prop-types";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles, Grid } from "@material-ui/core";
+import { StyledPageTitle, StyledSubtitle } from "../components/layout/Commons";
 
 const styles = theme => ({
-  about: {
-    padding: "20px"
-  },
+  root: { margin: "2%" },
   title: {
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.75em",
@@ -19,17 +17,6 @@ const styles = theme => ({
     [theme.breakpoints.up("lg")]: {
       fontSize: "3.75em"
     }
-  },
-  paragraph: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1em"
-    },
-    [theme.breakpoints.up("md")]: {
-      fontSize: "1.35em"
-    },
-    [theme.breakpoints.up("lg")]: {
-      fontSize: "1.75em"
-    }
   }
 });
 
@@ -38,42 +25,22 @@ class About extends React.Component {
     const { classes } = this.props;
     return (
       <Layout>
-        <div className={classes.about}>
-          <Typography
-            variant="h4"
-            align="center"
-            color="primary"
-            className={classes.title}
-          >
-            About us
-          </Typography>
-          <br />
-          <Typography
-            variant="body1"
-            align="center"
-            className={classes.paragraph}
-          >
+        <Grid className={classes.root}>
+          <StyledPageTitle>About us</StyledPageTitle>
+          <StyledSubtitle>
             An open source project to show what to eat when you're ill
-          </Typography>
-          <Typography
-            component="p"
-            align="center"
-            className={classes.paragraph}
-          >
+          </StyledSubtitle>
+          <StyledSubtitle>
             Check us out on{" "}
             <a target="_new" href="https://github.com/drex44/good-food-guide">
               Github
             </a>
-          </Typography>
-        </div>
+          </StyledSubtitle>
+        </Grid>
       </Layout>
     );
   }
 }
-
-About.getInitialProps = async function(context) {
-  return {};
-};
 
 About.propTypes = {
   classes: PropTypes.object.isRequired

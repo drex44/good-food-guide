@@ -17,7 +17,7 @@ import ShareModal from "../ShareModal";
 import Highlight from "react-instantsearch-dom/dist/cjs/widgets/Highlight";
 
 const styles = theme => ({
-  container: {
+  root: {
     marginBottom: 15,
     width: "100%",
     display: "flex",
@@ -39,7 +39,7 @@ class DiseaseCard extends Component {
   render() {
     const { disease, classes } = this.props;
     return (
-      <Card raised className={classes.container}>
+      <Card raised className={classes.root}>
         <div>
           <Link
             href={{
