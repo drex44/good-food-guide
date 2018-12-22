@@ -6,8 +6,8 @@ import { Grid, List, ListItem, ListItemText } from "@material-ui/core";
 const DiseaseList = props => {
   const { diseases } = props;
   return (
-    <Grid lg={3} md={4} sm={8} xs={10}>
-      <List component="nav">
+    <Grid item lg={3} md={4} sm={8} xs={10}>
+      <List>
         {diseases.map((disease, index) => (
           <DiseaseListItem key={index} disease={disease} />
         ))}

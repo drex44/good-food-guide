@@ -49,6 +49,10 @@ class MyDocument extends Document {
    `
             }}
           />
+
+
+          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+          
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
           <link rel="stylesheet" type="text/css" href="/static/app.css" />
 

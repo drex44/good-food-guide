@@ -9,7 +9,7 @@ mongoose.connect(
 );
 
 function finished() {
-  console.log("------------request-finished------------");
+  console.log("--------getDisease-request-successfully-finished--------");
 }
 
 const statusCode = 200;

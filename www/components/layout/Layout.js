@@ -6,6 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import AboutIcon from "@material-ui/icons/Info";
 import HomeIcon from "@material-ui/icons/Home";
 import ReceiptIcon from "@material-ui/icons/Receipt";
+import FeedbackIcon from "@material-ui/icons/Feedback";
 
 const styles = () => ({
   content: {
@@ -21,6 +22,11 @@ const Layout = props => {
   const { classes } = props;
   const navigationLinks = [
     { title: "home", href: "/", icon: HomeIcon },
+    {
+      title: "Give Feedback",
+      href: "/suggestions",
+      icon: FeedbackIcon
+    },
     { title: "Food Details", href: "/foodDetails", icon: ReceiptIcon },
     { title: "About", href: "/about", icon: AboutIcon }
   ];
