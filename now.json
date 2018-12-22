@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "good-food-guide",
-  "alias": ["good-food-guide.now.sh"],
+  "alias": ["good-food-guide.now.sh", "goodfoodguide.now.sh"],
   "builds": [
     { "src": "api/getAllDiseases/*.js", "use": "@now/node" },
     { "src": "api/getDisease/*.js", "use": "@now/node" },
