@@ -11,23 +11,16 @@ const styles = () => ({
   root: { margin: "2%" }
 });
 
-class Contributors extends React.Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <Layout>
-        <Grid item lg={8} xs={10} className={classes.root}>
-          <StyledPageTitle>Contributors</StyledPageTitle>
-          <StyledSubtitle>
-            Amazing people who helped this project
-          </StyledSubtitle>
-          <br />
-          <ContributorList contributors={this.props.contributors} />
-        </Grid>
-      </Layout>
-    );
-  }
-}
+const Contributors = ({ classes, contributors }) => (
+  <Layout>
+    <Grid item lg={8} xs={10} className={classes.root}>
+      <StyledPageTitle>Contributors</StyledPageTitle>
+      <StyledSubtitle>Amazing people who helped this project</StyledSubtitle>
+      <br />
+      <ContributorList contributors={contributors} />
+    </Grid>
+  </Layout>
+);
 
 Contributors.propTypes = {
   classes: PropTypes.object.isRequired

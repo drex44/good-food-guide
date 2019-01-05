@@ -15,17 +15,18 @@ class LanguageSelect extends React.Component {
     this.setState({ currentLang: lang });
   }
   render() {
+    const { currentLang, languages } = this.state;
     return (
       <FormControl>
         <InputLabel htmlFor="lang-select">Language</InputLabel>
         <Select
-          value={this.state.currentLang}
+          value={currentLang}
           inputProps={{
             name: "Language",
             id: "lang-select"
           }}
         >
-          {this.state.languages.map(lang => (
+          {languages.map(lang => (
             <MenuItem value={lang}>{lang}</MenuItem>
           ))}
         </Select>

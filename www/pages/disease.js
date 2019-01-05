@@ -14,11 +14,11 @@ import {
 } from "../components/layout/Commons";
 import PropTypes from "prop-types";
 
-const DiseaseDetails = props => {
-  if (props.disease.length <= 0) {
+const DiseaseDetails = ({ disease }) => {
+  if (disease.length <= 0) {
     return <Error404 />;
   }
-  let data = props.disease[0];
+  let data = disease[0];
   return (
     <Layout>
       <Grid container>
@@ -61,7 +61,7 @@ const DiseaseDetails = props => {
 };
 
 DiseaseDetails.propTypes = {
-  disease: PropTypes.object.isRequired
+  disease: PropTypes.array.isRequired
 };
 
 DiseaseDetails.getInitialProps = async function(context) {

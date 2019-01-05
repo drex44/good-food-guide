@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import { withStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const styles = ({ palette }) => ({
   root: {
     textAlign: "center",
     display: "flex",
@@ -27,7 +27,7 @@ const styles = theme => ({
 
     "& .homeIcon": {
       fontSize: 18,
-      color: theme.palette.primary.main,
+      color: palette.primary.main,
 
       "&:hover": {
         color: "#751d84"
@@ -55,23 +55,23 @@ class Breadcrumb extends React.Component {
     const { classes } = this.props;
     const { sickName } = this.state;
 
-    if (sickName !== "") {
-      return (
-        <div className={classes.root}>
-          <Link href="/">
-            <Tooltip title="Home" placement="left">
-              <Icon className="homeIcon">home</Icon>
-            </Tooltip>
-          </Link>
-          <BreadcrumbSlash />
-          <BreadcrumbTitle>disease</BreadcrumbTitle>
-          <BreadcrumbSlash />
-          <BreadcrumbTitle>{sickName}</BreadcrumbTitle>
-        </div>
-      );
-    } else {
-      return "";
-    }
+    return (
+      <React.Fragment>
+        {sickName ? (
+          <div className={classes.root}>
+            <Link href="/">
+              <Tooltip title="Home" placement="left">
+                <Icon className="homeIcon">home</Icon>
+              </Tooltip>
+            </Link>
+            <BreadcrumbSlash />
+            <BreadcrumbTitle>disease</BreadcrumbTitle>
+            <BreadcrumbSlash />
+            <BreadcrumbTitle>{sickName}</BreadcrumbTitle>
+          </div>
+        ) : null}
+      </React.Fragment>
+    );
   }
 }
 
@@ -93,12 +93,12 @@ function getQueryStringValue(key) {
   );
 }
 
-const BreadcrumbTitle = props => (
-  <Typography className="breadcrumbTitle">{props.children}</Typography>
+const BreadcrumbTitle = ({ children }) => (
+  <Typography className="breadcrumbTitle">{children}</Typography>
 );
 
 BreadcrumbTitle.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.string.isRequired
 };
 
 const BreadcrumbSlash = () => <Typography className="slash">/</Typography>;

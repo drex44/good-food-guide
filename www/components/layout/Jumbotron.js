@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const styles = ({ breakpoints }) => ({
   root: {
     width: "100%"
   },
@@ -12,15 +12,15 @@ const styles = theme => ({
   },
   title: {
     textAlign: "center",
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       fontSize: "1.75em",
       padding: "1% 10%"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       fontSize: "2.75em",
       padding: "1% 20%"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       fontSize: "3.75em",
       padding: "1% 20%"
     }
@@ -31,13 +31,13 @@ const styles = theme => ({
     display: "block"
   },
   boxImage: {
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       width: "100px"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       width: "120px"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       width: "150px"
     }
   },
@@ -61,33 +61,27 @@ const styles = theme => ({
   }
 });
 
-class Jumbotron extends React.Component {
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.container}>
-        <Typography
-          className={classes.title}
-          gutterBottom
-          variant="h2"
-          component="h2"
-          color="primary"
-        >
-          A guide to know which foods are good when you have certain disease!
-        </Typography>
-        <div className={classes.boxImage}>
-          <img
-            src="https://i.imgur.com/jFe8S1R.png"
-            alt="Good Foods"
-            className={classes.images}
-          />
-        </div>
-        <hr className={classes.hr} />
-      </div>
-    );
-  }
-}
+const Jumbotron = ({ classes }) => (
+  <div className={classes.container}>
+    <Typography
+      className={classes.title}
+      gutterBottom
+      variant="h2"
+      component="h2"
+      color="primary"
+    >
+      A guide to know which foods are good when you have certain disease!
+    </Typography>
+    <div className={classes.boxImage}>
+      <img
+        src="https://i.imgur.com/jFe8S1R.png"
+        alt="Good Foods"
+        className={classes.images}
+      />
+    </div>
+    <hr className={classes.hr} />
+  </div>
+);
 
 Jumbotron.propTypes = {
   classes: PropTypes.object.isRequired

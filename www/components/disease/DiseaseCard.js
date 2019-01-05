@@ -35,72 +35,67 @@ const styles = theme => ({
   }
 });
 
-class DiseaseCard extends Component {
-  render() {
-    const { disease, classes } = this.props;
-    return (
-      <Card raised className={classes.root}>
-        <div>
-          <Link
-            href={{
-              pathname: "/disease",
-              query: { disease: disease.searchKey }
-            }}
-          >
-            <CardActionArea className={classes.cardHeader}>
-              <CardMedia
-                className={classes.cardImage}
-                image={disease.image}
-                title={disease.name}
-              />
-              <CardContent>
-                {this.props.searchable ? (
-                  <Highlight attribute="name" hit={disease} />
-                ) : (
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="h2"
-                    color="primary"
-                  >
-                    {disease.name}
-                  </Typography>
-                )}
-              </CardContent>
-            </CardActionArea>
-          </Link>
-          <CardContent className={classes.cardContent}>
-            <Typography variant="subtitle1" align="justify">
-              {shortenText(disease.description, 0, 200) + " . . ."}
-            </Typography>
-            <Typography style={{ margin: "10px 0px" }}>
-              <FoodList goodFoods={disease.goodFoods} />
-            </Typography>
+const DiseaseCard = ({ disease, classes, searchable }) => (
+  <Card raised className={classes.root}>
+    <div>
+      <Link
+        href={{
+          pathname: "/disease",
+          query: { disease: disease.searchKey }
+        }}
+      >
+        <CardActionArea className={classes.cardHeader}>
+          <CardMedia
+            className={classes.cardImage}
+            image={disease.image}
+            title={disease.name}
+          />
+          <CardContent>
+            {searchable ? (
+              <Highlight attribute="name" hit={disease} />
+            ) : (
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                color="primary"
+              >
+                {disease.name}
+              </Typography>
+            )}
           </CardContent>
-        </div>
-        <DiseaseCardAction>
-          <DiseaseCardLink>
-            <ShareModal
-              shareLink={`https://good-food-guide.now.sh/disease?disease=${
-                disease.searchKey
-              }`}
-            />
-          </DiseaseCardLink>
-          <DiseaseCardLink>
-            <Link
-              href={{
-                pathname: "/disease",
-                query: { disease: disease.searchKey }
-              }}
-            >
-              <Button color="primary">Learn More</Button>
-            </Link>
-          </DiseaseCardLink>
-        </DiseaseCardAction>
-      </Card>
-    );
-  }
-}
+        </CardActionArea>
+      </Link>
+      <CardContent className={classes.cardContent}>
+        <Typography variant="subtitle1" align="justify">
+          {shortenText(disease.description, 0, 200) + " . . ."}
+        </Typography>
+        <Typography style={{ margin: "10px 0px" }}>
+          <FoodList goodFoods={disease.goodFoods} />
+        </Typography>
+      </CardContent>
+    </div>
+    <DiseaseCardAction>
+      <DiseaseCardLink>
+        <ShareModal
+          shareLink={`https://good-food-guide.now.sh/disease?disease=${
+            disease.searchKey
+          }`}
+        />
+      </DiseaseCardLink>
+      <DiseaseCardLink>
+        <Link
+          href={{
+            pathname: "/disease",
+            query: { disease: disease.searchKey }
+          }}
+        >
+          <Button color="primary">Learn More</Button>
+        </Link>
+      </DiseaseCardLink>
+    </DiseaseCardAction>
+  </Card>
+);
 
 DiseaseCard.propTypes = {
   classes: PropTypes.object.isRequired
@@ -110,27 +105,23 @@ const shortenText = (text, startingPoint, maxLength) => {
   return text.length > maxLength ? text.slice(startingPoint, maxLength) : text;
 };
 
-const DiseaseCardAction = props => {
-  return (
-    <CardActions>
-      <Grid container align="center">
-        {props.children}
-      </Grid>
-    </CardActions>
-  );
-};
+const DiseaseCardAction = ({ children }) => (
+  <CardActions>
+    <Grid container align="center">
+      {children}
+    </Grid>
+  </CardActions>
+);
 
 DiseaseCardAction.propTypes = {
   children: PropTypes.array.isRequired
 };
 
-const DiseaseCardLink = props => {
-  return (
-    <Grid xs={6} item>
-      {props.children}
-    </Grid>
-  );
-};
+const DiseaseCardLink = ({ children }) => (
+  <Grid xs={6} item>
+    {children}
+  </Grid>
+);
 
 DiseaseCardLink.propTypes = {
   children: PropTypes.object.isRequired

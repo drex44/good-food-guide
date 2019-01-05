@@ -15,7 +15,7 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 import MenuIcon from "@material-ui/icons/Menu";
 import Search from "./Search";
 
-const styles = theme => ({
+const styles = ({ breakpoints, palette, shape, spacing, transitions }) => ({
   root: {
     width: "100%"
   },
@@ -28,27 +28,27 @@ const styles = theme => ({
   },
   title: {
     display: "none",
-    [theme.breakpoints.up("sm")]: {
+    [breakpoints.up("sm")]: {
       display: "block"
     }
   },
   search: {
     position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
+    borderRadius: shape.borderRadius,
+    backgroundColor: fade(palette.common.white, 0.15),
     "&:hover": {
-      backgroundColor: fade(theme.palette.common.white, 0.25)
+      backgroundColor: fade(palette.common.white, 0.25)
     },
-    marginRight: theme.spacing.unit * 2,
+    marginRight: spacing.unit * 2,
     marginLeft: 0,
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing.unit * 3,
+    [breakpoints.up("sm")]: {
+      marginLeft: spacing.unit * 3,
       width: "auto"
     }
   },
   searchIcon: {
-    width: theme.spacing.unit * 9,
+    width: spacing.unit * 9,
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
@@ -61,78 +61,70 @@ const styles = theme => ({
     width: "100%"
   },
   inputInput: {
-    paddingTop: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
-    paddingLeft: theme.spacing.unit * 10,
-    transition: theme.transitions.create("width"),
+    paddingTop: spacing.unit,
+    paddingRight: spacing.unit,
+    paddingBottom: spacing.unit,
+    paddingLeft: spacing.unit * 10,
+    transition: transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       width: 200
     }
   },
   desktopSection: {
     display: "none",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       display: "flex"
     }
   },
   mobileSection: {
     display: "flex",
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       display: "none"
     }
   }
 });
 
-const WebsiteHeader = props => {
-  return (
-    <Link href="/">
-      <Button color="inherit">
-        <Typography variant="h6" color="inherit">
-          {props.children}
-        </Typography>
-      </Button>
-    </Link>
-  );
-};
+const WebsiteHeader = ({ children }) => (
+  <Link href="/">
+    <Button color="inherit">
+      <Typography variant="h6" color="inherit">
+        {children}
+      </Typography>
+    </Button>
+  </Link>
+);
 
 WebsiteHeader.propTypes = {
   children: PropTypes.object.isRequired
 };
 
-const DesktopMenuItem = props => {
-  const Icon = props.icon;
-  return (
-    <Link href={props.href}>
-      <Button color="inherit">
-        <Icon />
-        <Typography color="inherit" style={{ marginLeft: "7px" }}>
-          {props.children}
-        </Typography>
-      </Button>
-    </Link>
-  );
-};
+const DesktopMenuItem = ({ icon: Icon, href, children }) => (
+  <Link href={href}>
+    <Button color="inherit">
+      <Icon />
+      <Typography color="inherit" style={{ marginLeft: "7px" }}>
+        {children}
+      </Typography>
+    </Button>
+  </Link>
+);
 
 DesktopMenuItem.propTypes = {
   href: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired
 };
 
-const MobileMenuItem = props => {
-  const Icon = props.icon;
-  return (
-    <Link href={props.href}>
-      <MenuItem>
-        <IconButton color="inherit">
-          <Icon />
-        </IconButton>
-        {props.children}
-      </MenuItem>
-    </Link>
-  );
-};
+const MobileMenuItem = ({ icon: Icon, href, children }) => (
+  <Link href={href}>
+    <MenuItem>
+      <IconButton color="inherit">
+        <Icon />
+      </IconButton>
+      {children}
+    </MenuItem>
+  </Link>
+);
 
 MobileMenuItem.propTypes = {
   href: PropTypes.string.isRequired
@@ -153,7 +145,7 @@ class NavigationBar extends React.Component {
 
   render() {
     const { mobileMoreAnchorEl } = this.state;
-    const { classes } = this.props;
+    const { classes, links } = this.props;
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const MobileMenu = (
@@ -164,7 +156,7 @@ class NavigationBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMobileMenuClose}
       >
-        {this.props.links.map((link, index) => (
+        {links.map((link, index) => (
           <MobileMenuItem key={index} href={link.href} icon={link.icon}>
             {link.title}
           </MobileMenuItem>
@@ -174,7 +166,7 @@ class NavigationBar extends React.Component {
 
     const DesktopMenu = (
       <React.Fragment>
-        {this.props.links.map((link, index) => (
+        {links.map((link, index) => (
           <DesktopMenuItem key={index} href={link.href} icon={link.icon}>
             {link.title}
           </DesktopMenuItem>
