@@ -42,9 +42,9 @@ const DiseaseDetails = props => {
           <StyledParagraph>{data.description}</StyledParagraph>
 
           <br />
-          <StyledParagraphTitle>Symptomps</StyledParagraphTitle>
-          {data.symptoms.map((symptomps, index) => (
-            <Symptomps key={index} symptomps={symptomps} />
+          <StyledParagraphTitle>Symptoms</StyledParagraphTitle>
+          {data.symptoms.map((symptoms, index) => (
+            <Symptoms key={index} symptoms={symptoms} />
           ))}
 
           <br />
@@ -70,14 +70,14 @@ DiseaseDetails.getInitialProps = async function(context) {
   return { disease: data };
 };
 
-const Symptomps = props => {
-  const { symptomps } = props;
+const Symptoms = props => {
+  const { symptoms } = props;
   return (
     <React.Fragment>
-      <StyledParagraph>{symptomps.description}</StyledParagraph>
+      <StyledParagraph>{symptoms.description}</StyledParagraph>
       <StyledParagraph>
         <ul>
-          {symptomps.symptoms.map((symptom, index) => (
+          {symptoms.symptoms.map((symptom, index) => (
             <li key={index} style={{ marginLeft: "10px" }}>
               {symptom}
             </li>
@@ -88,8 +88,8 @@ const Symptomps = props => {
   );
 };
 
-Symptomps.propTypes = {
-  symptomps: PropTypes.object.isRequired
+Symptoms.propTypes = {
+  symptoms: PropTypes.object.isRequired
 };
 
 const GoodFoods = props => {
