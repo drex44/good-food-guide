@@ -18,8 +18,7 @@ const styles = () => ({
   }
 });
 
-const Layout = props => {
-  const { classes } = props;
+const Layout = ({ classes, children }) => {
   const navigationLinks = [
     { title: "home", href: "/", icon: HomeIcon },
     {
@@ -35,7 +34,7 @@ const Layout = props => {
     <React.Fragment>
       <WebsiteHead />
       <NavigationBar links={navigationLinks} />
-      <div className={classes.content}>{props.children}</div>
+      <div className={classes.content}>{children}</div>
       <Footer />
     </React.Fragment>
   );

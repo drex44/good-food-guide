@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 
-const styles = theme => ({
+const styles = ({ breakpoints }) => ({
   root: {
     width: "100%"
   },
@@ -17,33 +17,23 @@ const styles = theme => ({
     borderRadius: "10px"
   },
   boxImage: {
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       width: "100%"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       width: "60%"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       width: "40%"
     }
   }
 });
 
-class ImageContainer extends React.Component {
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.boxImage}>
-        <img
-          className={classes.images}
-          src={this.props.src}
-          alt={this.props.alt}
-        />
-      </div>
-    );
-  }
-}
+const ImageContainer = ({ classes, src, alt }) => (
+  <div className={classes.boxImage}>
+    <img className={classes.images} src={src} alt={alt} />
+  </div>
+);
 
 ImageContainer.propTypes = {
   classes: PropTypes.object.isRequired,

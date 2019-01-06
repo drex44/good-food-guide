@@ -15,35 +15,31 @@ const styles = () => ({
   root: { margin: "2%" }
 });
 
-const FoodDetails = props => {
-  const food = props.food || "Salmon";
-  const { diseases, classes } = props;
-  return (
-    <Layout>
-      <Grid container className={classes.root}>
-        <PageSection>
-          <StyledPageTitle>{food}</StyledPageTitle>
-        </PageSection>
+const FoodDetails = ({ food = "Salmon", diseases, classes }) => (
+  <Layout>
+    <Grid container className={classes.root}>
+      <PageSection>
+        <StyledPageTitle>{food}</StyledPageTitle>
+      </PageSection>
 
-        <PageSection>
-          <StyledSubtitle>This food helps in below diseases:</StyledSubtitle>
-          <DiseaseList diseases={diseases} />
-        </PageSection>
+      <PageSection>
+        <StyledSubtitle>This food helps in below diseases:</StyledSubtitle>
+        <DiseaseList diseases={diseases} />
+      </PageSection>
 
-        <PageSection>
-          <StyledSubtitle>Development in progress...</StyledSubtitle>
-        </PageSection>
+      <PageSection>
+        <StyledSubtitle>Development in progress...</StyledSubtitle>
+      </PageSection>
 
-        <PageSection>
-          <BackButton href="/" />
-        </PageSection>
-      </Grid>
-    </Layout>
-  );
-};
+      <PageSection>
+        <BackButton href="/" />
+      </PageSection>
+    </Grid>
+  </Layout>
+);
 
 FoodDetails.propTypes = {
-  food: PropTypes.string.isRequired,
+  food: PropTypes.string,
   diseases: PropTypes.array.isRequired
 };
 

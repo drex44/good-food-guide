@@ -14,28 +14,25 @@ const styles = () => ({
   }
 });
 
-const Index = props => {
-  const { classes } = props;
-  return (
-    <Layout>
-      <Jumbotron />
-      <Grid container spacing={8} className={classes.container}>
-        {props.FoodData.map((disease, index) => (
-          <Grid
-            item
-            key={disease.searchKey}
-            xs={12}
-            md={6}
-            lg={3}
-            className={classes.diseaseCard}
-          >
-            <DiseaseCard disease={disease} index={index} />
-          </Grid>
-        ))}
-      </Grid>
-    </Layout>
-  );
-};
+const Index = ({ classes, FoodData }) => (
+  <Layout>
+    <Jumbotron />
+    <Grid container spacing={8} className={classes.container}>
+      {FoodData.map((disease, index) => (
+        <Grid
+          item
+          key={disease.searchKey}
+          xs={12}
+          md={6}
+          lg={3}
+          className={classes.diseaseCard}
+        >
+          <DiseaseCard disease={disease} index={index} />
+        </Grid>
+      ))}
+    </Grid>
+  </Layout>
+);
 
 Index.getInitialProps = async () => {
   const data = await getAllDiseases();

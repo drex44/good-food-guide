@@ -72,21 +72,18 @@ class SearchBox2 extends React.Component {
 
 const ConnectedSearchBox = connectAutoComplete(SearchBox2);
 
-const RenderHit = props => {
-  const { hit } = props;
-  return (
-    <Link
-      href={{
-        pathname: "/disease",
-        query: { disease: hit.searchKey }
-      }}
-    >
-      <Button>
-        <Highlight attribute="name" hit={hit} tagName="mark" />
-      </Button>
-    </Link>
-  );
-};
+const RenderHit = ({ hit }) => (
+  <Link
+    href={{
+      pathname: "/disease",
+      query: { disease: hit.searchKey }
+    }}
+  >
+    <Button>
+      <Highlight attribute="name" hit={hit} tagName="mark" />
+    </Button>
+  </Link>
+);
 
 RenderHit.propTypes = {
   hit: PropTypes.object.isRequired

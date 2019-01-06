@@ -3,34 +3,31 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import { Typography, Grid, withStyles, Button } from "@material-ui/core";
 
-const pageTitleStyles = theme => ({
+const pageTitleStyles = ({ breakpoints }) => ({
   title: {
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       fontSize: "1.75em",
       textAlign: "center"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       fontSize: "2.75em"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       fontSize: "3.75em"
     }
   }
 });
 
-const PageTitle = props => {
-  const { classes } = props;
-  return (
-    <Typography
-      variant="h2"
-      align={props.align ? props.align : "center"}
-      color="primary"
-      className={classes.title}
-    >
-      {props.children}
-    </Typography>
-  );
-};
+const PageTitle = ({ classes, align = "center", children }) => (
+  <Typography
+    variant="h2"
+    align={align}
+    color="primary"
+    className={classes.title}
+  >
+    {children}
+  </Typography>
+);
 
 PageTitle.propTypes = {
   children: PropTypes.string.isRequired
@@ -38,114 +35,103 @@ PageTitle.propTypes = {
 
 export const StyledPageTitle = withStyles(pageTitleStyles)(PageTitle);
 
-const subtitleStyles = theme => ({
+const subtitleStyles = ({ breakpoints }) => ({
   subtitle: {
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       fontSize: "1em"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       fontSize: "1.35em"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       fontSize: "1.75em"
     }
   }
 });
 
-const Subtitle = props => {
-  const { classes } = props;
-  return (
-    <Typography variant="subtitle1" align="center" className={classes.subtitle}>
-      {props.children}
-    </Typography>
-  );
-};
+const Subtitle = ({ classes, children }) => (
+  <Typography variant="subtitle1" align="center" className={classes.subtitle}>
+    {children}
+  </Typography>
+);
 
 Subtitle.propTypes = {
   classes: PropTypes.object.isRequired,
-  children: PropTypes.object.isRequired
+  children: PropTypes.string.isRequired
 };
 
 export const StyledSubtitle = withStyles(subtitleStyles)(Subtitle);
 
-const paragraphStyles = theme => ({
+const paragraphStyles = ({ breakpoints }) => ({
   paragraph: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       fontSize: "0.75em"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       fontSize: "0.95em"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       fontSize: "1em"
     }
   }
 });
 
-const Paragraph = props => {
-  const { classes } = props;
-  return (
-    <Typography
-      variant="subtitle1"
-      style={{ margin: "10px 0px" }}
-      className={classes.paragraph}
-    >
-      {props.children}
-    </Typography>
-  );
-};
+const Paragraph = ({ classes, children }) => (
+  <Typography
+    variant="subtitle1"
+    style={{ margin: "10px 0px" }}
+    className={classes.paragraph}
+  >
+    {children}
+  </Typography>
+);
 
 export const StyledParagraph = withStyles(paragraphStyles)(Paragraph);
 
-const paragraphTitleStyles = theme => ({
+const paragraphTitleStyles = ({ breakpoints }) => ({
   paragraphTitle: {
-    [theme.breakpoints.down("sm")]: {
+    [breakpoints.down("sm")]: {
       fontSize: "1.5em"
     },
-    [theme.breakpoints.up("md")]: {
+    [breakpoints.up("md")]: {
       fontSize: "1.65em"
     },
-    [theme.breakpoints.up("lg")]: {
+    [breakpoints.up("lg")]: {
       fontSize: "1.75em"
     }
   }
 });
 
-const ParagraphTitle = props => {
-  const { classes } = props;
-  return (
-    <Typography variant="h2" color="primary" className={classes.paragraphTitle}>
-      {props.children}
-    </Typography>
-  );
-};
+const ParagraphTitle = ({ classes, children }) => (
+  <Typography variant="h2" color="primary" className={classes.paragraphTitle}>
+    {children}
+  </Typography>
+);
 
 export const StyledParagraphTitle = withStyles(paragraphTitleStyles)(
   ParagraphTitle
 );
 
-export const PageSection = props => {
+export const PageSection = ({ align = "center", children }) => {
   return (
-    <Grid item md={12} align={props.align ? props.align : "center"}>
-      {props.children}
+    <Grid item md={12} align={align}>
+      {children}
     </Grid>
   );
 };
 
 PageSection.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
 };
 
-export const BackButton = props => {
-  return (
-    <Link href={props.href}>
-      <Button variant="contained" style={{ margin: "30px 0px" }}>
-        Back
-      </Button>
-    </Link>
-  );
-};
+export const BackButton = ({ href }) => (
+  <Link href={href}>
+    <Button variant="contained" style={{ margin: "30px 0px" }}>
+      Back
+    </Button>
+  </Link>
+);
 
 BackButton.propTypes = {
   href: PropTypes.string.isRequired

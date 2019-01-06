@@ -14,20 +14,15 @@ const styles = () => ({
   }
 });
 
-class Contributors extends React.Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <React.Fragment>
-        <div className={classes.root}>
-          {this.props.contributors.map((item, index) => {
-            return <StyledContributor key={index} contributor={item} />;
-          })}
-        </div>
-      </React.Fragment>
-    );
-  }
-}
+const Contributors = ({ classes, contributors }) => (
+  <React.Fragment>
+    <div className={classes.root}>
+      {contributors.map((item, index) => {
+        return <StyledContributor key={index} contributor={item} />;
+      })}
+    </div>
+  </React.Fragment>
+);
 
 Contributors.propTypes = {
   classes: PropTypes.object.isRequired,

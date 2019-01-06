@@ -33,13 +33,13 @@ function getModalStyle() {
   };
 }
 
-const styles = theme => ({
+const styles = ({ palette, shadows, spacing }) => ({
   paper: {
     position: "absolute",
-    width: theme.spacing.unit * 30,
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing.unit * 3,
+    width: spacing.unit * 30,
+    backgroundColor: palette.background.paper,
+    boxShadow: shadows[5],
+    padding: spacing.unit * 3,
     flexgrow: 1,
     textAlign: "center"
   }
@@ -61,8 +61,7 @@ class SimpleModal extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
-    const shareUrl = this.props.shareLink;
+    const { classes, shareLink } = this.props;
     const title = "Good Food Guide: Health Remedies";
     const hashTag = "#HealthFoodGuide";
     const description = "Health foods that make great ailment remedies.";
@@ -83,18 +82,18 @@ class SimpleModal extends React.Component {
               Share the health:
             </Typography>
             <Grid container spacing={22} justify="center">
-              <FacebookShareButton url={shareUrl} hashtag={hashTag}>
+              <FacebookShareButton url={shareLink} hashtag={hashTag}>
                 <FacebookIcon size={38} round={true}>
                   {" "}
                 </FacebookIcon>
               </FacebookShareButton>
 
-              <TwitterShareButton url={shareUrl} hashtag={hashTag}>
+              <TwitterShareButton url={shareLink} hashtag={hashTag}>
                 <TwitterIcon size={38} round={true} />
               </TwitterShareButton>
 
               <RedditShareButton
-                url={shareUrl}
+                url={shareLink}
                 title={title}
                 windowWidth={660}
                 windowHeight={460}
@@ -103,7 +102,7 @@ class SimpleModal extends React.Component {
               </RedditShareButton>
 
               <LinkedinShareButton
-                url={shareUrl}
+                url={shareLink}
                 title={title}
                 description={description}
               >
