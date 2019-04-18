@@ -1,5 +1,7 @@
 # Good Food Guide :tada::tada::smile:
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/drex44/good-food-guide.svg)](https://greenkeeper.io/)
+
 A guide to know which foods are good when you are suffering from a certain disease!
 
 ### Background
