@@ -23,7 +23,7 @@
     "react": "^16.6.3",
     "react-autosuggest": "^9.4.2",
     "react-dom": "^16.5.2",
-    "react-instantsearch": "^5.3.2",
+    "react-instantsearch": "^5.7.0",
     "react-jss": "latest",
     "react-share": "^2.3.1"
   }
