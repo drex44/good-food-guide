@@ -22,7 +22,7 @@
     "nprogress": "^0.2.0",
     "react": "^16.9.0",
     "react-autosuggest": "^9.4.2",
-    "react-dom": "^16.5.2",
+    "react-dom": "^16.9.0",
     "react-instantsearch": "^5.3.2",
     "react-jss": "latest",
     "react-share": "^2.3.1"
