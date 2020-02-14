@@ -14,6 +14,6 @@
     "micro": "^9.3.3",
     "micro-fork": "^1.0.0",
     "micro-http-router": "^1.3.0",
-    "mongoose": "^5.3.12"
+    "mongoose": "^5.9.1"
   }
 }
