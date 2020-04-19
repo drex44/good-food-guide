@@ -14,7 +14,7 @@
   "dependencies": {
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
-    "ajv": "^6.6.1",
+    "ajv": "^6.12.2",
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "jss": "latest",
