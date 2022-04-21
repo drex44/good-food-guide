@@ -6,6 +6,8 @@ A guide to know which foods are good when you are suffering from a certain disea
 
 ### Background
 
+[Free-code-camp/contributor-to-an-open-source-project-maintainer-article](https://medium.com/free-code-camp/how-i-went-from-being-a-contributor-to-an-open-source-project-maintainer-acd8a6b316f5)
+
 It started when the Hacktoberfest '18 was announced with the vision to make a productive [Hacktoberfest](https://hacktoberfest.digitalocean.com/).
 
 If you like this repo then show your support,
