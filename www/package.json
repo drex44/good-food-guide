@@ -2,6 +2,9 @@
   "name": "good-food-guide",
   "version": "2.0.0",
   "description": "",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
