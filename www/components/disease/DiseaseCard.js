@@ -10,10 +10,14 @@ import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
 import Link from "next/link";
 import ShareModal from "../ShareModal";
+import useImageFallback from "../../hooks/useImageFallback";
 
 const DiseaseCard = ({ disease }) => {
+  const { hasError, imgRef, onError } = useImageFallback();
+
   return (
     <Card
       raised
@@ -34,15 +38,32 @@ const DiseaseCard = ({ disease }) => {
           }}
           sx={{ width: "100%" }}
         >
-          <CardMedia
-            component="img"
-            sx={{ aspectRatio: "4 / 1" }}
-            image={disease.image}
-            alt={disease.name}
-            title={disease.name}
-            loading="lazy"
-            decoding="async"
-          />
+          {hasError ? (
+            <Box
+              sx={{
+                aspectRatio: "4 / 1",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                bgcolor: "grey.100",
+                color: "grey.400"
+              }}
+            >
+              <RestaurantIcon sx={{ fontSize: 48 }} />
+            </Box>
+          ) : (
+            <CardMedia
+              component="img"
+              ref={imgRef}
+              sx={{ aspectRatio: "4 / 1" }}
+              image={disease.image}
+              alt={disease.name}
+              title={disease.name}
+              loading="lazy"
+              decoding="async"
+              onError={onError}
+            />
+          )}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" color="primary">
               {disease.name}

@@ -1,21 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
+import useImageFallback from "../../hooks/useImageFallback";
 
 const ImageContainer = ({ src, alt }) => {
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef(null);
-
-  // The image starts loading as soon as SSR markup is parsed, so a fast
-  // failure can resolve before hydration attaches the onError listener.
-  // Catch that race by checking the already-settled state on mount.
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img && img.complete && img.naturalWidth === 0) {
-      setHasError(true);
-    }
-  }, []);
+  const { hasError, imgRef, onError } = useImageFallback();
 
   return (
     <Box sx={{ width: "100%" }}>
@@ -44,7 +34,7 @@ const ImageContainer = ({ src, alt }) => {
           src={src}
           alt={alt}
           decoding="async"
-          onError={() => setHasError(true)}
+          onError={onError}
           sx={{
             maxWidth: { xs: "400px", md: "460px" },
             maxHeight: { xs: "400px", md: "460px" },
