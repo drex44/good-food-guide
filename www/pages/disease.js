@@ -1,9 +1,18 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import SickIcon from "@mui/icons-material/Sick";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FoodList from "../components/food/FoodList";
 import Image from "../components/disease/ImageContainer";
 import Breadcrumb from "../components/layout/Breadcrumb";
+import ShareModal from "../components/ShareModal";
 import { getDisease } from "../modules/api";
 import Error404 from "../components/Error/Error404";
 import {
@@ -21,34 +30,64 @@ const DiseaseDetails = ({ disease }) => {
   }
   let data = disease[0];
   return (
-    <Layout>
-      <Grid container>
+    <Layout
+      title={`${data.name} | Good Food Guide`}
+      description={truncate(data.description, 160)}
+    >
+      <Grid
+        container
+        style={{ maxWidth: "1100px", width: "100%" }}
+        sx={{
+          padding: { xs: "10px", md: "20px" }
+        }}
+      >
         <PageSection>
           <Breadcrumb />
         </PageSection>
 
-        <Grid
-          size={{ xs: 12, md: 5, lg: 5 }}
-          align="center"
-          style={{ paddingTop: "23px" }}
-        >
-          <Image src={data.image} alt={data.searchKey} />
-        </Grid>
+        <Card raised sx={{ width: "100%", minWidth: 0 }}>
+          <Grid container>
+            <Grid
+              size={{ xs: 12, md: 5, lg: 5 }}
+              align="center"
+              sx={{ paddingTop: "23px", paddingX: "15px" }}
+            >
+              <Image src={data.image} alt={data.searchKey} />
+            </Grid>
 
-        <Grid size={{ xs: 12, md: 6, lg: 6 }} style={{ padding: "15px" }}>
-          <StyledPageTitle align="left">{data.name}</StyledPageTitle>
-          <StyledParagraph>{data.description}</StyledParagraph>
+            <Grid size={{ xs: 12, md: 7, lg: 7 }} sx={{ minWidth: 0 }}>
+              <CardContent sx={{ padding: { xs: "15px", md: "25px" } }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: 1
+                  }}
+                >
+                  <StyledPageTitle align="left">{data.name}</StyledPageTitle>
+                  <ShareModal
+                    shareLink={`/disease?disease=${data.searchKey}`}
+                  />
+                </Box>
+                <StyledParagraph>{data.description}</StyledParagraph>
 
-          <br />
-          <StyledParagraphTitle>Symptoms</StyledParagraphTitle>
-          {data.symptoms.map((symptoms, index) => (
-            <Symptoms key={index} symptoms={symptoms} />
-          ))}
+                <Divider sx={{ margin: "20px 0" }} />
 
-          <br />
-          <StyledParagraphTitle>Good Foods</StyledParagraphTitle>
-          <GoodFoods goodFoods={data.goodFoods} />
-        </Grid>
+                <SectionTitle icon={SickIcon}>Symptoms</SectionTitle>
+                {data.symptoms.map((symptoms, index) => (
+                  <Symptoms key={index} symptoms={symptoms} />
+                ))}
+
+                <Divider sx={{ margin: "20px 0" }} />
+
+                <SectionTitle icon={RestaurantIcon}>Good Foods</SectionTitle>
+                <GoodFoods goodFoods={data.goodFoods} />
+              </CardContent>
+            </Grid>
+          </Grid>
+        </Card>
 
         <PageSection>
           <BackButton href="/" />
@@ -68,20 +107,31 @@ DiseaseDetails.getInitialProps = async function(context) {
   return { disease: data };
 };
 
+const truncate = (text, maxLength) =>
+  text.length > maxLength ? `${text.slice(0, maxLength).trim()}...` : text;
+
+const SectionTitle = ({ icon: Icon, children }) => (
+  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+    <Icon color="primary" />
+    <StyledParagraphTitle>{children}</StyledParagraphTitle>
+  </Box>
+);
+
+SectionTitle.propTypes = {
+  icon: PropTypes.elementType.isRequired,
+  children: PropTypes.string.isRequired
+};
+
 const Symptoms = props => {
   const { symptoms } = props;
   return (
     <React.Fragment>
       <StyledParagraph>{symptoms.description}</StyledParagraph>
-      <StyledParagraph component="div">
-        <ul>
-          {symptoms.symptoms.map((symptom, index) => (
-            <li key={index} style={{ marginLeft: "10px" }}>
-              {symptom}
-            </li>
-          ))}
-        </ul>
-      </StyledParagraph>
+      <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap", marginBottom: "10px" }}>
+        {symptoms.symptoms.map((symptom, index) => (
+          <Chip key={index} label={symptom} variant="outlined" color="secondary" size="small" />
+        ))}
+      </Stack>
     </React.Fragment>
   );
 };
@@ -99,6 +149,11 @@ const GoodFoods = props => {
         title="Non veg Foods:"
         foods={{ nonVegan: goodFoods.nonVegan }}
       />
+      {goodFoods.vegan.length <= 0 && goodFoods.nonVegan.length <= 0 && (
+        <StyledParagraph>
+          No food recommendations available yet for this condition.
+        </StyledParagraph>
+      )}
     </React.Fragment>
   );
 };

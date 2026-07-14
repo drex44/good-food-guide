@@ -8,7 +8,11 @@ import HomeIcon from "@mui/icons-material/Home";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 import FeedbackIcon from "@mui/icons-material/Feedback";
 
-const Layout = ({ children }) => {
+const Layout = ({
+  children,
+  title = "Good Food Guide",
+  description = "A guide to which foods help with which diseases and symptoms."
+}) => {
   const navigationLinks = [
     { title: "home", href: "/", icon: HomeIcon },
     {
@@ -22,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <React.Fragment>
-      <WebsiteHead />
+      <WebsiteHead title={title} description={description} />
       <NavigationBar links={navigationLinks} />
       <Box
         sx={{
@@ -40,11 +44,12 @@ const Layout = ({ children }) => {
   );
 };
 
-const WebsiteHead = () => (
+const WebsiteHead = ({ title, description }) => (
   <Head>
-    <title>Good Food Guide</title>
+    <title>{title}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <meta name="description" content={description} />
   </Head>
 );
 
