@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Layout from "../components/layout/Layout";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -30,11 +31,35 @@ const DiseaseDetails = ({ disease }) => {
     return <Error404 />;
   }
   let data = disease[0];
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    name: data.name,
+    description: data.description,
+    mainEntity: {
+      "@type": "MedicalCondition",
+      name: data.name,
+      description: data.description,
+      signOrSymptom: data.symptoms.flatMap(group =>
+        group.symptoms.map(symptom => ({
+          "@type": "MedicalSignOrSymptom",
+          name: symptom
+        }))
+      )
+    }
+  };
+
   return (
     <Layout
       title={`${data.name} | Good Food Guide`}
       description={truncate(data.description, 160)}
     >
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
       <Grid
         container
         style={{ maxWidth: "1100px", width: "100%" }}
