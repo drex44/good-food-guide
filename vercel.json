@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "good-food-guide",
+  "alias": ["good-food-guide.now.sh", "goodfoodguide.now.sh"],
+  "builds": [
+    { "src": "api/getAllDiseases/index.js", "use": "@vercel/node" },
+    { "src": "api/getDisease/index.js", "use": "@vercel/node" },
+    {
+      "src": "www/package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    { "src": "/api/getAllDiseases", "dest": "/api/getAllDiseases/index.js" },
+    { "src": "/api/getDisease(.*)", "dest": "/api/getDisease/index.js" },
+    { "src": "/_next/(.*)", "dest": "/www/_next/$1" },
+    { "src": "/static/(.*)", "dest": "/www/static/$1" },
+    { "src": "/(.*)", "dest": "/www/$1" }
+  ]
+}

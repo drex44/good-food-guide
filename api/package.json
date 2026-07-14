@@ -5,6 +5,9 @@
   "author": "Dhanraj Acharya",
   "license": "MIT",
   "description": "Microservices for good-food-guide",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "micro -l tcp://0.0.0.0:${PORT-3001}"

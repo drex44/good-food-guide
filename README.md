@@ -19,15 +19,16 @@ If you like this repo then show your support,
 ### Frontend
 
 - Framework: NextJS
-- Search: Algolia
-- Hosting: Zeit Now.
+- Data: static, bundled dataset (`www/data/diseases.json`) — no live backend call
+- Search: client-side filter over the same static dataset (previously Algolia; that Algolia application was deprovisioned years ago)
+- Hosting: Vercel
 
 ### Backend
 
 - Environment: NodeJS
 - Framework: Zeit Micro
-- Database: MongoDB
-- Hosting: Zeit Now, mLab
+- Database: MongoDB (Mongoose)
+- Status: present in the repo and still deployed, but currently unused by the frontend — its MongoDB connection points at a defunct mLab host
 
 For information on packages used, checkout the package.json in api and www.
 
@@ -39,13 +40,11 @@ For more, check out the [Contributing.md](https://github.com/drex44/good-food-gu
 
 ### Continuous Deployments
 
-The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
+The website is auto deployed from the master branch via [Vercel](https://vercel.com/) so if your pull request is merged, you can check it out here:
 
-This CD will break now as project structure has changed a lot!
-https://good-food-guide.netlify.com
-
-soon it will be changed to,
 https://good-food-guide.now.sh
+
+Deployment is configured in [`vercel.json`](./vercel.json): the NextJS frontend (`www`) is built with the `@vercel/next` builder and the API microservices (`api`) with `@vercel/node`.
 
 ### Quick Start for contributing
 
