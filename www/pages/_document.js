@@ -21,19 +21,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
           <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-127670782-2"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || []; function
-            gtag(){dataLayer.push(arguments);}; gtag('js', new Date());
-            gtag('config', 'UA-127670782-2');
-   `
-            }}
-          />
-          <script
             dangerouslySetInnerHTML={{
               __html: `
               window.$crisp=[];window.CRISP_WEBSITE_ID="64b60fbd-87d2-4674-aff1-772dfdc81ec8";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
@@ -41,17 +28,8 @@ class MyDocument extends Document {
             }}
           />
 
-
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-
           <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
           <link rel="stylesheet" type="text/css" href="/static/app.css" />
-
-          {/* Algolia default stylesheet */}
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/reset-min.css"
-          />
           {this.props.emotionStyleTags}
         </Head>
         <body>

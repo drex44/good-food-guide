@@ -2,15 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import InputBase from "@mui/material/InputBase";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
 import Autosuggest from "react-autosuggest";
 import Link from "next/link";
 import diseases from "../../data/diseases.json";
+
+const matchesDisease = (disease, query) => {
+  if (disease.name.toLowerCase().includes(query)) return true;
+  return disease.symptoms.some(group =>
+    group.symptoms.some(symptom => symptom.toLowerCase().includes(query))
+  );
+};
 
 const getSuggestions = value => {
   const query = value.trim().toLowerCase();
   if (query.length === 0) return [];
   return diseases.filter(
-    disease => disease.valid && disease.name.toLowerCase().includes(query)
+    disease => disease.valid && matchesDisease(disease, query)
   );
 };
 
@@ -44,6 +53,7 @@ class Search extends React.Component {
 
   render() {
     const { value, suggestions } = this.state;
+    const showNoResults = value.trim().length > 0 && suggestions.length === 0;
 
     const inputProps = {
       placeholder: "Search disease or food...",
@@ -52,15 +62,35 @@ class Search extends React.Component {
     };
 
     return (
-      <Autosuggest
-        renderInputComponent={InputComponent}
-        suggestions={suggestions}
-        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-        getSuggestionValue={this.getSuggestionValue}
-        renderSuggestion={this.renderSuggestion}
-        inputProps={inputProps}
-      />
+      <div style={{ position: "relative", width: "100%" }}>
+        <Autosuggest
+          renderInputComponent={InputComponent}
+          suggestions={suggestions}
+          onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+          onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          getSuggestionValue={this.getSuggestionValue}
+          renderSuggestion={this.renderSuggestion}
+          inputProps={inputProps}
+        />
+        {showNoResults && (
+          <Paper
+            square
+            sx={{
+              position: "absolute",
+              top: "51px",
+              left: 0,
+              width: "100%",
+              zIndex: 2,
+              borderBottomLeftRadius: "4px",
+              borderBottomRightRadius: "4px"
+            }}
+          >
+            <Typography sx={{ padding: "10px 20px", color: "text.secondary" }}>
+              No matches found
+            </Typography>
+          </Paper>
+        )}
+      </div>
     );
   }
 }

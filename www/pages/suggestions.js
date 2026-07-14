@@ -1,9 +1,13 @@
 import Layout from "../components/layout/Layout";
 import React from "react";
+import Head from "next/head";
 import Grid from "@mui/material/Grid";
 
 const Suggestions = () => (
-  <Layout>
+  <Layout title="Give Feedback | Good Food Guide">
+    <Head>
+      <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js" />
+    </Head>
     <Grid
       size={{ md: 10, xs: 12 }}
       sx={{ margin: "2%", width: { xs: "100%", md: "65%" } }}
