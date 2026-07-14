@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, InputBase } from "@material-ui/core";
+import Button from "@mui/material/Button";
+import InputBase from "@mui/material/InputBase";
 import Autosuggest from "react-autosuggest";
 import Link from "next/link";
 import diseases from "../../data/diseases.json";
@@ -65,14 +66,15 @@ class Search extends React.Component {
 }
 
 const RenderHit = ({ hit }) => (
-  <Link
+  <Button
+    component={Link}
     href={{
       pathname: "/disease",
       query: { disease: hit.searchKey }
     }}
   >
-    <Button>{hit.name}</Button>
-  </Link>
+    {hit.name}
+  </Button>
 );
 
 RenderHit.propTypes = {
@@ -80,7 +82,7 @@ RenderHit.propTypes = {
 };
 
 const InputComponent = inputProps => {
-  const { classes, inputRef = () => {}, ref, ...other } = inputProps;
+  const { classes, inputRef = () => {}, ref, key, ...other } = inputProps;
   return <InputBase style={{ color: "white" }} fullWidth {...other} />;
 };
 

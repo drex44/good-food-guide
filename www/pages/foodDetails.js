@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, withStyles } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 
 import Layout from "../components/layout/Layout";
 import {
@@ -11,13 +11,9 @@ import {
 } from "../components/layout/Commons";
 import DiseaseList from "../components/disease/DiseaseList";
 
-const styles = () => ({
-  root: { margin: "2%" }
-});
-
-const FoodDetails = ({ food = "Salmon", diseases, classes }) => (
+const FoodDetails = ({ food = "Salmon", diseases }) => (
   <Layout>
-    <Grid container className={classes.root}>
+    <Grid container style={{ margin: "2%" }}>
       <PageSection>
         <StyledPageTitle>{food}</StyledPageTitle>
       </PageSection>
@@ -55,4 +51,4 @@ FoodDetails.getInitialProps = async function(context) {
   return { food, diseases };
 };
 
-export default withStyles(styles)(FoodDetails);
+export default FoodDetails;

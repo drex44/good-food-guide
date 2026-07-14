@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Chip, Tooltip } from "@material-ui/core";
-import deepOrange from "@material-ui/core/colors/deepOrange";
-import green from "@material-ui/core/colors/green";
+import Chip from "@mui/material/Chip";
+import Tooltip from "@mui/material/Tooltip";
+import { deepOrange, green } from "@mui/material/colors";
 
 const FoodList = ({ goodFoods }) => (
   <div>

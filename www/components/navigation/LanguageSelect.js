@@ -1,5 +1,8 @@
 import React from "react";
-import { Select, MenuItem, InputLabel, FormControl } from "@material-ui/core";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import InputLabel from "@mui/material/InputLabel";
+import FormControl from "@mui/material/FormControl";
 
 class LanguageSelect extends React.Component {
   state = { languages: ["en-US"], currentLang: "en-US" };

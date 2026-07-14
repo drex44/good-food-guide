@@ -1,6 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Typography, withStyles, Grid } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 import Layout from "../components/layout/Layout";
 import {
   StyledPageTitle,
@@ -8,30 +7,19 @@ import {
   StyledParagraphTitle
 } from "../components/layout/Commons";
 
-const styles = ({ breakpoints }) => ({
-  root: {
-    textAlign: "justify",
-    [breakpoints.down("sm")]: {
-      padding: "20px 0px"
-    },
-    [breakpoints.up("md")]: {
-      padding: "20px 0px"
-    },
-    [breakpoints.up("lg")]: {
-      padding: "20px 0px"
-    }
-  }
-});
-
-const Terms = ({ classes }) => (
+const Terms = () => {
+  return (
   <Layout>
-    <Grid item lg={6} md={8} xs={10} className={classes.root}>
+    <Grid
+      size={{ lg: 6, md: 8, xs: 10 }}
+      sx={{ textAlign: "justify", padding: "20px 0px" }}
+    >
       <StyledPageTitle>Terms and Conditions ("Terms")</StyledPageTitle>
       <br />
       <StyledParagraph>Last updated: October 09, 2018</StyledParagraph>
       <StyledParagraph>
         Please read these Terms and Conditions ("Terms", "Terms and Conditions")
-        carefully before using the https://good-food-guide.now.sh website (the
+        carefully before using the https://good-food-guide.vercel.app website (the
         "Service") operated by Good Food Guide ("us", "we", or "our").
       </StyledParagraph>
       <StyledParagraph>
@@ -47,7 +35,7 @@ const Terms = ({ classes }) => (
       <br />
       <StyledParagraphTitle>Disclaimers</StyledParagraphTitle>
       <StyledParagraph>
-        All the information on this website - https://good-food-guide.now.sh -
+        All the information on this website - https://good-food-guide.vercel.app -
         is published in good faith and for general information purpose only.
         Good Food Guide does not make any warranties about the completeness,
         reliability and accuracy of this information. Any action you take upon
@@ -139,10 +127,7 @@ const Terms = ({ classes }) => (
       </StyledParagraph>
     </Grid>
   </Layout>
-);
-
-Terms.propTypes = {
-  classes: PropTypes.object.isRequired
+  );
 };
 
-export default withStyles(styles)(Terms);
+export default Terms;

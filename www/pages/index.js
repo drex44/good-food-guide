@@ -3,30 +3,17 @@ import Layout from "../components/layout/Layout";
 import DiseaseCard from "../components/disease/DiseaseCard";
 import Jumbotron from "../components/layout/Jumbotron";
 import { getAllDiseases } from "../modules/api";
-import { Grid, withStyles } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 
-const styles = () => ({
-  container: {
-    padding: "2%",
-    width: "100%"
-  },
-  diseaseCard: {
-    display: "flex"
-  }
-});
-
-const Index = ({ classes, FoodData }) => (
+const Index = ({ FoodData }) => (
   <Layout>
     <Jumbotron />
-    <Grid container spacing={8} className={classes.container}>
+    <Grid container spacing={1} sx={{ padding: "2%", width: "100%" }}>
       {FoodData.map((disease, index) => (
         <Grid
-          item
+          size={{ xs: 12, md: 6, lg: 3 }}
           key={disease.searchKey}
-          xs={12}
-          md={6}
-          lg={3}
-          className={classes.diseaseCard}
+          sx={{ display: "flex" }}
         >
           <DiseaseCard disease={disease} index={index} />
         </Grid>
@@ -42,4 +29,4 @@ Index.getInitialProps = async () => {
   };
 };
 
-export default withStyles(styles)(Index);
+export default Index;
