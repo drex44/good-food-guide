@@ -25,18 +25,22 @@ FoodList.propTypes = {
 // White text on these background shades fails WCAG AA contrast (~2.8:1 and
 // ~3.2:1 respectively); black text keeps the same vibrant backgrounds while
 // passing AA (~7.5:1 and ~6.6:1).
+// Food names in the data are inconsistently cased (e.g. "apples" vs
+// "Apples"); normalize display without touching the underlying data.
 const styles = {
   vegan: {
     background: green[500],
     color: "black",
     fontSize: 12,
-    margin: 5
+    margin: 5,
+    textTransform: "capitalize"
   },
   nonVegan: {
     background: deepOrange[500],
     color: "black",
     fontSize: 12,
-    margin: 5
+    margin: 5,
+    textTransform: "capitalize"
   }
 };
 

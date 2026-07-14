@@ -16,13 +16,19 @@ const allFoodsOf = disease => [
 ];
 
 export const getAllFoods = async () => {
-  const foodNames = new Set();
+  // Food names are inconsistently cased in the data (e.g. "apples" vs
+  // "Apples"); dedupe case-insensitively so the browse list doesn't show
+  // the same food twice, keeping whichever casing was seen first.
+  const foodNames = new Map();
   diseases
     .filter(disease => disease.valid)
     .forEach(disease =>
-      allFoodsOf(disease).forEach(food => foodNames.add(food.name))
+      allFoodsOf(disease).forEach(food => {
+        const key = food.name.toLowerCase();
+        if (!foodNames.has(key)) foodNames.set(key, food.name);
+      })
     );
-  return [...foodNames].sort((a, b) => a.localeCompare(b));
+  return [...foodNames.values()].sort((a, b) => a.localeCompare(b));
 };
 
 export const getDiseasesByFood = async foodName => {

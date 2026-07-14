@@ -46,6 +46,7 @@ const FoodDetails = ({ food, foods, diseases }) => {
                   color="secondary"
                   component={Link}
                   href={{ pathname: "/foodDetails", query: { food: name } }}
+                  sx={{ textTransform: "capitalize" }}
                 />
               ))}
             </Stack>
