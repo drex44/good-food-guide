@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Autosuggest from "react-autosuggest";
 import Link from "next/link";
+import Router from "next/router";
 import diseases from "../../data/diseases.json";
 
 const matchesDisease = (disease, query) => {
@@ -46,6 +47,13 @@ class Search extends React.Component {
     this.setState({ suggestions: [] });
   };
 
+  onSuggestionSelected = (event, { suggestion }) => {
+    Router.push({
+      pathname: "/disease",
+      query: { disease: suggestion.searchKey }
+    });
+  };
+
   getSuggestionValue(hit) {
     return hit.name;
   }
@@ -71,6 +79,7 @@ class Search extends React.Component {
           suggestions={suggestions}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+          onSuggestionSelected={this.onSuggestionSelected}
           getSuggestionValue={this.getSuggestionValue}
           renderSuggestion={this.renderSuggestion}
           inputProps={inputProps}
