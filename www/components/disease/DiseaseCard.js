@@ -54,7 +54,7 @@ const DiseaseCard = ({ disease }) => {
             {shortenText(disease.description, 0, 200) + " . . ."}
           </Typography>
           <Typography component="div" style={{ margin: "10px 0px" }}>
-            <FoodList goodFoods={disease.goodFoods} />
+            <FoodList goodFoods={disease.goodFoods} limit={6} />
           </Typography>
         </CardContent>
       </Box>
