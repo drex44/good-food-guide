@@ -5,9 +5,16 @@ import InputBase from "@mui/material/InputBase";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Autosuggest from "react-autosuggest";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import SickIcon from "@mui/icons-material/Sick";
 import Link from "next/link";
 import Router from "next/router";
 import diseases from "../../data/diseases.json";
+
+const foodsOf = disease => [
+  ...disease.goodFoods.vegan,
+  ...disease.goodFoods.nonVegan
+];
 
 const matchesDisease = (disease, query) => {
   if (disease.name.toLowerCase().includes(query)) return true;
@@ -15,16 +22,32 @@ const matchesDisease = (disease, query) => {
     group.symptoms.some(symptom => symptom.toLowerCase().includes(query))
   );
   if (matchesSymptom) return true;
-  const foods = [...disease.goodFoods.vegan, ...disease.goodFoods.nonVegan];
-  return foods.some(food => food.name.toLowerCase().includes(query));
+  return foodsOf(disease).some(food => food.name.toLowerCase().includes(query));
 };
 
 const getSuggestions = value => {
   const query = value.trim().toLowerCase();
   if (query.length === 0) return [];
-  return diseases.filter(
-    disease => disease.valid && matchesDisease(disease, query)
+
+  const validDiseases = diseases.filter(disease => disease.valid);
+
+  const matchedDiseases = validDiseases
+    .filter(disease => matchesDisease(disease, query))
+    .map(disease => ({ kind: "disease", ...disease }));
+
+  const foodNames = new Set();
+  validDiseases.forEach(disease =>
+    foodsOf(disease).forEach(food => {
+      if (food.name.toLowerCase().includes(query)) {
+        foodNames.add(food.name);
+      }
+    })
   );
+  const matchedFoods = [...foodNames]
+    .sort((a, b) => a.localeCompare(b))
+    .map(name => ({ kind: "food", name }));
+
+  return [...matchedDiseases, ...matchedFoods];
 };
 
 class Search extends React.Component {
@@ -48,10 +71,11 @@ class Search extends React.Component {
   };
 
   onSuggestionSelected = (event, { suggestion }) => {
-    Router.push({
-      pathname: "/disease",
-      query: { disease: suggestion.searchKey }
-    });
+    if (suggestion.kind === "food") {
+      Router.push({ pathname: "/foodDetails", query: { food: suggestion.name } });
+    } else {
+      Router.push({ pathname: "/disease", query: { disease: suggestion.searchKey } });
+    }
   };
 
   getSuggestionValue(hit) {
@@ -107,17 +131,30 @@ class Search extends React.Component {
   }
 }
 
-const RenderHit = ({ hit }) => (
-  <Button
-    component={Link}
-    href={{
-      pathname: "/disease",
-      query: { disease: hit.searchKey }
-    }}
-  >
-    {hit.name}
-  </Button>
-);
+const RenderHit = ({ hit }) =>
+  hit.kind === "food" ? (
+    <Button
+      component={Link}
+      href={{
+        pathname: "/foodDetails",
+        query: { food: hit.name }
+      }}
+      startIcon={<RestaurantIcon fontSize="small" />}
+    >
+      {hit.name}
+    </Button>
+  ) : (
+    <Button
+      component={Link}
+      href={{
+        pathname: "/disease",
+        query: { disease: hit.searchKey }
+      }}
+      startIcon={<SickIcon fontSize="small" />}
+    >
+      {hit.name}
+    </Button>
+  );
 
 RenderHit.propTypes = {
   hit: PropTypes.object.isRequired
