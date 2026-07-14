@@ -10,9 +10,12 @@ import diseases from "../../data/diseases.json";
 
 const matchesDisease = (disease, query) => {
   if (disease.name.toLowerCase().includes(query)) return true;
-  return disease.symptoms.some(group =>
+  const matchesSymptom = disease.symptoms.some(group =>
     group.symptoms.some(symptom => symptom.toLowerCase().includes(query))
   );
+  if (matchesSymptom) return true;
+  const foods = [...disease.goodFoods.vegan, ...disease.goodFoods.nonVegan];
+  return foods.some(food => food.name.toLowerCase().includes(query));
 };
 
 const getSuggestions = value => {
