@@ -14,7 +14,6 @@ import {
 } from "@material-ui/core";
 import Link from "next/link";
 import ShareModal from "../ShareModal";
-import Highlight from "react-instantsearch-dom/dist/cjs/widgets/Highlight";
 
 const styles = theme => ({
   root: {
@@ -35,7 +34,7 @@ const styles = theme => ({
   }
 });
 
-const DiseaseCard = ({ disease, classes, searchable }) => (
+const DiseaseCard = ({ disease, classes }) => (
   <Card raised className={classes.root}>
     <div>
       <Link
@@ -51,18 +50,9 @@ const DiseaseCard = ({ disease, classes, searchable }) => (
             title={disease.name}
           />
           <CardContent>
-            {searchable ? (
-              <Highlight attribute="name" hit={disease} />
-            ) : (
-              <Typography
-                gutterBottom
-                variant="h5"
-                component="h2"
-                color="primary"
-              >
-                {disease.name}
-              </Typography>
-            )}
+            <Typography gutterBottom variant="h5" component="h2" color="primary">
+              {disease.name}
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Link>

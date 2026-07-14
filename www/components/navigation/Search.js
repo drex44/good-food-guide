@@ -1,26 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { InstantSearch, Highlight } from "react-instantsearch/dom";
 import { Button, InputBase } from "@material-ui/core";
 import Autosuggest from "react-autosuggest";
-import { connectAutoComplete } from "react-instantsearch/connectors";
 import Link from "next/link";
-import { SearchAppId, SearchApiKey, SearchIndexName } from "../../modules/searchConfig";
+import diseases from "../dataList";
 
-const Search = () => (
-  <InstantSearch
-    appId={SearchAppId}
-    apiKey={SearchApiKey}
-    indexName={SearchIndexName}
-  >
-    <ConnectedSearchBox />
-  </InstantSearch>
-);
+const getSuggestions = value => {
+  const query = value.trim().toLowerCase();
+  if (query.length === 0) return [];
+  return diseases.filter(disease => disease.sick.toLowerCase().includes(query));
+};
 
-class SearchBox2 extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: "" };
+    this.state = { value: "", suggestions: [] };
   }
 
   onChange = (_, { newValue }) => {
@@ -30,15 +24,15 @@ class SearchBox2 extends React.Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
-    this.props.refine(value);
+    this.setState({ suggestions: getSuggestions(value) });
   };
 
   onSuggestionsClearRequested = () => {
-    this.props.refine();
+    this.setState({ suggestions: [] });
   };
 
   getSuggestionValue(hit) {
-    return hit.name;
+    return hit.sick;
   }
 
   renderSuggestion(hit) {
@@ -46,8 +40,7 @@ class SearchBox2 extends React.Component {
   }
 
   render() {
-    const { hits } = this.props;
-    const { value } = this.state;
+    const { value, suggestions } = this.state;
 
     const inputProps = {
       placeholder: "Search disease or food...",
@@ -58,7 +51,7 @@ class SearchBox2 extends React.Component {
     return (
       <Autosuggest
         renderInputComponent={InputComponent}
-        suggestions={hits}
+        suggestions={suggestions}
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={this.getSuggestionValue}
@@ -69,8 +62,6 @@ class SearchBox2 extends React.Component {
   }
 }
 
-const ConnectedSearchBox = connectAutoComplete(SearchBox2);
-
 const RenderHit = ({ hit }) => (
   <Link
     href={{
@@ -78,9 +69,7 @@ const RenderHit = ({ hit }) => (
       query: { disease: hit.searchKey }
     }}
   >
-    <Button>
-      <Highlight attribute="name" hit={hit} tagName="mark" />
-    </Button>
+    <Button>{hit.sick}</Button>
   </Link>
 );
 
