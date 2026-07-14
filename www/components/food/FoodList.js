@@ -4,32 +4,22 @@ import Chip from "@mui/material/Chip";
 import Tooltip from "@mui/material/Tooltip";
 import { deepOrange, green } from "@mui/material/colors";
 
-const FoodList = ({ goodFoods, limit }) => {
+const FoodList = ({ goodFoods }) => {
   const items = Object.keys(goodFoods).flatMap(type =>
     goodFoods[type].map(food => ({ food, type }))
   );
-  const visible = limit ? items.slice(0, limit) : items;
-  const remaining = items.length - visible.length;
 
   return (
     <div>
-      {visible.map(({ food, type }) => (
+      {items.map(({ food, type }) => (
         <FoodListItem key={food.name} type={type} food={food} />
       ))}
-      {remaining > 0 && (
-        <Chip
-          label={`+${remaining} more`}
-          variant="outlined"
-          style={{ fontSize: 12, margin: 5 }}
-        />
-      )}
     </div>
   );
 };
 
 FoodList.propTypes = {
-  goodFoods: PropTypes.object.isRequired,
-  limit: PropTypes.number
+  goodFoods: PropTypes.object.isRequired
 };
 
 // White text on these background shades fails WCAG AA contrast (~2.8:1 and
