@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+import { green } from "@mui/material/colors";
 import SickIcon from "@mui/icons-material/Sick";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FoodList from "../components/food/FoodList";
@@ -129,7 +130,13 @@ const Symptoms = props => {
       <StyledParagraph>{symptoms.description}</StyledParagraph>
       <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: "wrap", marginBottom: "10px" }}>
         {symptoms.symptoms.map((symptom, index) => (
-          <Chip key={index} label={symptom} variant="outlined" color="secondary" size="small" />
+          <Chip
+            key={index}
+            label={symptom}
+            variant="outlined"
+            size="small"
+            sx={{ color: green[800], borderColor: green[800] }}
+          />
         ))}
       </Stack>
     </React.Fragment>

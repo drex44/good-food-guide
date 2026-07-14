@@ -18,16 +18,19 @@ FoodList.prototype = {
   goodFoods: PropTypes.array
 };
 
+// White text on these background shades fails WCAG AA contrast (~2.8:1 and
+// ~3.2:1 respectively); black text keeps the same vibrant backgrounds while
+// passing AA (~7.5:1 and ~6.6:1).
 const styles = {
   vegan: {
     background: green[500],
-    color: "white",
+    color: "black",
     fontSize: 12,
     margin: 5
   },
   nonVegan: {
     background: deepOrange[500],
-    color: "white",
+    color: "black",
     fontSize: 12,
     margin: 5
   }
