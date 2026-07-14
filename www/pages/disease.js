@@ -74,14 +74,14 @@ const DiseaseDetails = ({ disease }) => {
         <Card raised sx={{ width: "100%", minWidth: 0 }}>
           <Grid container>
             <Grid
-              size={{ xs: 12, md: 5, lg: 5 }}
+              size={{ xs: 12, md: 6, lg: 6 }}
               align="center"
               sx={{ paddingTop: "23px", paddingX: "15px" }}
             >
               <Image src={data.image} alt={data.searchKey} />
             </Grid>
 
-            <Grid size={{ xs: 12, md: 7, lg: 7 }} sx={{ minWidth: 0 }}>
+            <Grid size={{ xs: 12, md: 6, lg: 6 }} sx={{ minWidth: 0 }}>
               <CardContent sx={{ padding: { xs: "15px", md: "25px" } }}>
                 <Box
                   sx={{

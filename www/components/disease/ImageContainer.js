@@ -18,12 +18,12 @@ const ImageContainer = ({ src, alt }) => {
   }, []);
 
   return (
-    <Box sx={{ width: { xs: "100%", md: "60%", lg: "40%" } }}>
+    <Box sx={{ width: "100%" }}>
       {hasError ? (
         <Box
           sx={{
             width: "100%",
-            maxWidth: "400px",
+            maxWidth: { xs: "400px", md: "460px" },
             height: "260px",
             margin: "0 auto",
             display: "flex",
@@ -46,8 +46,8 @@ const ImageContainer = ({ src, alt }) => {
           decoding="async"
           onError={() => setHasError(true)}
           sx={{
-            maxWidth: "400px",
-            maxHeight: "400px",
+            maxWidth: { xs: "400px", md: "460px" },
+            maxHeight: { xs: "400px", md: "460px" },
             width: "100%",
             height: "auto",
             display: "block",
