@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import NavigationBar from "../navigation/NavigationBar";
 import AboutIcon from "@mui/icons-material/Info";
 import HomeIcon from "@mui/icons-material/Home";
-import ReceiptIcon from "@mui/icons-material/Receipt";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
 import FeedbackIcon from "@mui/icons-material/Feedback";
 
 const Layout = ({
@@ -15,12 +15,12 @@ const Layout = ({
 }) => {
   const navigationLinks = [
     { title: "home", href: "/", icon: HomeIcon },
+    { title: "Browse Foods", href: "/foodDetails", icon: RestaurantIcon },
     {
       title: "Give Feedback",
       href: "/suggestions",
       icon: FeedbackIcon
     },
-    { title: "Food Details", href: "/foodDetails", icon: ReceiptIcon },
     { title: "About", href: "/about", icon: AboutIcon }
   ];
 
