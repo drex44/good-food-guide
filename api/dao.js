@@ -7,33 +7,16 @@ function throw_promise_error(error) {
 }
 
 function getAllDiseases() {
-  return new Promise(function(resolve, reject) {
-    var query = models.Disease.find({ valid: true });
-    query.exec(function(err, docs) {
-      if (err) reject(err);
-      else resolve(docs);
-    });
-  });
+  return models.Disease.find({ valid: true }).exec();
 }
 
 function getDisease(searchKey) {
-  return new Promise(function(resolve, reject) {
-    var query = models.Disease.find({ valid: true, searchKey: searchKey });
-    query.exec(function(err, docs) {
-      if (err) reject(err);
-      else resolve(docs);
-    });
-  });
+  return models.Disease.find({ valid: true, searchKey: searchKey }).exec();
 }
 
 function saveNewDisease(newDisease) {
-  return new Promise(function(resolve, reject) {
-    var disease = new models.Disease(newDisease);
-    disease.save(function(err, doc) {
-      if (err) reject(err);
-      else resolve(doc);
-    });
-  });
+  var disease = new models.Disease(newDisease);
+  return disease.save();
 }
 
 module.exports = {

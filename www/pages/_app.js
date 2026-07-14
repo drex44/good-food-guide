@@ -1,8 +1,8 @@
 import React from "react";
-import App, { Container } from "next/app";
+import App from "next/app";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import JssProvider from "react-jss/lib/JssProvider";
+import { JssProvider } from "react-jss";
 import getPageContext from "../src/getPageContext";
 import NProgress from "nprogress";
 import Router from "next/router";
@@ -30,7 +30,7 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
+      <React.Fragment>
         {/* Wrap every page in Jss and Theme providers */}
         <JssProvider
           registry={this.pageContext.sheetsRegistry}
@@ -49,7 +49,7 @@ class MyApp extends App {
             <Component pageContext={this.pageContext} {...pageProps} />
           </MuiThemeProvider>
         </JssProvider>
-      </Container>
+      </React.Fragment>
     );
   }
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import Layout from "../components/layout/Layout";
 import Grid from "@material-ui/core/Grid";
 import FoodList from "../components/food/FoodList";
