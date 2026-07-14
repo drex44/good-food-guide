@@ -12,13 +12,19 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
           />
           <script
             dangerouslySetInnerHTML={{

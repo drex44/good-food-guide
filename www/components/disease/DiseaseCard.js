@@ -35,9 +35,13 @@ const DiseaseCard = ({ disease }) => {
           sx={{ width: "100%" }}
         >
           <CardMedia
-            sx={{ height: 0, paddingTop: "25%" }}
+            component="img"
+            sx={{ aspectRatio: "4 / 1" }}
             image={disease.image}
+            alt={disease.name}
             title={disease.name}
+            loading="lazy"
+            decoding="async"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" color="primary">

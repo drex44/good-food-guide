@@ -43,6 +43,7 @@ const ImageContainer = ({ src, alt }) => {
           ref={imgRef}
           src={src}
           alt={alt}
+          decoding="async"
           onError={() => setHasError(true)}
           sx={{
             maxWidth: "400px",
