@@ -1,10 +1,21 @@
 import Layout from "../components/layout/Layout";
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { StyledPageTitle, StyledSubtitle } from "../components/layout/Commons";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Link from "next/link";
+import HomeIcon from "@mui/icons-material/Home";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
+import FeedbackIcon from "@mui/icons-material/Feedback";
+import PeopleIcon from "@mui/icons-material/People";
+import {
+  StyledPageTitle,
+  StyledSubtitle,
+  PageSection
+} from "../components/layout/Commons";
 
 const About = () => (
-  <Layout>
+  <Layout title="About | Good Food Guide">
     <Grid style={{ margin: "2%" }}>
       <StyledPageTitle>About us</StyledPageTitle>
       <StyledSubtitle>
@@ -16,6 +27,48 @@ const About = () => (
           Github
         </a>
       </StyledSubtitle>
+
+      <PageSection>
+        <Stack
+          direction="row"
+          spacing={2}
+          useFlexGap
+          sx={{ flexWrap: "wrap", justifyContent: "center", padding: "20px 0" }}
+        >
+          <Button
+            component={Link}
+            href="/"
+            variant="outlined"
+            startIcon={<HomeIcon />}
+          >
+            Browse Diseases
+          </Button>
+          <Button
+            component={Link}
+            href="/foodDetails"
+            variant="outlined"
+            startIcon={<RestaurantIcon />}
+          >
+            Browse Foods
+          </Button>
+          <Button
+            component={Link}
+            href="/contributors"
+            variant="outlined"
+            startIcon={<PeopleIcon />}
+          >
+            Contributors
+          </Button>
+          <Button
+            component={Link}
+            href="/suggestions"
+            variant="outlined"
+            startIcon={<FeedbackIcon />}
+          >
+            Give Feedback
+          </Button>
+        </Stack>
+      </PageSection>
     </Grid>
   </Layout>
 );
