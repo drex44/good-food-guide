@@ -5,7 +5,6 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
@@ -82,23 +81,17 @@ const DiseaseCard = ({ disease }) => {
         </CardContent>
       </Box>
       <DiseaseCardAction>
-        <DiseaseCardLink>
-          <ShareModal
-            shareLink={`/disease?disease=${disease.searchKey}`}
-          />
-        </DiseaseCardLink>
-        <DiseaseCardLink>
-          <Button
-            component={Link}
-            href={{
-              pathname: "/disease",
-              query: { disease: disease.searchKey }
-            }}
-            color="primary"
-          >
-            Learn More
-          </Button>
-        </DiseaseCardLink>
+        <ShareModal shareLink={`/disease?disease=${disease.searchKey}`} />
+        <Button
+          component={Link}
+          href={{
+            pathname: "/disease",
+            query: { disease: disease.searchKey }
+          }}
+          color="primary"
+        >
+          Learn More
+        </Button>
       </DiseaseCardAction>
     </Card>
   );
@@ -113,23 +106,13 @@ const shortenText = (text, startingPoint, maxLength) => {
 };
 
 const DiseaseCardAction = ({ children }) => (
-  <CardActions>
-    <Grid container align="center">
-      {children}
-    </Grid>
+  <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+    {children}
   </CardActions>
 );
 
 DiseaseCardAction.propTypes = {
   children: PropTypes.array.isRequired
-};
-
-const DiseaseCardLink = ({ children }) => (
-  <Grid size={{ xs: 6 }}>{children}</Grid>
-);
-
-DiseaseCardLink.propTypes = {
-  children: PropTypes.object.isRequired
 };
 
 export default DiseaseCard;
