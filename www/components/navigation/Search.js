@@ -5,14 +5,13 @@ import { Button, InputBase } from "@material-ui/core";
 import Autosuggest from "react-autosuggest";
 import { connectAutoComplete } from "react-instantsearch/connectors";
 import Link from "next/link";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
+import { SearchAppId, SearchApiKey, SearchIndexName } from "../../modules/searchConfig";
 
 const Search = () => (
   <InstantSearch
-    appId={publicRuntimeConfig.SearchAppId}
-    apiKey={publicRuntimeConfig.SearchApiKey}
-    indexName={publicRuntimeConfig.SearchIndexName}
+    appId={SearchAppId}
+    apiKey={SearchApiKey}
+    indexName={SearchIndexName}
   >
     <ConnectedSearchBox />
   </InstantSearch>
