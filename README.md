@@ -39,13 +39,11 @@ For more, check out the [Contributing.md](https://github.com/drex44/good-food-gu
 
 ### Continuous Deployments
 
-The website will be auto deployed from the master branch so if your pull request is merged, you can check it out here!
+The website is auto deployed from the master branch via [Vercel](https://vercel.com/) so if your pull request is merged, you can check it out here:
 
-This CD will break now as project structure has changed a lot!
-https://good-food-guide.netlify.com
-
-soon it will be changed to,
 https://good-food-guide.now.sh
+
+Deployment is configured in [`vercel.json`](./vercel.json): the NextJS frontend (`www`) is built with the `@vercel/next` builder and the API microservices (`api`) with `@vercel/node`.
 
 ### Quick Start for contributing
 
