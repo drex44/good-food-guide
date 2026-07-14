@@ -1,44 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
+import Box from "@mui/material/Box";
 
-const styles = ({ breakpoints }) => ({
-  root: {
-    width: "100%"
-  },
-  grow: {
-    flexGrow: 1
-  },
-  images: {
-    maxWidth: "400px",
-    maxHeight: "400px",
-    height: "auto",
-    display: "block",
-    borderRadius: "10px"
-  },
-  boxImage: {
-    [breakpoints.down("sm")]: {
-      width: "100%"
-    },
-    [breakpoints.up("md")]: {
-      width: "60%"
-    },
-    [breakpoints.up("lg")]: {
-      width: "40%"
-    }
-  }
-});
-
-const ImageContainer = ({ classes, src, alt }) => (
-  <div className={classes.boxImage}>
-    <img className={classes.images} src={src} alt={alt} />
-  </div>
-);
+const ImageContainer = ({ src, alt }) => {
+  return (
+    <Box sx={{ width: { xs: "100%", md: "60%", lg: "40%" } }}>
+      <Box
+        component="img"
+        src={src}
+        alt={alt}
+        sx={{
+          maxWidth: "400px",
+          maxHeight: "400px",
+          height: "auto",
+          display: "block",
+          borderRadius: "10px"
+        }}
+      />
+    </Box>
+  );
+};
 
 ImageContainer.propTypes = {
-  classes: PropTypes.object.isRequired,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(ImageContainer);
+export default ImageContainer;

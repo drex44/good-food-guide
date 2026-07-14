@@ -1,25 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Head from "next/head";
+import Box from "@mui/material/Box";
 import Footer from "./Footer";
 import NavigationBar from "../navigation/NavigationBar";
-import { withStyles } from "@material-ui/core/styles";
-import AboutIcon from "@material-ui/icons/Info";
-import HomeIcon from "@material-ui/icons/Home";
-import ReceiptIcon from "@material-ui/icons/Receipt";
-import FeedbackIcon from "@material-ui/icons/Feedback";
+import AboutIcon from "@mui/icons-material/Info";
+import HomeIcon from "@mui/icons-material/Home";
+import ReceiptIcon from "@mui/icons-material/Receipt";
+import FeedbackIcon from "@mui/icons-material/Feedback";
 
-const styles = () => ({
-  content: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    width: "100%",
-    minHeight: "calc(100vh - 114px)"
-  }
-});
-
-const Layout = ({ classes, children }) => {
+const Layout = ({ children }) => {
   const navigationLinks = [
     { title: "home", href: "/", icon: HomeIcon },
     {
@@ -35,14 +24,20 @@ const Layout = ({ classes, children }) => {
     <React.Fragment>
       <WebsiteHead />
       <NavigationBar links={navigationLinks} />
-      <div className={classes.content}>{children}</div>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
+          minHeight: "calc(100vh - 114px)"
+        }}
+      >
+        {children}
+      </Box>
       <Footer />
     </React.Fragment>
   );
-};
-
-Layout.propTypes = {
-  classes: PropTypes.object.isRequired
 };
 
 const WebsiteHead = () => (
@@ -53,4 +48,4 @@ const WebsiteHead = () => (
   </Head>
 );
 
-export default withStyles(styles)(Layout);
+export default Layout;

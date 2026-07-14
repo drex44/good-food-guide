@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import Grid from "@material-ui/core/Grid";
+import Grid from "@mui/material/Grid";
 import FoodList from "../components/food/FoodList";
 import Image from "../components/disease/ImageContainer";
 import Breadcrumb from "../components/layout/Breadcrumb";
@@ -28,17 +28,14 @@ const DiseaseDetails = ({ disease }) => {
         </PageSection>
 
         <Grid
-          item
-          xs={12}
-          md={5}
-          lg={5}
+          size={{ xs: 12, md: 5, lg: 5 }}
           align="center"
           style={{ paddingTop: "23px" }}
         >
           <Image src={data.image} alt={data.searchKey} />
         </Grid>
 
-        <Grid item xs={12} md={6} lg={6} style={{ padding: "15px" }}>
+        <Grid size={{ xs: 12, md: 6, lg: 6 }} style={{ padding: "15px" }}>
           <StyledPageTitle align="left">{data.name}</StyledPageTitle>
           <StyledParagraph>{data.description}</StyledParagraph>
 
@@ -76,7 +73,7 @@ const Symptoms = props => {
   return (
     <React.Fragment>
       <StyledParagraph>{symptoms.description}</StyledParagraph>
-      <StyledParagraph>
+      <StyledParagraph component="div">
         <ul>
           {symptoms.symptoms.map((symptom, index) => (
             <li key={index} style={{ marginLeft: "10px" }}>

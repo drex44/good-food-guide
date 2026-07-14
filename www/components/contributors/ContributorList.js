@@ -1,79 +1,61 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import classNames from "classnames";
+import Typography from "@mui/material/Typography";
+import Avatar from "@mui/material/Avatar";
+import Box from "@mui/material/Box";
 
-const styles = () => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-around",
-    overflow: "hidden"
-  }
-});
-
-const Contributors = ({ classes, contributors }) => (
-  <React.Fragment>
-    <div className={classes.root}>
-      {contributors.map((item, index) => {
-        return <StyledContributor key={index} contributor={item} />;
-      })}
-    </div>
-  </React.Fragment>
+const Contributors = ({ contributors }) => (
+  <Box
+    sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "space-around",
+      overflow: "hidden"
+    }}
+  >
+    {contributors.map((item, index) => {
+      return <StyledContributor key={index} contributor={item} />;
+    })}
+  </Box>
 );
 
 Contributors.propTypes = {
-  classes: PropTypes.object.isRequired,
   contributors: PropTypes.array.isRequired
 };
 
-const contributorStyles = () => ({
-  contributor: {
-    display: "flex",
-    justifyContent: "center",
-    flexDirection: "column",
-    padding: "10px",
-    transition: "0.5s",
-    "&:hover": {
-      transform: "scale(1.2)"
-    }
-  },
-  avatar: {
-    margin: 10
-  },
-  bigAvatar: {
-    width: 60,
-    height: 60
-  }
-});
-
-const Contributor = props => {
-  const { contributor, classes } = props;
+const StyledContributor = props => {
+  const { contributor } = props;
   return (
-    <div className={classes.contributor}>
-      <a href={contributor.html_url} target="_blank">
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        padding: "10px",
+        transition: "0.5s",
+        "&:hover": {
+          transform: "scale(1.2)"
+        }
+      }}
+    >
+      <a href={contributor.html_url} target="_blank" rel="noreferrer">
         <center>
           <Avatar
             alt={contributor.login}
             src={contributor.avatar_url}
-            className={classNames(classes.avatar, classes.bigAvatar)}
+            sx={{ margin: "10px", width: 60, height: 60 }}
           />
         </center>
       </a>
       <Typography style={{ textAlign: "center" }}>
         {contributor.login}
       </Typography>
-    </div>
+    </Box>
   );
 };
 
-Contributor.propTypes = {
-  classes: PropTypes.object.isRequired,
+StyledContributor.propTypes = {
   contributor: PropTypes.object.isRequired
 };
 
-const StyledContributor = withStyles(contributorStyles)(Contributor);
-
-export default withStyles(styles)(Contributors);
+export default Contributors;

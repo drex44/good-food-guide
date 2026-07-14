@@ -1,28 +1,11 @@
 import Layout from "../components/layout/Layout";
 import React from "react";
-import PropTypes from "prop-types";
-import { withStyles, Grid } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 import { StyledPageTitle, StyledSubtitle } from "../components/layout/Commons";
 
-const styles = ({ breakpoints }) => ({
-  root: { margin: "2%" },
-  title: {
-    [breakpoints.down("sm")]: {
-      fontSize: "1.75em",
-      textAlign: "center"
-    },
-    [breakpoints.up("md")]: {
-      fontSize: "2.75em"
-    },
-    [breakpoints.up("lg")]: {
-      fontSize: "3.75em"
-    }
-  }
-});
-
-const About = ({ classes }) => (
+const About = () => (
   <Layout>
-    <Grid className={classes.root}>
+    <Grid style={{ margin: "2%" }}>
       <StyledPageTitle>About us</StyledPageTitle>
       <StyledSubtitle>
         An open source project to show what to eat when you're ill
@@ -37,8 +20,4 @@ const About = ({ classes }) => (
   </Layout>
 );
 
-About.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(About);
+export default About;

@@ -1,98 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  MenuItem,
-  Menu,
-  withStyles,
-  Button
-} from "@material-ui/core";
-import { fade } from "@material-ui/core/styles/colorManipulator";
-import MenuIcon from "@material-ui/icons/Menu";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import { alpha } from "@mui/material/styles";
+import MenuIcon from "@mui/icons-material/Menu";
 import Search from "./Search";
 
-const styles = ({ breakpoints, palette, shape, spacing, transitions }) => ({
-  root: {
-    width: "100%"
-  },
-  grow: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20
-  },
-  title: {
-    display: "none",
-    [breakpoints.up("sm")]: {
-      display: "block"
-    }
-  },
-  search: {
-    position: "relative",
-    borderRadius: shape.borderRadius,
-    backgroundColor: fade(palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: fade(palette.common.white, 0.25)
-    },
-    marginRight: spacing.unit * 2,
-    marginLeft: 0,
-    width: "100%",
-    [breakpoints.up("sm")]: {
-      marginLeft: spacing.unit * 3,
-      width: "auto"
-    }
-  },
-  searchIcon: {
-    width: spacing.unit * 9,
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center"
-  },
-  inputRoot: {
-    color: "inherit",
-    width: "100%"
-  },
-  inputInput: {
-    paddingTop: spacing.unit,
-    paddingRight: spacing.unit,
-    paddingBottom: spacing.unit,
-    paddingLeft: spacing.unit * 10,
-    transition: transitions.create("width"),
-    width: "100%",
-    [breakpoints.up("md")]: {
-      width: 200
-    }
-  },
-  desktopSection: {
-    display: "none",
-    [breakpoints.up("md")]: {
-      display: "flex"
-    }
-  },
-  mobileSection: {
-    display: "flex",
-    [breakpoints.up("md")]: {
-      display: "none"
-    }
-  }
-});
+const desktopSectionSx = { display: { xs: "none", md: "flex" } };
+const mobileSectionSx = { display: { xs: "flex", md: "none" } };
 
 const WebsiteHeader = ({ children }) => (
-  <Link href="/">
-    <Button color="inherit">
-      <Typography variant="h6" color="inherit">
-        {children}
-      </Typography>
-    </Button>
-  </Link>
+  <Button component={Link} href="/" color="inherit">
+    <Typography variant="h6" color="inherit">
+      {children}
+    </Typography>
+  </Button>
 );
 
 WebsiteHeader.propTypes = {
@@ -100,14 +29,12 @@ WebsiteHeader.propTypes = {
 };
 
 const DesktopMenuItem = ({ icon: Icon, href, children }) => (
-  <Link href={href}>
-    <Button color="inherit">
-      <Icon />
-      <Typography color="inherit" style={{ marginLeft: "7px" }}>
-        {children}
-      </Typography>
-    </Button>
-  </Link>
+  <Button component={Link} href={href} color="inherit">
+    <Icon />
+    <Typography color="inherit" style={{ marginLeft: "7px" }}>
+      {children}
+    </Typography>
+  </Button>
 );
 
 DesktopMenuItem.propTypes = {
@@ -116,99 +43,105 @@ DesktopMenuItem.propTypes = {
 };
 
 const MobileMenuItem = ({ icon: Icon, href, children }) => (
-  <Link href={href}>
-    <MenuItem>
-      <IconButton color="inherit">
-        <Icon />
-      </IconButton>
-      {children}
-    </MenuItem>
-  </Link>
+  <MenuItem component={Link} href={href}>
+    <IconButton color="inherit" component="span">
+      <Icon />
+    </IconButton>
+    {children}
+  </MenuItem>
 );
 
 MobileMenuItem.propTypes = {
   href: PropTypes.string.isRequired
 };
 
-class NavigationBar extends React.Component {
-  state = {
-    mobileMoreAnchorEl: null
+const NavigationBar = ({ links }) => {
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const handleMobileMenuOpen = event => {
+    setMobileMoreAnchorEl(event.currentTarget);
   };
 
-  handleMobileMenuOpen = event => {
-    this.setState({ mobileMoreAnchorEl: event.currentTarget });
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
   };
 
-  handleMobileMenuClose = () => {
-    this.setState({ mobileMoreAnchorEl: null });
-  };
+  const MobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: "top", horizontal: "right" }}
+      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      {links.map((link, index) => (
+        <MobileMenuItem key={index} href={link.href} icon={link.icon}>
+          {link.title}
+        </MobileMenuItem>
+      ))}
+    </Menu>
+  );
 
-  render() {
-    const { mobileMoreAnchorEl } = this.state;
-    const { classes, links } = this.props;
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const DesktopMenu = (
+    <React.Fragment>
+      {links.map((link, index) => (
+        <DesktopMenuItem key={index} href={link.href} icon={link.icon}>
+          {link.title}
+        </DesktopMenuItem>
+      ))}
+    </React.Fragment>
+  );
 
-    const MobileMenu = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        transformOrigin={{ vertical: "top", horizontal: "right" }}
-        open={isMobileMenuOpen}
-        onClose={this.handleMobileMenuClose}
-      >
-        {links.map((link, index) => (
-          <MobileMenuItem key={index} href={link.href} icon={link.icon}>
-            {link.title}
-          </MobileMenuItem>
-        ))}
-      </Menu>
-    );
-
-    const DesktopMenu = (
-      <React.Fragment>
-        {links.map((link, index) => (
-          <DesktopMenuItem key={index} href={link.href} icon={link.icon}>
-            {link.title}
-          </DesktopMenuItem>
-        ))}
-      </React.Fragment>
-    );
-
-    return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <WebsiteHeader>
-              <React.Fragment>
-                <div className={classes.desktopSection}>Good Food Guide</div>
-                <div className={classes.mobileSection}>GFG</div>
-              </React.Fragment>
-            </WebsiteHeader>
-            <div className={classes.search}>
-              <Search />
-            </div>
-            <div className={classes.grow} />
-            <div className={classes.desktopSection}>{DesktopMenu}</div>
-            <div className={classes.mobileSection}>
-              <IconButton
-                aria-haspopup="true"
-                onClick={this.handleMobileMenuOpen}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              {MobileMenu}
-            </div>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
-  }
-}
+  return (
+    <Box sx={{ width: "100%" }}>
+      <AppBar position="static">
+        <Toolbar>
+          <WebsiteHeader>
+            <React.Fragment>
+              <Box sx={desktopSectionSx}>Good Food Guide</Box>
+              <Box sx={mobileSectionSx}>GFG</Box>
+            </React.Fragment>
+          </WebsiteHeader>
+          <Box
+            sx={theme => ({
+              position: "relative",
+              borderRadius: theme.shape.borderRadius,
+              backgroundColor: alpha(theme.palette.common.white, 0.15),
+              "&:hover": {
+                backgroundColor: alpha(theme.palette.common.white, 0.25)
+              },
+              marginRight: theme.spacing(2),
+              marginLeft: 0,
+              width: "100%",
+              [theme.breakpoints.up("sm")]: {
+                marginLeft: theme.spacing(3),
+                width: "auto"
+              }
+            })}
+          >
+            <Search />
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={desktopSectionSx}>{DesktopMenu}</Box>
+          <Box sx={mobileSectionSx}>
+            <IconButton
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            {MobileMenu}
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+};
 
 NavigationBar.propTypes = {
-  classes: PropTypes.object.isRequired,
   links: PropTypes.array.isRequired
 };
 
-export default withStyles(styles)(NavigationBar);
+export default NavigationBar;

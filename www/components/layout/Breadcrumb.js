@@ -1,82 +1,67 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-import Typography from "@material-ui/core/Typography";
-import Icon from "@material-ui/core/Icon";
-import Tooltip from "@material-ui/core/Tooltip";
+import Typography from "@mui/material/Typography";
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
+import Box from "@mui/material/Box";
 
-import { withStyles } from "@material-ui/core/styles";
+const Breadcrumb = () => {
+  const [sickName, setSickName] = useState("");
 
-const styles = ({ palette }) => ({
-  root: {
-    textAlign: "center",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "50px",
+  useEffect(() => {
+    setSickName(getQueryStringValue("disease"));
+  }, []);
 
-    "& p": {
-      display: "inline-block"
-    },
+  if (!sickName) return null;
 
-    "& a": {
-      margin: 0,
-      height: 18
-    },
+  return (
+    <Box
+      sx={{
+        textAlign: "center",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "50px",
 
-    "& .homeIcon": {
-      fontSize: 18,
-      color: palette.primary.main,
+        "& p": {
+          display: "inline-block"
+        },
 
-      "&:hover": {
-        color: "#751d84"
-      }
-    },
+        "& a": {
+          margin: 0,
+          height: 18
+        },
 
-    "& .slash": {
-      margin: "0 10px"
-    },
+        "& .homeIcon": {
+          fontSize: 18,
+          color: "primary.main",
 
-    "& .breadcrumbTitle": {
-      textTransform: "capitalize"
-    }
-  }
-});
+          "&:hover": {
+            color: "#751d84"
+          }
+        },
 
-class Breadcrumb extends React.Component {
-  state = {
-    sickName: ""
-  };
-  componentDidMount() {
-    this.setState({ sickName: getQueryStringValue("disease") });
-  }
-  render() {
-    const { classes } = this.props;
-    const { sickName } = this.state;
+        "& .slash": {
+          margin: "0 10px"
+        },
 
-    return (
-      <React.Fragment>
-        {sickName ? (
-          <div className={classes.root}>
-            <Link href="/">
-              <Tooltip title="Home" placement="left">
-                <Icon className="homeIcon">home</Icon>
-              </Tooltip>
-            </Link>
-            <BreadcrumbSlash />
-            <BreadcrumbTitle>disease</BreadcrumbTitle>
-            <BreadcrumbSlash />
-            <BreadcrumbTitle>{sickName}</BreadcrumbTitle>
-          </div>
-        ) : null}
-      </React.Fragment>
-    );
-  }
-}
-
-Breadcrumb.propTypes = {
-  classes: PropTypes.object.isRequired
+        "& .breadcrumbTitle": {
+          textTransform: "capitalize"
+        }
+      }}
+    >
+      <Link href="/">
+        <Tooltip title="Home" placement="left">
+          <Icon className="homeIcon">home</Icon>
+        </Tooltip>
+      </Link>
+      <BreadcrumbSlash />
+      <BreadcrumbTitle>disease</BreadcrumbTitle>
+      <BreadcrumbSlash />
+      <BreadcrumbTitle>{sickName}</BreadcrumbTitle>
+    </Box>
+  );
 };
 
 function getQueryStringValue(key) {
@@ -97,10 +82,6 @@ const BreadcrumbTitle = ({ children }) => (
   <Typography className="breadcrumbTitle">{children}</Typography>
 );
 
-BreadcrumbTitle.propTypes = {
-  children: PropTypes.string.isRequired
-};
-
 const BreadcrumbSlash = () => <Typography className="slash">/</Typography>;
 
-export default withStyles(styles)(Breadcrumb);
+export default Breadcrumb;

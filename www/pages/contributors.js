@@ -1,19 +1,13 @@
 import React from "react";
 import fetch from "isomorphic-fetch";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Layout from "../components/layout/Layout";
 import ContributorList from "../components/contributors/ContributorList";
 import { StyledPageTitle, StyledSubtitle } from "../components/layout/Commons";
-import { Grid } from "@material-ui/core";
+import Grid from "@mui/material/Grid";
 
-const styles = () => ({
-  root: { margin: "2%" }
-});
-
-const Contributors = ({ classes, contributors }) => (
+const Contributors = ({ contributors }) => (
   <Layout>
-    <Grid item lg={8} xs={10} className={classes.root}>
+    <Grid size={{ lg: 8, xs: 10 }} style={{ margin: "2%" }}>
       <StyledPageTitle>Contributors</StyledPageTitle>
       <StyledSubtitle>Amazing people who helped this project</StyledSubtitle>
       <br />
@@ -21,10 +15,6 @@ const Contributors = ({ classes, contributors }) => (
     </Grid>
   </Layout>
 );
-
-Contributors.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 Contributors.getInitialProps = async function(context) {
   const response = await fetch(
@@ -36,4 +26,4 @@ Contributors.getInitialProps = async function(context) {
   };
 };
 
-export default withStyles(styles)(Contributors);
+export default Contributors;
