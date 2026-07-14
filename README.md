@@ -19,15 +19,16 @@ If you like this repo then show your support,
 ### Frontend
 
 - Framework: NextJS
-- Search: Algolia
-- Hosting: Zeit Now.
+- Data: static, bundled dataset (`www/data/diseases.json`) — no live backend call
+- Search: client-side filter over the same static dataset (previously Algolia; that Algolia application was deprovisioned years ago)
+- Hosting: Vercel
 
 ### Backend
 
 - Environment: NodeJS
 - Framework: Zeit Micro
-- Database: MongoDB
-- Hosting: Zeit Now, mLab
+- Database: MongoDB (Mongoose)
+- Status: present in the repo and still deployed, but currently unused by the frontend — its MongoDB connection points at a defunct mLab host
 
 For information on packages used, checkout the package.json in api and www.
 

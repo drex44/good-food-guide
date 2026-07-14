@@ -3,12 +3,14 @@ import PropTypes from "prop-types";
 import { Button, InputBase } from "@material-ui/core";
 import Autosuggest from "react-autosuggest";
 import Link from "next/link";
-import diseases from "../dataList";
+import diseases from "../../data/diseases.json";
 
 const getSuggestions = value => {
   const query = value.trim().toLowerCase();
   if (query.length === 0) return [];
-  return diseases.filter(disease => disease.sick.toLowerCase().includes(query));
+  return diseases.filter(
+    disease => disease.valid && disease.name.toLowerCase().includes(query)
+  );
 };
 
 class Search extends React.Component {
@@ -32,7 +34,7 @@ class Search extends React.Component {
   };
 
   getSuggestionValue(hit) {
-    return hit.sick;
+    return hit.name;
   }
 
   renderSuggestion(hit) {
@@ -69,7 +71,7 @@ const RenderHit = ({ hit }) => (
       query: { disease: hit.searchKey }
     }}
   >
-    <Button>{hit.sick}</Button>
+    <Button>{hit.name}</Button>
   </Link>
 );
 
