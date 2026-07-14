@@ -34,8 +34,8 @@ class MyDocument extends Document {
             }}
           />
 
-          <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-          <link rel="stylesheet" type="text/css" href="/static/app.css" />
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
+          <link rel="stylesheet" type="text/css" href="/app.css" />
           {this.props.emotionStyleTags}
         </Head>
         <body>
