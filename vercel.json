@@ -14,7 +14,6 @@
     { "src": "/api/getAllDiseases", "dest": "/api/getAllDiseases/index.js" },
     { "src": "/api/getDisease(.*)", "dest": "/api/getDisease/index.js" },
     { "src": "/_next/(.*)", "dest": "/www/_next/$1" },
-    { "src": "/static/(.*)", "dest": "/www/static/$1" },
     { "src": "/(.*)", "dest": "/www/$1" }
   ]
 }
