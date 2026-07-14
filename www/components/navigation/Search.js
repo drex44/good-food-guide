@@ -125,7 +125,17 @@ RenderHit.propTypes = {
 
 const InputComponent = inputProps => {
   const { classes, inputRef = () => {}, ref, key, ...other } = inputProps;
-  return <InputBase style={{ color: "white" }} fullWidth {...other} />;
+  return (
+    <InputBase
+      style={{ color: "white" }}
+      // The browser's default placeholder opacity (~0.5) drops contrast
+      // against this translucent background to ~2:1; match the ~4.8:1
+      // the typed (full-opacity white) text gets.
+      sx={{ "& input::placeholder": { opacity: 1 } }}
+      fullWidth
+      {...other}
+    />
+  );
 };
 
 export default Search;
