@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
+import { green } from "@mui/material/colors";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import SearchIcon from "@mui/icons-material/Search";
@@ -110,10 +111,14 @@ const BrowseFoods = ({ foods }) => {
                         key={name}
                         label={name}
                         clickable
-                        color="secondary"
                         component={Link}
                         href={{ pathname: "/foodDetails", query: { food: name } }}
-                        sx={{ textTransform: "capitalize" }}
+                        sx={{
+                          textTransform: "capitalize",
+                          backgroundColor: green[800],
+                          color: "white",
+                          "&:hover": { backgroundColor: green[900] }
+                        }}
                       />
                     ))}
                   </Stack>
