@@ -10,11 +10,10 @@ const Footer = () => {
       container
       sx={{
         width: "100%",
-        height: "50px",
         display: "flex",
         alignItems: "center",
         background: "#9c27b0",
-        minHeight: "4em"
+        padding: { xs: "16px 12px", sm: "20px 12px" }
       }}
     >
       <FooterColumn>
@@ -36,7 +35,10 @@ const Footer = () => {
 };
 
 const FooterColumn = ({ children }) => (
-  <Grid size={{ lg: 4, md: 4, sm: 4, xs: 12 }} style={{ textAlign: "center" }}>
+  <Grid
+    size={{ lg: 4, md: 4, sm: 4, xs: 12 }}
+    sx={{ textAlign: "center", padding: { xs: "6px 0", sm: 0 } }}
+  >
     {children}
   </Grid>
 );
