@@ -5,7 +5,7 @@ import Layout from "../layout/Layout";
 
 export default () => (
   <Layout>
-    <Grid style={{ margin: "5em" }} align="center">
+    <Grid sx={{ margin: "5em", width: "100%", textAlign: "center" }}>
       <Typography variant="h3" style={{ margin: "1em" }} color="primary">
         404
       </Typography>
