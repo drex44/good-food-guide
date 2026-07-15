@@ -1,88 +1,153 @@
-# Good Food Guide :tada::tada::smile:
+# Good Food Guide
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/drex44/good-food-guide.svg)](https://greenkeeper.io/)
+A guide to which foods help when you are suffering from a disease or symptom — covering 29 conditions with vegan and non-vegan food recommendations.
 
-A guide to know which foods are good when you are suffering from a certain disease!
+**Live site:** https://good-food-guide.vercel.app/
 
-### Background
+---
 
-[Free-code-camp/contributor-to-an-open-source-project-maintainer-article](https://medium.com/free-code-camp/how-i-went-from-being-a-contributor-to-an-open-source-project-maintainer-acd8a6b316f5)
+## Features
 
-It started when the Hacktoberfest '18 was announced with the vision to make a productive [Hacktoberfest](https://hacktoberfest.digitalocean.com/).
+- **29 health conditions** — from common cold and flu to arthritis, diabetes, insomnia, anxiety, and more
+- **Vegan & non-vegan food recommendations** per condition, with notes explaining why each food helps
+- **Client-side search** — instant filtering by condition name via the navigation bar
+- **Sort by** A → Z, Z → A, or Most Foods on the home page
+- **Share buttons** — share any condition page to Facebook, X (Twitter), WhatsApp, LinkedIn, Reddit, or Email; plus a Copy Link button
+- **Structured data** (JSON-LD `MedicalWebPage`) on each disease page for better search engine visibility
 
-If you like this repo then show your support,
-
-:star: this repo
+---
 
 ## Technology Stack
 
-### Frontend
+### Frontend (`www/`)
 
-- Framework: NextJS
-- Data: static, bundled dataset (`www/data/diseases.json`) — no live backend call
-- Search: client-side filter over the same static dataset (previously Algolia; that Algolia application was deprovisioned years ago)
-- Hosting: Vercel
+| | |
+|---|---|
+| Framework | Next.js (pages router) |
+| UI | Material UI |
+| Data | Static JSON bundled at build time (`www/data/diseases.json`) — no live network calls |
+| Search | Client-side filter over the static dataset |
+| Sharing | `react-share` |
+| Hosting | Vercel |
 
-### Backend
+### Backend (`api/`)
 
-- Environment: NodeJS
-- Framework: Zeit Micro
-- Database: MongoDB (Mongoose)
-- Status: present in the repo and still deployed, but currently unused by the frontend — its MongoDB connection points at a defunct mLab host
+| | |
+|---|---|
+| Runtime | Node.js |
+| Framework | Micro (Zeit) |
+| Database | MongoDB via Mongoose |
+| Status | Present in the repo and deployed, but **currently unused** by the frontend. The MongoDB connection points at a defunct mLab host — calls time out. |
 
-For information on packages used, checkout the package.json in api and www.
+---
+
+## Quick Start
+
+```bash
+# Clone the repo
+git clone https://github.com/drex44/good-food-guide.git
+cd good-food-guide/www
+
+# Install dependencies
+yarn install
+
+# Start the dev server (http://localhost:3000)
+yarn dev
+```
+
+### Other frontend commands
+
+```bash
+yarn build    # production build
+yarn start    # run production build locally
+yarn export   # static export
+```
+
+### API (optional, currently unused)
+
+```bash
+cd api
+npm install
+npm run dev   # http://localhost:3001
+```
+
+---
+
+## Project Structure
+
+```
+good-food-guide/
+├── www/                        # Next.js frontend
+│   ├── components/             # Reusable UI components
+│   │   ├── disease/            # DiseaseCard, ImageContainer
+│   │   ├── food/               # FoodList
+│   │   ├── layout/             # Layout, Navigation, Breadcrumb, etc.
+│   │   └── ShareModal.js       # Share popover (all platforms + copy link)
+│   ├── data/
+│   │   └── diseases.json       # Source of truth — 29 conditions
+│   ├── modules/
+│   │   └── api.js              # Reads diseases.json; getAllDiseases, getDisease, getAllFoods
+│   ├── pages/
+│   │   ├── index.js            # Home page — card grid with sorting
+│   │   ├── disease.js          # Condition detail page
+│   │   └── foodDetails.js      # Stub (not yet wired to real data)
+│   └── public/                 # Static assets (CSS, images)
+├── api/                        # Serverless API (orphaned)
+│   ├── getAllDiseases/
+│   ├── getDisease/
+│   ├── dao.js
+│   ├── models.js
+│   └── schemas.js
+└── vercel.json                 # Deployment config (legacy builds + routes)
+```
+
+---
+
+## Data Format
+
+Each entry in `www/data/diseases.json` follows this shape:
+
+```json
+{
+  "searchKey": "arthritis",
+  "name": "Arthritis",
+  "description": "...",
+  "symptoms": [
+    {
+      "description": "General Symptoms",
+      "symptoms": ["Joint pain", "Swelling", "..."]
+    }
+  ],
+  "goodFoods": {
+    "vegan": [{ "name": "Ginger", "desc": "Anti-inflammatory..." }],
+    "nonVegan": [{ "name": "Salmon", "desc": "Rich in omega-3s..." }]
+  },
+  "image": "https://...",
+  "valid": true
+}
+```
+
+Food names are normalized to Title Case and deduplicated within each entry. The `valid` flag controls whether an entry appears on the site.
+
+---
 
 ## Contributing
 
-We use [monorepo structure](https://trunkbaseddevelopment.com/monorepos/) to host code. This repository is open to all forms of suggestions. so wear your thinking hat and let the hacking begin.
+This repository welcomes all contributions. The monorepo hosts both the frontend and the (currently dormant) backend.
 
-For more, check out the [Contributing.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING.md](https://github.com/drex44/good-food-guide/blob/master/CONTRIBUTING.md) for guidelines.
 
-### Continuous Deployments
+Pull requests merged to `master` are automatically deployed to the live site via Vercel.
 
-The website is auto deployed from the master branch via [Vercel](https://vercel.com/) so if your pull request is merged, you can check it out here:
+### Adding a new condition
 
-https://good-food-guide.vercel.app/
+1. Add an entry to `www/data/diseases.json` following the shape above
+2. Set `valid: true`
+3. Use a unique, URL-safe `searchKey` (e.g. `"kidney-stones"`)
+4. Open a PR — no code changes required
 
-Deployment is configured in [`vercel.json`](./vercel.json): the NextJS frontend (`www`) is built with the `@vercel/next` builder and the API microservices (`api`) with `@vercel/node`.
-
-### Quick Start for contributing
-
-1.  Clone the project
-
-2.  Navigate to your new project:
-
-```bash
-$ cd good-food-guide/www
-```
-
-3.  Install all dependencies:
-
-```bash
-$ yarn
-# or
-$ npm install
-```
-
-4.  Start the dev server and edit some code!
-
-```bash
-$ yarn dev
-# or
-$ npm run dev
-```
-
-### Important Links :pencil2:
-
-Here are some links for grasping the code & further procedure. May the force be with you! and Happy coding!
-
-1. [Learn React](https://reactjs.org/docs/hello-world.html)
-2. [Learn NextJs](https://nextjs.org/learn)
-3. [Material UI Docs](http://material-ui.com)
-4. [Learn how to make pull request](https://help.github.com/articles/creating-a-pull-request/)
-5. [Learn how to fork a repository](https://help.github.com/articles/fork-a-repo/)
+---
 
 ## License
 
-This repository is licensed under the MIT license. See `LICENSE` for
-details.
+MIT — see `LICENSE` for details.
