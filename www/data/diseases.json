@@ -579,6 +579,535 @@
   {
     "goodFoods": {
       "vegan": [
+        { "name": "Turmeric Milk (Golden Milk)", "desc": "Turmeric contains curcumin, a powerful anti-inflammatory compound that can reduce joint pain" },
+        { "name": "Ginger", "desc": "Acts as a natural anti-inflammatory, helping reduce pain and swelling in joints" },
+        { "name": "Berries (Blueberries, Strawberries)", "desc": "Rich in antioxidants that fight inflammation" },
+        { "name": "Broccoli", "desc": "Contains sulforaphane, which may slow the progression of arthritis" },
+        { "name": "Green Tea", "desc": "Packed with polyphenols that reduce inflammation and slow cartilage destruction" },
+        { "name": "Walnuts", "desc": "High in omega-3 fatty acids which help lower inflammation" },
+        { "name": "Olive Oil", "desc": "Contains oleocanthal which has properties similar to anti-inflammatory drugs" }
+      ],
+      "nonVegan": [
+        { "name": "Salmon", "desc": "Rich in omega-3 fatty acids which reduce joint inflammation" },
+        { "name": "Sardines", "desc": "High in omega-3s and vitamin D which helps maintain bone health" }
+      ]
+    },
+    "searchKey": "arthritis",
+    "name": "Arthritis",
+    "description": "Arthritis is inflammation of one or more joints, causing pain and stiffness that can worsen with age. The most common types are osteoarthritis and rheumatoid arthritis. Osteoarthritis involves wear-and-tear damage to joint cartilage. Rheumatoid arthritis is an autoimmune disorder in which your immune system attacks the lining of your joint capsule. Both can be managed with dietary and lifestyle changes.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Joint pain and stiffness",
+          "Swelling around joints",
+          "Reduced range of motion",
+          "Redness of the skin around a joint",
+          "Fatigue and general weakness",
+          "Warmth around affected joints"
+        ]
+      }
+    ],
+    "image": "https://images.medicinenet.com/images/article/main_image/arthritis.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Leafy Greens (Spinach, Kale)", "desc": "High in iron and folate which are essential for red blood cell production" },
+        { "name": "Fortified Cereals", "desc": "Many are fortified with iron and B vitamins critical for treating anemia" },
+        { "name": "Lentils", "desc": "Excellent plant-based source of iron and folate" },
+        { "name": "Tofu", "desc": "Good source of iron for vegetarians" },
+        { "name": "Pumpkin Seeds", "desc": "Rich in iron and other minerals" },
+        { "name": "Dried Apricots", "desc": "Good source of non-heme iron" },
+        { "name": "Vitamin C-rich foods (Oranges, Bell Peppers)", "desc": "Vitamin C enhances iron absorption from plant sources" }
+      ],
+      "nonVegan": [
+        { "name": "Red Meat (Beef, Lamb)", "desc": "Rich in heme iron, the most easily absorbed form of iron" },
+        { "name": "Liver", "desc": "One of the richest sources of iron and B12" },
+        { "name": "Oysters and Clams", "desc": "Excellent source of heme iron and vitamin B12" }
+      ]
+    },
+    "searchKey": "anemia",
+    "name": "Anemia",
+    "description": "Anemia is a condition in which you lack enough healthy red blood cells to carry adequate oxygen to your body's tissues. Having anemia can make you feel tired and weak. There are many forms of anemia, each with its own cause. Anemia can be temporary or long term, and it can range from mild to severe. Iron deficiency anemia is the most common type worldwide and is usually caused by blood loss or inadequate dietary iron intake.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Fatigue and weakness",
+          "Pale or yellowish skin",
+          "Irregular heartbeats",
+          "Shortness of breath",
+          "Dizziness or lightheadedness",
+          "Chest pain",
+          "Cold hands and feet",
+          "Headaches"
+        ]
+      }
+    ],
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Blausen_0052_Anemia_Iron-Deficiency.png/440px-Blausen_0052_Anemia_Iron-Deficiency.png",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Chamomile Tea", "desc": "Has calming properties that can reduce anxiety and help with sleep" },
+        { "name": "Magnesium-rich foods (Dark Chocolate, Almonds)", "desc": "Magnesium deficiency is linked to increased anxiety" },
+        { "name": "Blueberries", "desc": "High in antioxidants and vitamin C which help relieve stress and anxiety" },
+        { "name": "Turmeric", "desc": "Curcumin may boost serotonin and dopamine levels" },
+        { "name": "Avocado", "desc": "Rich in B vitamins and healthy fats that support brain health" },
+        { "name": "Ashwagandha (in tea or supplement form)", "desc": "Adaptogenic herb that reduces cortisol and anxiety" }
+      ],
+      "nonVegan": [
+        { "name": "Salmon", "desc": "Omega-3 fatty acids help regulate neurotransmitters and reduce anxiety" },
+        { "name": "Eggs", "desc": "Contain tryptophan which helps create serotonin, a mood-regulating neurotransmitter" }
+      ]
+    },
+    "searchKey": "anxiety",
+    "name": "Anxiety",
+    "description": "Anxiety is your body's natural response to stress. It's a feeling of fear or apprehension about what's to come. Anxiety disorders are the most common mental health conditions. They include generalized anxiety disorder, panic disorder, and phobia-related disorders. While occasional anxiety is normal, anxiety disorders involve persistent, excessive worry that interferes with daily activities.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Feeling nervous, restless or tense",
+          "Having a sense of impending danger or doom",
+          "Increased heart rate",
+          "Rapid breathing (hyperventilation)",
+          "Sweating and trembling",
+          "Feeling weak or tired",
+          "Trouble concentrating",
+          "Difficulty sleeping",
+          "Gastrointestinal problems"
+        ]
+      }
+    ],
+    "image": "https://www.helpguide.org/wp-content/uploads/anxiety-symptoms-causes-treatment.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Warm Water with Honey and Lemon", "desc": "Soothes the throat and the honey has antibacterial properties" },
+        { "name": "Ginger Tea", "desc": "Anti-inflammatory properties soothe a sore throat" },
+        { "name": "Marshmallow Root Tea", "desc": "The mucilage coats and soothes the throat lining" },
+        { "name": "Popsicles", "desc": "Cold temperature numbs and soothes throat pain" },
+        { "name": "Slippery Elm Tea", "desc": "Creates a soothing coating in the throat" },
+        { "name": "Fenugreek Tea", "desc": "Has antimicrobial properties and relieves throat pain" }
+      ],
+      "nonVegan": [
+        { "name": "Chicken Broth", "desc": "Warm liquid soothes the throat and provides easy-to-absorb nutrients" }
+      ]
+    },
+    "searchKey": "sore-throat",
+    "name": "Sore Throat",
+    "description": "A sore throat is pain, scratchiness or irritation of the throat that often worsens when you swallow. The most common cause of a sore throat (pharyngitis) is a viral infection, such as a cold or the flu. A sore throat caused by a virus resolves on its own. Strep throat (streptococcal infection), a less common type of sore throat caused by bacteria, requires treatment with antibiotics to prevent complications.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Pain or a scratchy sensation in the throat",
+          "Pain that worsens with swallowing or talking",
+          "Difficulty swallowing",
+          "Sore, swollen glands in your neck or jaw",
+          "Swollen, red tonsils",
+          "White patches or pus on your tonsils",
+          "A hoarse or muffled voice"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322906_1100-800x825.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Ginger", "desc": "One of the most effective natural remedies for nausea" },
+        { "name": "Peppermint Tea", "desc": "Menthol in peppermint soothes the stomach and eases nausea" },
+        { "name": "Bananas", "desc": "Easy to digest and gentle on the stomach" },
+        { "name": "Plain Crackers (Saltines)", "desc": "Bland and easy to keep down when nauseous" },
+        { "name": "Cold Water with Lemon", "desc": "Hydrates and the lemon scent can reduce nausea" },
+        { "name": "Fennel Seeds", "desc": "Chewing fennel seeds can help settle the stomach" }
+      ],
+      "nonVegan": []
+    },
+    "searchKey": "nausea",
+    "name": "Nausea",
+    "description": "Nausea is an unpleasant, diffuse sensation of unease and discomfort, often perceived as an urge to vomit. While not painful, it can be a debilitating symptom if prolonged. Nausea has many causes including motion sickness, pregnancy, medication side effects, infections, and food poisoning. In most cases it resolves on its own, but persistent nausea may require medical attention.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Feeling of unease in the stomach",
+          "Urge to vomit",
+          "Cold sweats",
+          "Dizziness",
+          "Loss of appetite",
+          "Excess saliva production"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/what-is-nausea.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Tart Cherry Juice", "desc": "Melatonin-rich and has been shown to improve sleep duration and quality" },
+        { "name": "Kiwi", "desc": "Studies show eating kiwi before bed significantly improves sleep" },
+        { "name": "Chamomile Tea", "desc": "Contains apigenin, an antioxidant that promotes sleepiness" },
+        { "name": "Almonds", "desc": "Source of melatonin and magnesium which improve sleep quality" },
+        { "name": "Warm Milk", "desc": "Contains tryptophan and melatonin which promote sleep" },
+        { "name": "Walnuts", "desc": "Good source of melatonin, serotonin, and magnesium" },
+        { "name": "Passionflower Tea", "desc": "Has mild sedative effects that improve sleep quality" }
+      ],
+      "nonVegan": [
+        { "name": "Turkey", "desc": "Rich in tryptophan, which promotes drowsiness and sleep" }
+      ]
+    },
+    "searchKey": "insomnia",
+    "name": "Insomnia",
+    "description": "Insomnia is a common sleep disorder that can make it hard to fall asleep, hard to stay asleep, or cause you to wake up too early and not be able to get back to sleep. Insomnia can sap not only your energy level and mood but also your health, work performance and quality of life. Short-term insomnia lasts for days or weeks and is often triggered by stress. Long-term insomnia lasts for a month or more.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Difficulty falling asleep at night",
+          "Waking up during the night",
+          "Waking up too early",
+          "Not feeling well-rested after a night's sleep",
+          "Daytime tiredness or sleepiness",
+          "Irritability, depression or anxiety",
+          "Difficulty paying attention or remembering things",
+          "Increased errors or accidents"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2019/02/322905_2200-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Oatmeal", "desc": "Complex carbohydrates keep blood sugar levels stable which can improve mood" },
+        { "name": "Berries", "desc": "High in antioxidants that reduce brain inflammation linked to depression" },
+        { "name": "Walnuts", "desc": "One of the richest plant sources of omega-3s which support brain health" },
+        { "name": "Dark Chocolate", "desc": "Contains compounds that boost serotonin and endorphins" },
+        { "name": "Avocado", "desc": "Rich in folate which is essential for serotonin production" },
+        { "name": "Turmeric", "desc": "Curcumin has shown antidepressant effects in studies" },
+        { "name": "Green Tea", "desc": "Contains L-theanine which promotes a calm, focused state" }
+      ],
+      "nonVegan": [
+        { "name": "Fatty Fish (Salmon, Mackerel)", "desc": "Rich in omega-3 fatty acids which play a crucial role in brain function and mood" },
+        { "name": "Eggs", "desc": "Contain tryptophan, choline, and B vitamins that support mood regulation" }
+      ]
+    },
+    "searchKey": "depression",
+    "name": "Depression",
+    "description": "Depression is a mood disorder that causes a persistent feeling of sadness and loss of interest. Also called major depressive disorder or clinical depression, it affects how you feel, think and behave and can lead to a variety of emotional and physical problems. Depression is not a weakness and you can't simply 'snap out' of it. Depression may require long-term treatment through therapy, medication, and lifestyle changes including diet.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Feelings of sadness, tearfulness, emptiness or hopelessness",
+          "Angry outbursts, irritability or frustration",
+          "Loss of interest or pleasure in most activities",
+          "Sleep disturbances (insomnia or sleeping too much)",
+          "Tiredness and lack of energy",
+          "Reduced appetite and weight loss, or increased cravings and weight gain",
+          "Anxiety, agitation or restlessness",
+          "Slowed thinking, speaking or body movements",
+          "Difficulty thinking, concentrating and making decisions"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/04/depression-1200x628-facebook.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Aloe Vera Juice", "desc": "Soothes the esophagus and reduces acid reflux symptoms" },
+        { "name": "Ginger Tea", "desc": "Natural anti-inflammatory that can help settle the stomach" },
+        { "name": "Bananas", "desc": "Low-acid fruit that helps coat the stomach lining" },
+        { "name": "Oatmeal", "desc": "Absorbs stomach acid and provides filling fiber" },
+        { "name": "Licorice Root Tea", "desc": "May help soothe the esophagus and stomach lining" },
+        { "name": "Fennel", "desc": "Helps soothe the stomach and improve digestion" },
+        { "name": "Melon (Cantaloupe, Honeydew)", "desc": "Low-acid fruits that are easy on the stomach" }
+      ],
+      "nonVegan": [
+        { "name": "Lean Chicken or Turkey (grilled, not fried)", "desc": "Low-fat protein that is less likely to trigger reflux than fatty meats" }
+      ]
+    },
+    "searchKey": "acid-reflux",
+    "name": "Acid Reflux",
+    "description": "Acid reflux occurs when stomach acid flows back up into the esophagus (the tube connecting your mouth and stomach), causing a burning sensation in the chest or throat known as heartburn. When acid reflux occurs more than twice a week, it may be diagnosed as gastroesophageal reflux disease (GERD). Diet plays a major role in controlling symptoms — avoiding trigger foods and eating smaller meals can significantly reduce discomfort.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Burning sensation in the chest (heartburn), usually after eating",
+          "Chest pain",
+          "Difficulty swallowing",
+          "Regurgitation of food or sour liquid",
+          "A sensation of a lump in your throat",
+          "Chronic cough",
+          "Laryngitis",
+          "Disrupted sleep"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/acid-reflux-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Water and Hydrating Fluids", "desc": "Staying well-hydrated dilutes urine and helps flush bacteria from the urinary tract" },
+        { "name": "Cranberry Juice (unsweetened)", "desc": "May prevent bacteria from adhering to the walls of the urinary tract" },
+        { "name": "Blueberries", "desc": "Similar to cranberries, may inhibit bacterial adhesion in the urinary tract" },
+        { "name": "Probiotic-rich foods (Yogurt, Kefir)", "desc": "Probiotics help maintain healthy bacteria balance and may prevent recurrent UTIs" },
+        { "name": "Garlic", "desc": "Has antimicrobial properties that may help fight UTI-causing bacteria" },
+        { "name": "Green Tea", "desc": "Contains antioxidants and may have antibacterial properties" }
+      ],
+      "nonVegan": []
+    },
+    "searchKey": "uti",
+    "name": "Urinary Tract Infection (UTI)",
+    "description": "A urinary tract infection (UTI) is an infection in any part of your urinary system — your kidneys, ureters, bladder and urethra. Most infections involve the lower urinary tract — the bladder and the urethra. Women are at greater risk of developing a UTI than men. UTIs may not cause noticeable signs and symptoms, but when they do they may include a burning sensation when urinating and a persistent urge to urinate.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "A strong, persistent urge to urinate",
+          "A burning sensation when urinating",
+          "Passing frequent, small amounts of urine",
+          "Urine that appears cloudy",
+          "Urine that appears red, bright pink or cola-colored (sign of blood in urine)",
+          "Strong-smelling urine",
+          "Pelvic pain (in women)"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/urinary-tract-infection-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Salmon and Fatty Fish", "desc": "Omega-3 fatty acids reduce triglycerides and support healthy cholesterol balance" },
+        { "name": "Oats and Oatmeal", "desc": "Beta-glucan fiber in oats lowers LDL (bad) cholesterol" },
+        { "name": "Avocado", "desc": "Rich in monounsaturated fats that lower LDL and raise HDL cholesterol" },
+        { "name": "Nuts (Almonds, Walnuts)", "desc": "Help lower LDL cholesterol; walnuts also rich in omega-3s" },
+        { "name": "Olive Oil", "desc": "Monounsaturated fats in olive oil lower LDL without affecting HDL" },
+        { "name": "Berries", "desc": "Rich in soluble fiber and antioxidants that support healthy cholesterol levels" },
+        { "name": "Flaxseeds", "desc": "High in omega-3 fatty acids and soluble fiber that lower LDL" }
+      ],
+      "nonVegan": [
+        { "name": "Fatty Fish (Mackerel, Herring, Tuna)", "desc": "Omega-3 fatty acids lower triglycerides and raise HDL cholesterol" }
+      ]
+    },
+    "searchKey": "high-cholesterol",
+    "name": "High Cholesterol",
+    "description": "High cholesterol means you have too much of a fatty substance called cholesterol in your blood. It's mainly caused by eating fatty food, not exercising enough, being overweight, smoking and drinking alcohol. High cholesterol itself usually has no symptoms, but it increases the risk of serious conditions such as heart attack and stroke. Diet changes and lifestyle improvements can significantly lower cholesterol levels.",
+    "symptoms": [
+      {
+        "description": "High cholesterol has no symptoms. A blood test is the only way to detect it. Risk factors include",
+        "symptoms": [
+          "Poor diet high in saturated fats",
+          "Obesity or being overweight",
+          "Lack of exercise",
+          "Smoking",
+          "Family history of high cholesterol",
+          "Diabetes",
+          "Hypothyroidism"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/what-is-cholesterol-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Dark Leafy Greens (Spinach, Kale)", "desc": "Rich in calcium, magnesium, and vitamin K which are critical for bone strength" },
+        { "name": "Fortified Plant Milks (Almond, Soy)", "desc": "Provide calcium and vitamin D which are essential for bone density" },
+        { "name": "Tofu (calcium-set)", "desc": "Excellent plant-based source of calcium" },
+        { "name": "Prunes", "desc": "Studies show prunes can help prevent and reverse bone loss" },
+        { "name": "Beans and Lentils", "desc": "Good sources of calcium, magnesium, and protein for bone health" },
+        { "name": "Seeds (Chia, Sesame, Pumpkin)", "desc": "High in calcium and other bone-supporting minerals" }
+      ],
+      "nonVegan": [
+        { "name": "Dairy (Milk, Cheese, Yogurt)", "desc": "Rich in calcium and vitamin D for bone strength" },
+        { "name": "Fatty Fish (Salmon, Sardines with bones)", "desc": "Provide vitamin D and calcium (from bones in canned sardines)" }
+      ]
+    },
+    "searchKey": "osteoporosis",
+    "name": "Osteoporosis",
+    "description": "Osteoporosis causes bones to become weak and brittle — so brittle that a fall or even mild stresses such as bending over or coughing can cause a fracture. Osteoporosis-related fractures most commonly occur in the hip, wrist or spine. Bone is living tissue that is constantly being broken down and replaced. Osteoporosis occurs when the creation of new bone doesn't keep up with the loss of old bone. Diet rich in calcium and vitamin D is a cornerstone of treatment and prevention.",
+    "symptoms": [
+      {
+        "description": "General Symptoms (often no symptoms until a fracture occurs)",
+        "symptoms": [
+          "Back pain, caused by a fractured or collapsed vertebra",
+          "Loss of height over time",
+          "A stooped posture",
+          "A bone that breaks much more easily than expected",
+          "Neck pain",
+          "Limited mobility"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/01/osteoporosis-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Celery", "desc": "Acts as a diuretic and contains compounds that may prevent kidney stone formation" },
+        { "name": "Lemon Juice (in water)", "desc": "Citrate in lemon juice helps prevent calcium oxalate stones from forming" },
+        { "name": "Basil Juice", "desc": "Contains acetic acid that may help dissolve kidney stones and reduce pain" },
+        { "name": "Pomegranate Juice", "desc": "Antioxidants may help prevent stones from forming" },
+        { "name": "Kidney Beans", "desc": "High in B vitamins and fiber that may help prevent kidney stones" },
+        { "name": "Dandelion Root Tea", "desc": "Acts as a diuretic and may reduce risk of stone formation" }
+      ],
+      "nonVegan": []
+    },
+    "searchKey": "kidney-stones",
+    "name": "Kidney Stones",
+    "description": "Kidney stones (also called renal calculi, nephrolithiasis or urolithiasis) are hard deposits made of minerals and salts that form inside your kidneys. Diet, excess body weight, some medical conditions, and certain supplements and medications are among the many causes of kidney stones. Kidney stones can affect any part of your urinary tract. Drinking lots of water is the best prevention, and most stones pass on their own with adequate hydration.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Severe, sharp pain in the side and back, below the ribs",
+          "Pain that radiates to the lower abdomen and groin",
+          "Pain that comes in waves and fluctuates in intensity",
+          "Pain or burning sensation while urinating",
+          "Pink, red or brown urine",
+          "Cloudy or foul-smelling urine",
+          "A persistent need to urinate",
+          "Nausea and vomiting",
+          "Fever and chills if an infection is present"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/kidney-stones-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Anti-inflammatory foods (Berries, Leafy Greens)", "desc": "Reduce systemic inflammation that can worsen asthma symptoms" },
+        { "name": "Ginger", "desc": "Anti-inflammatory and bronchodilatory properties may reduce asthma symptoms" },
+        { "name": "Garlic and Onions", "desc": "Anti-inflammatory properties may help manage asthma" },
+        { "name": "Apples", "desc": "Rich in quercetin, an antioxidant that has been linked to reduced asthma risk" },
+        { "name": "Turmeric", "desc": "Curcumin may help reduce airway inflammation" },
+        { "name": "Vitamin D-rich foods (Fortified foods, Mushrooms)", "desc": "Low vitamin D levels are linked to worse asthma control" }
+      ],
+      "nonVegan": [
+        { "name": "Fatty Fish (Salmon, Mackerel)", "desc": "Omega-3s reduce lung inflammation and may reduce asthma severity" }
+      ]
+    },
+    "searchKey": "asthma",
+    "name": "Asthma",
+    "description": "Asthma is a condition in which your airways narrow and swell and may produce extra mucus. This can make breathing difficult and trigger coughing, a whistling sound (wheezing) when you breathe out and shortness of breath. For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities. While asthma can't be cured, its symptoms can be controlled through medication and by avoiding triggers, and diet can play a supportive role.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Shortness of breath",
+          "Chest tightness or pain",
+          "Wheezing when exhaling",
+          "Trouble sleeping caused by shortness of breath, coughing or wheezing",
+          "Coughing or wheezing attacks that are worsened by a respiratory virus",
+          "Signs that asthma is worsening: more frequent and bothersome symptoms"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/asthma-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Fermented Foods (Kimchi, Sauerkraut, Kombucha)", "desc": "Probiotics help restore gut bacteria balance disrupted by infections" },
+        { "name": "Bananas", "desc": "Gentle on the gut and help replenish lost electrolytes" },
+        { "name": "Plain White Rice", "desc": "Easily digestible and helps bind loose stools" },
+        { "name": "Applesauce", "desc": "Contains pectin which helps absorb excess water in the intestines" },
+        { "name": "Toast", "desc": "Bland and easy to digest, helps settle the stomach" },
+        { "name": "Coconut Water", "desc": "Helps replenish electrolytes lost through diarrhea" },
+        { "name": "Oral Rehydration Solution", "desc": "Critical for replacing fluids and electrolytes" }
+      ],
+      "nonVegan": [
+        { "name": "Plain Boiled Chicken", "desc": "Lean protein that's easy to digest and helps recovery" }
+      ]
+    },
+    "searchKey": "diarrhea",
+    "name": "Diarrhea",
+    "description": "Diarrhea is loose, watery stools (bowel movements). You have diarrhea if you have loose stools three or more times in one day. Acute diarrhea is diarrhea that lasts a short time and is common. It usually lasts about one or two days and goes away on its own. Diarrhea that lasts longer may be a sign of a more serious problem. The BRAT diet (Bananas, Rice, Applesauce, Toast) is a traditional dietary approach to managing symptoms.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Loose, watery stools",
+          "Abdominal cramps or pain",
+          "Nausea",
+          "Vomiting",
+          "Fever",
+          "Blood in the stool",
+          "Mucus in the stool",
+          "Urgent need to have a bowel movement",
+          "Bloating"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/diarrhea-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
+        { "name": "Whole Grains (Oats, Quinoa, Brown Rice)", "desc": "High fiber content helps maintain a healthy weight and improves insulin sensitivity" },
+        { "name": "Leafy Greens (Spinach, Kale, Collard Greens)", "desc": "Low in calories, high in nutrients, and have minimal impact on blood sugar" },
+        { "name": "Berries (Blueberries, Strawberries)", "desc": "High in antioxidants and fiber with a low glycemic index" },
+        { "name": "Legumes (Beans, Lentils, Chickpeas)", "desc": "Excellent source of fiber and plant protein that helps control blood sugar" },
+        { "name": "Nuts (Almonds, Walnuts)", "desc": "Help control blood sugar, reduce inflammation, and decrease heart disease risk" },
+        { "name": "Cinnamon", "desc": "May improve insulin sensitivity and lower blood sugar levels" },
+        { "name": "Turmeric", "desc": "Curcumin may help prevent prediabetes from progressing to type 2 diabetes" }
+      ],
+      "nonVegan": [
+        { "name": "Fatty Fish (Salmon, Sardines)", "desc": "Omega-3 fatty acids reduce inflammation and improve heart health in diabetics" },
+        { "name": "Eggs", "desc": "Improve insulin sensitivity and are a good source of protein that helps with blood sugar control" }
+      ]
+    },
+    "searchKey": "type-2-diabetes",
+    "name": "Type 2 Diabetes",
+    "description": "Type 2 diabetes is a chronic condition that affects the way your body metabolizes sugar (glucose). With type 2 diabetes, your body either doesn't produce enough insulin, or it resists insulin. Type 2 diabetes used to be known as adult-onset diabetes, but today more children are being diagnosed with the disorder. There's no cure for type 2 diabetes, but losing weight, eating well and exercising can help manage the disease.",
+    "symptoms": [
+      {
+        "description": "General Symptoms",
+        "symptoms": [
+          "Increased thirst",
+          "Frequent urination",
+          "Increased hunger",
+          "Unintended weight loss",
+          "Fatigue",
+          "Blurred vision",
+          "Slow-healing sores",
+          "Frequent infections",
+          "Numbness or tingling in hands or feet",
+          "Areas of darkened skin (acanthosis nigricans)"
+        ]
+      }
+    ],
+    "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/11/type-2-diabetes-1200x628.jpg",
+    "valid": true
+  },
+  {
+    "goodFoods": {
+      "vegan": [
         {
           "name": "Papaya Leaves",
           "desc": "Just crush the papaya leaves and squeeze them to extract the juice"
