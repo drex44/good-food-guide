@@ -5,15 +5,18 @@ import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import RestaurantIcon from "@mui/icons-material/Restaurant";
 import Link from "next/link";
 import ShareModal from "../ShareModal";
+import useImageFallback from "../../hooks/useImageFallback";
 
 const DiseaseCard = ({ disease }) => {
+  const { hasError, imgRef, onError } = useImageFallback();
+
   return (
     <Card
       raised
@@ -34,11 +37,32 @@ const DiseaseCard = ({ disease }) => {
           }}
           sx={{ width: "100%" }}
         >
-          <CardMedia
-            sx={{ height: 0, paddingTop: "25%" }}
-            image={disease.image}
-            title={disease.name}
-          />
+          {hasError ? (
+            <Box
+              sx={{
+                aspectRatio: "4 / 1",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                bgcolor: "grey.100",
+                color: "grey.400"
+              }}
+            >
+              <RestaurantIcon sx={{ fontSize: 48 }} />
+            </Box>
+          ) : (
+            <CardMedia
+              component="img"
+              ref={imgRef}
+              sx={{ aspectRatio: "4 / 1" }}
+              image={disease.image}
+              alt={disease.name}
+              title={disease.name}
+              loading="lazy"
+              decoding="async"
+              onError={onError}
+            />
+          )}
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" color="primary">
               {disease.name}
@@ -50,28 +74,24 @@ const DiseaseCard = ({ disease }) => {
             {shortenText(disease.description, 0, 200) + " . . ."}
           </Typography>
           <Typography component="div" style={{ margin: "10px 0px" }}>
-            <FoodList goodFoods={disease.goodFoods} />
+            <Box sx={{ maxHeight: "84px", overflow: "hidden" }}>
+              <FoodList goodFoods={disease.goodFoods} />
+            </Box>
           </Typography>
         </CardContent>
       </Box>
       <DiseaseCardAction>
-        <DiseaseCardLink>
-          <ShareModal
-            shareLink={`/disease?disease=${disease.searchKey}`}
-          />
-        </DiseaseCardLink>
-        <DiseaseCardLink>
-          <Button
-            component={Link}
-            href={{
-              pathname: "/disease",
-              query: { disease: disease.searchKey }
-            }}
-            color="primary"
-          >
-            Learn More
-          </Button>
-        </DiseaseCardLink>
+        <ShareModal shareLink={`/disease?disease=${disease.searchKey}`} />
+        <Button
+          component={Link}
+          href={{
+            pathname: "/disease",
+            query: { disease: disease.searchKey }
+          }}
+          color="primary"
+        >
+          Learn More
+        </Button>
       </DiseaseCardAction>
     </Card>
   );
@@ -86,23 +106,13 @@ const shortenText = (text, startingPoint, maxLength) => {
 };
 
 const DiseaseCardAction = ({ children }) => (
-  <CardActions>
-    <Grid container align="center">
-      {children}
-    </Grid>
+  <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
+    {children}
   </CardActions>
 );
 
 DiseaseCardAction.propTypes = {
   children: PropTypes.array.isRequired
-};
-
-const DiseaseCardLink = ({ children }) => (
-  <Grid size={{ xs: 6 }}>{children}</Grid>
-);
-
-DiseaseCardLink.propTypes = {
-  children: PropTypes.object.isRequired
 };
 
 export default DiseaseCard;

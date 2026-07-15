@@ -12,26 +12,19 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-127670782-2"
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || []; function
-            gtag(){dataLayer.push(arguments);}; gtag('js', new Date());
-            gtag('config', 'UA-127670782-2');
-   `
-            }}
+            href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block"
           />
           <script
             dangerouslySetInnerHTML={{
@@ -41,17 +34,8 @@ class MyDocument extends Document {
             }}
           />
 
-
-          <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
-
-          <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
-          <link rel="stylesheet" type="text/css" href="/static/app.css" />
-
-          {/* Algolia default stylesheet */}
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.0.0/themes/reset-min.css"
-          />
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
+          <link rel="stylesheet" type="text/css" href="/app.css" />
           {this.props.emotionStyleTags}
         </Head>
         <body>

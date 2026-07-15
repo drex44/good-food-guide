@@ -44,9 +44,7 @@ DesktopMenuItem.propTypes = {
 
 const MobileMenuItem = ({ icon: Icon, href, children }) => (
   <MenuItem component={Link} href={href}>
-    <IconButton color="inherit" component="span">
-      <Icon />
-    </IconButton>
+    <Icon color="inherit" sx={{ marginRight: 1 }} />
     {children}
   </MenuItem>
 );
@@ -69,6 +67,8 @@ const NavigationBar = ({ links }) => {
 
   const MobileMenu = (
     <Menu
+      id="mobile-menu"
+      MenuListProps={{ "aria-labelledby": "mobile-menu-button" }}
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
       transformOrigin={{ vertical: "top", horizontal: "right" }}
@@ -126,7 +126,11 @@ const NavigationBar = ({ links }) => {
           <Box sx={desktopSectionSx}>{DesktopMenu}</Box>
           <Box sx={mobileSectionSx}>
             <IconButton
+              id="mobile-menu-button"
+              aria-label="Open navigation menu"
               aria-haspopup="true"
+              aria-controls={isMobileMenuOpen ? "mobile-menu" : undefined}
+              aria-expanded={isMobileMenuOpen ? "true" : undefined}
               onClick={handleMobileMenuOpen}
               color="inherit"
             >

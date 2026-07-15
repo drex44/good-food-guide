@@ -11,8 +11,13 @@ const Terms = () => {
   return (
   <Layout>
     <Grid
-      size={{ lg: 6, md: 8, xs: 10 }}
-      sx={{ textAlign: "justify", padding: "20px 0px" }}
+      sx={{
+        textAlign: "justify",
+        maxWidth: "900px",
+        width: "100%",
+        margin: "0 auto",
+        padding: { xs: "20px", md: "20px 40px" }
+      }}
     >
       <StyledPageTitle>Terms and Conditions ("Terms")</StyledPageTitle>
       <br />
