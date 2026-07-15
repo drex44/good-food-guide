@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Good Food Guide: a guide to which foods help with which diseases/symptoms. A monorepo with two apps that are deployed together but no longer talk to each other at runtime:
 
-- `www/` — Next.js 8 frontend (pages router, class components, Material-UI v3). Fully self-contained: all disease/food data is read from a bundled static JSON file, not fetched over the network.
+- `www/` — Next.js frontend (pages router, Material-UI). Fully self-contained: all disease/food data is read from a bundled static JSON file, not fetched over the network.
 - `api/` — Node/Micro serverless functions with Mongoose/MongoDB as the data store. Still deployed, but currently orphaned — nothing in `www/` calls it (see Architecture). Its MongoDB connection string points at a defunct mLab host, so calling it would hang until timeout anyway.
 
 Both are deployed together as a single Vercel project via the root `vercel.json` (legacy `builds`/`routes` config, not per-app "Root Directory" settings).
@@ -62,4 +62,4 @@ There is no test suite in either app (`api`'s `test` script is a placeholder tha
 
 - Next.js 8 cannot combine `publicRuntimeConfig`/`serverRuntimeConfig` with `target=serverless`, which `@vercel/next` forces here due to the legacy `routes` config. Any config values a page/component needs must be plain constants/env vars read at build/runtime, not threaded through `next/config`.
 - This is a legacy codebase (Next.js 8, Material-UI v3, React 16, `react-autosuggest`) — many dependencies are years past end-of-life. Prefer minimal, targeted fixes over version bumps unless a bump is specifically requested, since a major-version upgrade of Next.js or Material-UI here is a large, breaking migration, not a small change.
-- `www/data/diseases.json` only has 14 entries. If it's ever regenerated from a live DB, keep the same field shape (`searchKey`/`name`/`description`/`symptoms`/`image`/`goodFoods`/`valid`) since both `modules/api.js` and `Search.js` depend on it exactly.
+- `www/data/diseases.json` has 29 entries (expanded from 14). If it's ever regenerated from a live DB, keep the same field shape (`searchKey`/`name`/`description`/`symptoms`/`image`/`goodFoods`/`valid`) since `modules/api.js`, `Search.js`, and the home-page sort all depend on it exactly. Food names are normalized to Title Case and deduplicated within each entry.
