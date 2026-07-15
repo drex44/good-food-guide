@@ -63,7 +63,7 @@ export const StyledParagraphTitle = ({ children }) => (
 
 export const PageSection = ({ align = "center", children }) => {
   return (
-    <Grid size={{ md: 12 }} align={align}>
+    <Grid size={{ md: 12 }} sx={{ width: "100%", textAlign: align }}>
       {children}
     </Grid>
   );
