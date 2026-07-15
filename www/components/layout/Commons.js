@@ -37,10 +37,9 @@ StyledSubtitle.propTypes = {
   children: PropTypes.string.isRequired
 };
 
-export const StyledParagraph = ({ component, children }) => (
+export const StyledParagraph = ({ children }) => (
   <Typography
     variant="subtitle1"
-    component={component}
     sx={{
       margin: "10px 0px",
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',

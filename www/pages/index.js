@@ -78,7 +78,7 @@ const Index = ({ FoodData, foodCount }) => {
             key={disease.searchKey}
             sx={{ display: "flex" }}
           >
-            <DiseaseCard disease={disease} index={index} />
+            <DiseaseCard disease={disease} />
           </Grid>
         ))}
       </Grid>

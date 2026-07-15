@@ -1,11 +1,5 @@
 const models = require("./models");
 
-function throw_promise_error(error) {
-  return new Promise(function(resolve, reject) {
-    reject(error);
-  });
-}
-
 function getAllDiseases() {
   return models.Disease.find({ valid: true }).exec();
 }
@@ -20,7 +14,6 @@ function saveNewDisease(newDisease) {
 }
 
 module.exports = {
-  throw_promise_error: throw_promise_error,
   saveNewDisease: saveNewDisease,
   getAllDiseases: getAllDiseases,
   getDisease: getDisease

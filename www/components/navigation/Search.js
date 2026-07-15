@@ -161,7 +161,7 @@ RenderHit.propTypes = {
 };
 
 const InputComponent = inputProps => {
-  const { classes, inputRef = () => {}, ref, key, ...other } = inputProps;
+  const { key, ...other } = inputProps;
   return (
     <InputBase
       style={{ color: "white" }}
