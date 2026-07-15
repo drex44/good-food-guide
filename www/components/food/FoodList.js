@@ -24,14 +24,15 @@ FoodList.propTypes = {
 
 // Green/brown mirrors the conventional veg/non-veg indicator colors
 // (rather than the previous green/bright-orange, which read as a bit
-// garish next to the site's purple theme). Both comfortably pass WCAG AA
-// (green[600]+black ~6.4:1, brown[500]+white ~6.6:1).
+// garish next to the site's purple theme). White text on a dark shade
+// reads far better than black-on-green despite both passing WCAG AA on
+// paper; green[800]+white ~5.1:1, brown[500]+white ~6.6:1.
 // Food names in the data are inconsistently cased (e.g. "apples" vs
 // "Apples"); normalize display without touching the underlying data.
 const styles = {
   vegan: {
-    background: green[600],
-    color: "black",
+    background: green[800],
+    color: "white",
     fontSize: 12,
     margin: 5,
     textTransform: "capitalize"
