@@ -17,6 +17,16 @@ A guide to which foods help when you are suffering from a disease or symptom —
 
 ---
 
+## Background
+
+It started when Hacktoberfest '18 was announced, with the vision to make a productive [Hacktoberfest](https://hacktoberfest.digitalocean.com/). Read the full story on freeCodeCamp:
+
+[How I went from contributor to open source project maintainer](https://medium.com/free-code-camp/how-i-went-from-being-a-contributor-to-an-open-source-project-maintainer-acd8a6b316f5)
+
+If you like this repo, give it a :star:!
+
+---
+
 ## Technology Stack
 
 ### Frontend (`www/`)
