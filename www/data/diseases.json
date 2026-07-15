@@ -2,14 +2,32 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Coriander Tea", "desc": "" },
-        { "name": "Eat Raw Garlic & Onion", "desc": "" },
-        { "name": "Honey, Lemon and Ginger Juice", "desc": "" },
-        { "name": "Tulsi(Basil) Leaves", "desc": "" }
+        {
+          "name": "Coriander Tea",
+          "desc": ""
+        },
+        {
+          "name": "Eat Raw Garlic & Onion",
+          "desc": ""
+        },
+        {
+          "name": "Honey, Lemon and Ginger Juice",
+          "desc": ""
+        },
+        {
+          "name": "Tulsi(Basil) Leaves",
+          "desc": ""
+        }
       ],
       "nonVegan": [
-        { "name": "Bland Diet", "desc": "" },
-        { "name": "Gargle With Salt Water", "desc": "" }
+        {
+          "name": "Bland Diet",
+          "desc": ""
+        },
+        {
+          "name": "Gargle With Salt Water",
+          "desc": ""
+        }
       ]
     },
     "searchKey": "viral-fever",
@@ -35,14 +53,38 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Russet Potato", "desc": "" },
-        { "name": "Cucumber", "desc": "" },
-        { "name": "Cherries", "desc": "" },
-        { "name": "Fortified Whole Grain Cereal", "desc": "" },
-        { "name": "Hot Peppers", "desc": "" },
-        { "name": "Pumpkin Seeds", "desc": "" },
-        { "name": "Oatmeal", "desc": "" },
-        { "name": "Brown Rice", "desc": "" }
+        {
+          "name": "Russet Potato",
+          "desc": ""
+        },
+        {
+          "name": "Cucumber",
+          "desc": ""
+        },
+        {
+          "name": "Cherries",
+          "desc": ""
+        },
+        {
+          "name": "Fortified Whole Grain Cereal",
+          "desc": ""
+        },
+        {
+          "name": "Hot Peppers",
+          "desc": ""
+        },
+        {
+          "name": "Pumpkin Seeds",
+          "desc": ""
+        },
+        {
+          "name": "Oatmeal",
+          "desc": ""
+        },
+        {
+          "name": "Brown Rice",
+          "desc": ""
+        }
       ],
       "nonVegan": []
     },
@@ -65,13 +107,34 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Bananas", "desc": "" },
-        { "name": "Rice", "desc": "" },
-        { "name": "Applesauce", "desc": "" },
-        { "name": "Toast", "desc": "" },
-        { "name": "Flat ginger ale", "desc": "" },
-        { "name": "Coke", "desc": "" },
-        { "name": "Saltines", "desc": "" }
+        {
+          "name": "Bananas",
+          "desc": ""
+        },
+        {
+          "name": "Rice",
+          "desc": ""
+        },
+        {
+          "name": "Applesauce",
+          "desc": ""
+        },
+        {
+          "name": "Toast",
+          "desc": ""
+        },
+        {
+          "name": "Flat ginger ale",
+          "desc": ""
+        },
+        {
+          "name": "Coke",
+          "desc": ""
+        },
+        {
+          "name": "Saltines",
+          "desc": ""
+        }
       ],
       "nonVegan": []
     },
@@ -96,19 +159,57 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Broths", "desc": "" },
-        { "name": "Garlic", "desc": "" },
-        { "name": "Coconut Water", "desc": "" },
-        { "name": "Hot Tea", "desc": "" },
-        { "name": "Honey", "desc": "" },
-        { "name": "Ginger", "desc": "" },
-        { "name": "Spicy Foods", "desc": "" },
-        { "name": "Bananas", "desc": "" },
-        { "name": "Oatmeal", "desc": "" },
-        { "name": "Yogurt", "desc": "" },
-        { "name": "Avocados", "desc": "" }
+        {
+          "name": "Broths",
+          "desc": ""
+        },
+        {
+          "name": "Garlic",
+          "desc": ""
+        },
+        {
+          "name": "Coconut Water",
+          "desc": ""
+        },
+        {
+          "name": "Hot Tea",
+          "desc": ""
+        },
+        {
+          "name": "Honey",
+          "desc": ""
+        },
+        {
+          "name": "Ginger",
+          "desc": ""
+        },
+        {
+          "name": "Spicy Foods",
+          "desc": ""
+        },
+        {
+          "name": "Bananas",
+          "desc": ""
+        },
+        {
+          "name": "Oatmeal",
+          "desc": ""
+        },
+        {
+          "name": "Yogurt",
+          "desc": ""
+        },
+        {
+          "name": "Avocado",
+          "desc": ""
+        }
       ],
-      "nonVegan": [{ "name": "Chicken Soup", "desc": "" }]
+      "nonVegan": [
+        {
+          "name": "Chicken Soup",
+          "desc": ""
+        }
+      ]
     },
     "searchKey": "common-cold",
     "name": "Common Cold",
@@ -142,12 +243,29 @@
           "name": "Manuka honey",
           "desc": "Known for its wound-healing properties"
         },
-        { "name": "Soft creamy foods such as cream soups", "desc": "" },
-        { "name": "Mashed Potatoes", "desc": "" },
-        { "name": "Yogurt", "desc": "" },
-        { "name": "Custards", "desc": "Also soothing" }
+        {
+          "name": "Soft creamy foods such as cream soups",
+          "desc": ""
+        },
+        {
+          "name": "Mashed Potatoes",
+          "desc": ""
+        },
+        {
+          "name": "Yogurt",
+          "desc": ""
+        },
+        {
+          "name": "Custards",
+          "desc": "Also soothing"
+        }
       ],
-      "nonVegan": [{ "name": "Scrambled eggs", "desc": "" }]
+      "nonVegan": [
+        {
+          "name": "Scrambled eggs",
+          "desc": ""
+        }
+      ]
     },
     "searchKey": "hurts-to-swallow",
     "name": "It hurts to swallow",
@@ -217,20 +335,44 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "apples", "desc": "Try high-fiber food" },
-        { "name": "oatmeal", "desc": "Try high-fiber food" },
-        { "name": "carrots", "desc": "Try high-fiber food" },
-        { "name": "broccoli", "desc": "Try high-fiber food" },
-        { "name": "beans", "desc": "Try high-fiber food" },
         {
-          "name": "vegetables",
+          "name": "Apples",
+          "desc": "Try high-fiber food"
+        },
+        {
+          "name": "Oatmeal",
+          "desc": "Try high-fiber food"
+        },
+        {
+          "name": "Carrots",
+          "desc": "Try high-fiber food"
+        },
+        {
+          "name": "Broccoli",
+          "desc": "Try high-fiber food"
+        },
+        {
+          "name": "Beans",
+          "desc": "Try high-fiber food"
+        },
+        {
+          "name": "Vegetables",
           "desc": "foods with low acidity, or more like alkaline"
         }
       ],
       "nonVegan": [
-        { "name": "fish", "desc": "Try low-fat food" },
-        { "name": "chicken", "desc": "Try low-fat food" },
-        { "name": "turkey breast", "desc": "Try low-fat food" }
+        {
+          "name": "Fish",
+          "desc": "Try low-fat food"
+        },
+        {
+          "name": "Chicken",
+          "desc": "Try low-fat food"
+        },
+        {
+          "name": "Turkey breast",
+          "desc": "Try low-fat food"
+        }
       ]
     },
     "searchKey": "gastritis",
@@ -253,14 +395,37 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "tea", "desc": "It calms frazzled nerves" },
-        { "name": "Wholee-Wheat Pretzels", "desc": "" },
-        { "name": "Carrots", "desc": "" },
-        { "name": "Milk", "desc": "" },
-        { "name": "Yogurt", "desc": "" },
-        { "name": "Nut", "desc": "" }
+        {
+          "name": "Herbal Tea",
+          "desc": "It calms frazzled nerves"
+        },
+        {
+          "name": "Wholee-Wheat Pretzels",
+          "desc": ""
+        },
+        {
+          "name": "Carrots",
+          "desc": ""
+        },
+        {
+          "name": "Milk",
+          "desc": ""
+        },
+        {
+          "name": "Yogurt",
+          "desc": ""
+        },
+        {
+          "name": "Nuts",
+          "desc": ""
+        }
       ],
-      "nonVegan": [{ "name": "Fish", "desc": "" }]
+      "nonVegan": [
+        {
+          "name": "Fish",
+          "desc": ""
+        }
+      ]
     },
     "searchKey": "stress",
     "name": "Stress",
@@ -321,17 +486,38 @@
           "name": "Leafy greens",
           "desc": "high in potassium. Potassium helps your kidneys get rid of more sodium through your urine. This in turn lowers your blood pressure"
         },
-        { "name": "Red beets", "desc": "" },
-        { "name": "Skim milk", "desc": "" },
-        { "name": "yoghurt", "desc": "" },
-        { "name": "Oatmeal", "desc": "" },
-        { "name": "Bananas", "desc": "" }
+        {
+          "name": "Red beets",
+          "desc": ""
+        },
+        {
+          "name": "Skim milk",
+          "desc": ""
+        },
+        {
+          "name": "Yogurt",
+          "desc": ""
+        },
+        {
+          "name": "Oatmeal",
+          "desc": ""
+        },
+        {
+          "name": "Bananas",
+          "desc": ""
+        }
       ],
       "nonVegan": [
-        { "name": "Salmon", "desc": "" },
-        { "name": "mackerel", "desc": "" },
         {
-          "name": "fish",
+          "name": "Salmon",
+          "desc": ""
+        },
+        {
+          "name": "Mackerel",
+          "desc": ""
+        },
+        {
+          "name": "Fish",
           "desc": "fish with omega-3s also good for high blood pressure"
         }
       ]
@@ -360,10 +546,22 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "prunes( Dried plums)", "desc": "rich in fibers" },
-        { "name": "Apples", "desc": "rich in fibers" },
-        { "name": "Pears", "desc": "rich in fibers" },
-        { "name": "Kiwifruit", "desc": "rich in fibers" },
+        {
+          "name": "Prunes( Dried plums)",
+          "desc": "rich in fibers"
+        },
+        {
+          "name": "Apples",
+          "desc": "rich in fibers"
+        },
+        {
+          "name": "Pears",
+          "desc": "rich in fibers"
+        },
+        {
+          "name": "Kiwifruit",
+          "desc": "rich in fibers"
+        },
         {
           "name": "Artichokes",
           "desc": "it have a prebiotic effect, promoting good gut health and regularity"
@@ -397,9 +595,12 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "avocado", "desc": "it can help regulate appetite" },
         {
-          "name": "sliced mushrooms",
+          "name": "Avocado",
+          "desc": "it can help regulate appetite"
+        },
+        {
+          "name": "Sliced mushrooms",
           "desc": "Use as a meat alternative in recipes like stir fries for a way to fill up without the added calories"
         }
       ],
@@ -432,7 +633,10 @@
           "name": "Chamomile Tea",
           "desc": "relief abdominal cramp and calm you down"
         },
-        { "name": "Ginger Tea", "desc": "relief abdominal cramp" },
+        {
+          "name": "Ginger Tea",
+          "desc": "relief abdominal cramp"
+        },
         {
           "name": "Dark Leafy Vegetables",
           "desc": "full of iron, which helps when you are losing iron during menstruation"
@@ -460,7 +664,12 @@
       },
       {
         "description": "Some women also have these symptoms",
-        "symptoms": ["Nausea", "Loose stools", "Headache", "Dizziness"]
+        "symptoms": [
+          "Nausea",
+          "Loose stools",
+          "Headache",
+          "Dizziness"
+        ]
       }
     ],
     "image": "https://cdn2.stylecraze.com/wp-content/uploads/2014/07/Top-10-Foods-To-Relieve-Menstrual-Cramps-1.jpg",
@@ -474,7 +683,7 @@
           "desc": "oy protein has been shown to lower LDL cholesterol levels, especially if blood cholesterol levels are high"
         },
         {
-          "name": "Tea",
+          "name": "Herbal Tea",
           "desc": "some evidence suggests that the antioxidants in tea can help prevent the build-up of fatty deposits in the arteries."
         },
         {
@@ -482,7 +691,7 @@
           "desc": "hey should be eaten in small quantities, as they are high in kilojoules"
         },
         {
-          "name": "Some vegetables oils ",
+          "name": "Some vegetables oils",
           "desc": "such as corn, soy and safflower, which contain omega-6 fatty acids, and those containing omega-3 fatty acids such as canola and olive oil."
         },
         {
@@ -496,7 +705,7 @@
       ],
       "nonVegan": [
         {
-          "name": "Oily Fish",
+          "name": "Fatty Fish",
           "desc": "such as mackerel, sardines, tuna and salmon which contain omega-3 fatty acids"
         }
       ]
@@ -570,7 +779,11 @@
       },
       {
         "description": "Seek emergency medical care if you have these heart disease symptoms",
-        "symptoms": ["Chest pain", "Shortness of breath", "Fainting"]
+        "symptoms": [
+          "Chest pain",
+          "Shortness of breath",
+          "Fainting"
+        ]
       }
     ],
     "image": "https://secure.i.telegraph.co.uk/multimedia/archive/02943/meddiet_2943573b.jpg",
@@ -579,17 +792,44 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Turmeric Milk (Golden Milk)", "desc": "Turmeric contains curcumin, a powerful anti-inflammatory compound that can reduce joint pain" },
-        { "name": "Ginger", "desc": "Acts as a natural anti-inflammatory, helping reduce pain and swelling in joints" },
-        { "name": "Berries (Blueberries, Strawberries)", "desc": "Rich in antioxidants that fight inflammation" },
-        { "name": "Broccoli", "desc": "Contains sulforaphane, which may slow the progression of arthritis" },
-        { "name": "Green Tea", "desc": "Packed with polyphenols that reduce inflammation and slow cartilage destruction" },
-        { "name": "Walnuts", "desc": "High in omega-3 fatty acids which help lower inflammation" },
-        { "name": "Olive Oil", "desc": "Contains oleocanthal which has properties similar to anti-inflammatory drugs" }
+        {
+          "name": "Turmeric Milk (Golden Milk)",
+          "desc": "Turmeric contains curcumin, a powerful anti-inflammatory compound that can reduce joint pain"
+        },
+        {
+          "name": "Ginger",
+          "desc": "Acts as a natural anti-inflammatory, helping reduce pain and swelling in joints"
+        },
+        {
+          "name": "Berries",
+          "desc": "Rich in antioxidants that fight inflammation"
+        },
+        {
+          "name": "Broccoli",
+          "desc": "Contains sulforaphane, which may slow the progression of arthritis"
+        },
+        {
+          "name": "Green Tea",
+          "desc": "Packed with polyphenols that reduce inflammation and slow cartilage destruction"
+        },
+        {
+          "name": "Walnuts",
+          "desc": "High in omega-3 fatty acids which help lower inflammation"
+        },
+        {
+          "name": "Olive Oil",
+          "desc": "Contains oleocanthal which has properties similar to anti-inflammatory drugs"
+        }
       ],
       "nonVegan": [
-        { "name": "Salmon", "desc": "Rich in omega-3 fatty acids which reduce joint inflammation" },
-        { "name": "Sardines", "desc": "High in omega-3s and vitamin D which helps maintain bone health" }
+        {
+          "name": "Salmon",
+          "desc": "Rich in omega-3 fatty acids which reduce joint inflammation"
+        },
+        {
+          "name": "Sardines",
+          "desc": "High in omega-3s and vitamin D which helps maintain bone health"
+        }
       ]
     },
     "searchKey": "arthritis",
@@ -614,18 +854,48 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Leafy Greens (Spinach, Kale)", "desc": "High in iron and folate which are essential for red blood cell production" },
-        { "name": "Fortified Cereals", "desc": "Many are fortified with iron and B vitamins critical for treating anemia" },
-        { "name": "Lentils", "desc": "Excellent plant-based source of iron and folate" },
-        { "name": "Tofu", "desc": "Good source of iron for vegetarians" },
-        { "name": "Pumpkin Seeds", "desc": "Rich in iron and other minerals" },
-        { "name": "Dried Apricots", "desc": "Good source of non-heme iron" },
-        { "name": "Vitamin C-rich foods (Oranges, Bell Peppers)", "desc": "Vitamin C enhances iron absorption from plant sources" }
+        {
+          "name": "Leafy Greens (Spinach, Kale)",
+          "desc": "High in iron and folate which are essential for red blood cell production"
+        },
+        {
+          "name": "Fortified Cereals",
+          "desc": "Many are fortified with iron and B vitamins critical for treating anemia"
+        },
+        {
+          "name": "Lentils",
+          "desc": "Excellent plant-based source of iron and folate"
+        },
+        {
+          "name": "Tofu",
+          "desc": "Good source of iron for vegetarians"
+        },
+        {
+          "name": "Pumpkin Seeds",
+          "desc": "Rich in iron and other minerals"
+        },
+        {
+          "name": "Dried Apricots",
+          "desc": "Good source of non-heme iron"
+        },
+        {
+          "name": "Vitamin C-rich foods (Oranges, Bell Peppers)",
+          "desc": "Vitamin C enhances iron absorption from plant sources"
+        }
       ],
       "nonVegan": [
-        { "name": "Red Meat (Beef, Lamb)", "desc": "Rich in heme iron, the most easily absorbed form of iron" },
-        { "name": "Liver", "desc": "One of the richest sources of iron and B12" },
-        { "name": "Oysters and Clams", "desc": "Excellent source of heme iron and vitamin B12" }
+        {
+          "name": "Red Meat (Beef, Lamb)",
+          "desc": "Rich in heme iron, the most easily absorbed form of iron"
+        },
+        {
+          "name": "Liver",
+          "desc": "One of the richest sources of iron and B12"
+        },
+        {
+          "name": "Oysters and Clams",
+          "desc": "Excellent source of heme iron and vitamin B12"
+        }
       ]
     },
     "searchKey": "anemia",
@@ -652,16 +922,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Chamomile Tea", "desc": "Has calming properties that can reduce anxiety and help with sleep" },
-        { "name": "Magnesium-rich foods (Dark Chocolate, Almonds)", "desc": "Magnesium deficiency is linked to increased anxiety" },
-        { "name": "Blueberries", "desc": "High in antioxidants and vitamin C which help relieve stress and anxiety" },
-        { "name": "Turmeric", "desc": "Curcumin may boost serotonin and dopamine levels" },
-        { "name": "Avocado", "desc": "Rich in B vitamins and healthy fats that support brain health" },
-        { "name": "Ashwagandha (in tea or supplement form)", "desc": "Adaptogenic herb that reduces cortisol and anxiety" }
+        {
+          "name": "Chamomile Tea",
+          "desc": "Has calming properties that can reduce anxiety and help with sleep"
+        },
+        {
+          "name": "Magnesium-rich foods (Dark Chocolate, Almonds)",
+          "desc": "Magnesium deficiency is linked to increased anxiety"
+        },
+        {
+          "name": "Blueberries",
+          "desc": "High in antioxidants and vitamin C which help relieve stress and anxiety"
+        },
+        {
+          "name": "Turmeric",
+          "desc": "Curcumin may boost serotonin and dopamine levels"
+        },
+        {
+          "name": "Avocado",
+          "desc": "Rich in B vitamins and healthy fats that support brain health"
+        },
+        {
+          "name": "Ashwagandha (in tea or supplement form)",
+          "desc": "Adaptogenic herb that reduces cortisol and anxiety"
+        }
       ],
       "nonVegan": [
-        { "name": "Salmon", "desc": "Omega-3 fatty acids help regulate neurotransmitters and reduce anxiety" },
-        { "name": "Eggs", "desc": "Contain tryptophan which helps create serotonin, a mood-regulating neurotransmitter" }
+        {
+          "name": "Salmon",
+          "desc": "Omega-3 fatty acids help regulate neurotransmitters and reduce anxiety"
+        },
+        {
+          "name": "Eggs",
+          "desc": "Contain tryptophan which helps create serotonin, a mood-regulating neurotransmitter"
+        }
       ]
     },
     "searchKey": "anxiety",
@@ -689,15 +983,36 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Warm Water with Honey and Lemon", "desc": "Soothes the throat and the honey has antibacterial properties" },
-        { "name": "Ginger Tea", "desc": "Anti-inflammatory properties soothe a sore throat" },
-        { "name": "Marshmallow Root Tea", "desc": "The mucilage coats and soothes the throat lining" },
-        { "name": "Popsicles", "desc": "Cold temperature numbs and soothes throat pain" },
-        { "name": "Slippery Elm Tea", "desc": "Creates a soothing coating in the throat" },
-        { "name": "Fenugreek Tea", "desc": "Has antimicrobial properties and relieves throat pain" }
+        {
+          "name": "Warm Water with Honey and Lemon",
+          "desc": "Soothes the throat and the honey has antibacterial properties"
+        },
+        {
+          "name": "Ginger Tea",
+          "desc": "Anti-inflammatory properties soothe a sore throat"
+        },
+        {
+          "name": "Marshmallow Root Tea",
+          "desc": "The mucilage coats and soothes the throat lining"
+        },
+        {
+          "name": "Popsicles",
+          "desc": "Cold temperature numbs and soothes throat pain"
+        },
+        {
+          "name": "Slippery Elm Tea",
+          "desc": "Creates a soothing coating in the throat"
+        },
+        {
+          "name": "Fenugreek Tea",
+          "desc": "Has antimicrobial properties and relieves throat pain"
+        }
       ],
       "nonVegan": [
-        { "name": "Chicken Broth", "desc": "Warm liquid soothes the throat and provides easy-to-absorb nutrients" }
+        {
+          "name": "Chicken Broth",
+          "desc": "Warm liquid soothes the throat and provides easy-to-absorb nutrients"
+        }
       ]
     },
     "searchKey": "sore-throat",
@@ -723,12 +1038,30 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Ginger", "desc": "One of the most effective natural remedies for nausea" },
-        { "name": "Peppermint Tea", "desc": "Menthol in peppermint soothes the stomach and eases nausea" },
-        { "name": "Bananas", "desc": "Easy to digest and gentle on the stomach" },
-        { "name": "Plain Crackers (Saltines)", "desc": "Bland and easy to keep down when nauseous" },
-        { "name": "Cold Water with Lemon", "desc": "Hydrates and the lemon scent can reduce nausea" },
-        { "name": "Fennel Seeds", "desc": "Chewing fennel seeds can help settle the stomach" }
+        {
+          "name": "Ginger",
+          "desc": "One of the most effective natural remedies for nausea"
+        },
+        {
+          "name": "Peppermint Tea",
+          "desc": "Menthol in peppermint soothes the stomach and eases nausea"
+        },
+        {
+          "name": "Bananas",
+          "desc": "Easy to digest and gentle on the stomach"
+        },
+        {
+          "name": "Plain Crackers (Saltines)",
+          "desc": "Bland and easy to keep down when nauseous"
+        },
+        {
+          "name": "Cold Water with Lemon",
+          "desc": "Hydrates and the lemon scent can reduce nausea"
+        },
+        {
+          "name": "Fennel Seeds",
+          "desc": "Chewing fennel seeds can help settle the stomach"
+        }
       ],
       "nonVegan": []
     },
@@ -754,16 +1087,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Tart Cherry Juice", "desc": "Melatonin-rich and has been shown to improve sleep duration and quality" },
-        { "name": "Kiwi", "desc": "Studies show eating kiwi before bed significantly improves sleep" },
-        { "name": "Chamomile Tea", "desc": "Contains apigenin, an antioxidant that promotes sleepiness" },
-        { "name": "Almonds", "desc": "Source of melatonin and magnesium which improve sleep quality" },
-        { "name": "Warm Milk", "desc": "Contains tryptophan and melatonin which promote sleep" },
-        { "name": "Walnuts", "desc": "Good source of melatonin, serotonin, and magnesium" },
-        { "name": "Passionflower Tea", "desc": "Has mild sedative effects that improve sleep quality" }
+        {
+          "name": "Tart Cherry Juice",
+          "desc": "Melatonin-rich and has been shown to improve sleep duration and quality"
+        },
+        {
+          "name": "Kiwi",
+          "desc": "Studies show eating kiwi before bed significantly improves sleep"
+        },
+        {
+          "name": "Chamomile Tea",
+          "desc": "Contains apigenin, an antioxidant that promotes sleepiness"
+        },
+        {
+          "name": "Almonds",
+          "desc": "Source of melatonin and magnesium which improve sleep quality"
+        },
+        {
+          "name": "Warm Milk",
+          "desc": "Contains tryptophan and melatonin which promote sleep"
+        },
+        {
+          "name": "Walnuts",
+          "desc": "Good source of melatonin, serotonin, and magnesium"
+        },
+        {
+          "name": "Passionflower Tea",
+          "desc": "Has mild sedative effects that improve sleep quality"
+        }
       ],
       "nonVegan": [
-        { "name": "Turkey", "desc": "Rich in tryptophan, which promotes drowsiness and sleep" }
+        {
+          "name": "Turkey",
+          "desc": "Rich in tryptophan, which promotes drowsiness and sleep"
+        }
       ]
     },
     "searchKey": "insomnia",
@@ -790,17 +1147,44 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Oatmeal", "desc": "Complex carbohydrates keep blood sugar levels stable which can improve mood" },
-        { "name": "Berries", "desc": "High in antioxidants that reduce brain inflammation linked to depression" },
-        { "name": "Walnuts", "desc": "One of the richest plant sources of omega-3s which support brain health" },
-        { "name": "Dark Chocolate", "desc": "Contains compounds that boost serotonin and endorphins" },
-        { "name": "Avocado", "desc": "Rich in folate which is essential for serotonin production" },
-        { "name": "Turmeric", "desc": "Curcumin has shown antidepressant effects in studies" },
-        { "name": "Green Tea", "desc": "Contains L-theanine which promotes a calm, focused state" }
+        {
+          "name": "Oatmeal",
+          "desc": "Complex carbohydrates keep blood sugar levels stable which can improve mood"
+        },
+        {
+          "name": "Berries",
+          "desc": "High in antioxidants that reduce brain inflammation linked to depression"
+        },
+        {
+          "name": "Walnuts",
+          "desc": "One of the richest plant sources of omega-3s which support brain health"
+        },
+        {
+          "name": "Dark Chocolate",
+          "desc": "Contains compounds that boost serotonin and endorphins"
+        },
+        {
+          "name": "Avocado",
+          "desc": "Rich in folate which is essential for serotonin production"
+        },
+        {
+          "name": "Turmeric",
+          "desc": "Curcumin has shown antidepressant effects in studies"
+        },
+        {
+          "name": "Green Tea",
+          "desc": "Contains L-theanine which promotes a calm, focused state"
+        }
       ],
       "nonVegan": [
-        { "name": "Fatty Fish (Salmon, Mackerel)", "desc": "Rich in omega-3 fatty acids which play a crucial role in brain function and mood" },
-        { "name": "Eggs", "desc": "Contain tryptophan, choline, and B vitamins that support mood regulation" }
+        {
+          "name": "Fatty Fish",
+          "desc": "Rich in omega-3 fatty acids which play a crucial role in brain function and mood"
+        },
+        {
+          "name": "Eggs",
+          "desc": "Contain tryptophan, choline, and B vitamins that support mood regulation"
+        }
       ]
     },
     "searchKey": "depression",
@@ -828,16 +1212,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Aloe Vera Juice", "desc": "Soothes the esophagus and reduces acid reflux symptoms" },
-        { "name": "Ginger Tea", "desc": "Natural anti-inflammatory that can help settle the stomach" },
-        { "name": "Bananas", "desc": "Low-acid fruit that helps coat the stomach lining" },
-        { "name": "Oatmeal", "desc": "Absorbs stomach acid and provides filling fiber" },
-        { "name": "Licorice Root Tea", "desc": "May help soothe the esophagus and stomach lining" },
-        { "name": "Fennel", "desc": "Helps soothe the stomach and improve digestion" },
-        { "name": "Melon (Cantaloupe, Honeydew)", "desc": "Low-acid fruits that are easy on the stomach" }
+        {
+          "name": "Aloe Vera Juice",
+          "desc": "Soothes the esophagus and reduces acid reflux symptoms"
+        },
+        {
+          "name": "Ginger Tea",
+          "desc": "Natural anti-inflammatory that can help settle the stomach"
+        },
+        {
+          "name": "Bananas",
+          "desc": "Low-acid fruit that helps coat the stomach lining"
+        },
+        {
+          "name": "Oatmeal",
+          "desc": "Absorbs stomach acid and provides filling fiber"
+        },
+        {
+          "name": "Licorice Root Tea",
+          "desc": "May help soothe the esophagus and stomach lining"
+        },
+        {
+          "name": "Fennel",
+          "desc": "Helps soothe the stomach and improve digestion"
+        },
+        {
+          "name": "Melon (Cantaloupe, Honeydew)",
+          "desc": "Low-acid fruits that are easy on the stomach"
+        }
       ],
       "nonVegan": [
-        { "name": "Lean Chicken or Turkey (grilled, not fried)", "desc": "Low-fat protein that is less likely to trigger reflux than fatty meats" }
+        {
+          "name": "Lean Chicken or Turkey (grilled, not fried)",
+          "desc": "Low-fat protein that is less likely to trigger reflux than fatty meats"
+        }
       ]
     },
     "searchKey": "acid-reflux",
@@ -864,12 +1272,30 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Water and Hydrating Fluids", "desc": "Staying well-hydrated dilutes urine and helps flush bacteria from the urinary tract" },
-        { "name": "Cranberry Juice (unsweetened)", "desc": "May prevent bacteria from adhering to the walls of the urinary tract" },
-        { "name": "Blueberries", "desc": "Similar to cranberries, may inhibit bacterial adhesion in the urinary tract" },
-        { "name": "Probiotic-rich foods (Yogurt, Kefir)", "desc": "Probiotics help maintain healthy bacteria balance and may prevent recurrent UTIs" },
-        { "name": "Garlic", "desc": "Has antimicrobial properties that may help fight UTI-causing bacteria" },
-        { "name": "Green Tea", "desc": "Contains antioxidants and may have antibacterial properties" }
+        {
+          "name": "Water and Hydrating Fluids",
+          "desc": "Staying well-hydrated dilutes urine and helps flush bacteria from the urinary tract"
+        },
+        {
+          "name": "Cranberry Juice (unsweetened)",
+          "desc": "May prevent bacteria from adhering to the walls of the urinary tract"
+        },
+        {
+          "name": "Blueberries",
+          "desc": "Similar to cranberries, may inhibit bacterial adhesion in the urinary tract"
+        },
+        {
+          "name": "Probiotic-rich foods (Yogurt, Kefir)",
+          "desc": "Probiotics help maintain healthy bacteria balance and may prevent recurrent UTIs"
+        },
+        {
+          "name": "Garlic",
+          "desc": "Has antimicrobial properties that may help fight UTI-causing bacteria"
+        },
+        {
+          "name": "Green Tea",
+          "desc": "Contains antioxidants and may have antibacterial properties"
+        }
       ],
       "nonVegan": []
     },
@@ -896,16 +1322,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Salmon and Fatty Fish", "desc": "Omega-3 fatty acids reduce triglycerides and support healthy cholesterol balance" },
-        { "name": "Oats and Oatmeal", "desc": "Beta-glucan fiber in oats lowers LDL (bad) cholesterol" },
-        { "name": "Avocado", "desc": "Rich in monounsaturated fats that lower LDL and raise HDL cholesterol" },
-        { "name": "Nuts (Almonds, Walnuts)", "desc": "Help lower LDL cholesterol; walnuts also rich in omega-3s" },
-        { "name": "Olive Oil", "desc": "Monounsaturated fats in olive oil lower LDL without affecting HDL" },
-        { "name": "Berries", "desc": "Rich in soluble fiber and antioxidants that support healthy cholesterol levels" },
-        { "name": "Flaxseeds", "desc": "High in omega-3 fatty acids and soluble fiber that lower LDL" }
+        {
+          "name": "Salmon and Fatty Fish",
+          "desc": "Omega-3 fatty acids reduce triglycerides and support healthy cholesterol balance"
+        },
+        {
+          "name": "Oats and Oatmeal",
+          "desc": "Beta-glucan fiber in oats lowers LDL (bad) cholesterol"
+        },
+        {
+          "name": "Avocado",
+          "desc": "Rich in monounsaturated fats that lower LDL and raise HDL cholesterol"
+        },
+        {
+          "name": "Nuts",
+          "desc": "Help lower LDL cholesterol; walnuts also rich in omega-3s"
+        },
+        {
+          "name": "Olive Oil",
+          "desc": "Monounsaturated fats in olive oil lower LDL without affecting HDL"
+        },
+        {
+          "name": "Berries",
+          "desc": "Rich in soluble fiber and antioxidants that support healthy cholesterol levels"
+        },
+        {
+          "name": "Flaxseeds",
+          "desc": "High in omega-3 fatty acids and soluble fiber that lower LDL"
+        }
       ],
       "nonVegan": [
-        { "name": "Fatty Fish (Mackerel, Herring, Tuna)", "desc": "Omega-3 fatty acids lower triglycerides and raise HDL cholesterol" }
+        {
+          "name": "Fatty Fish (Mackerel, Herring, Tuna)",
+          "desc": "Omega-3 fatty acids lower triglycerides and raise HDL cholesterol"
+        }
       ]
     },
     "searchKey": "high-cholesterol",
@@ -931,16 +1381,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Dark Leafy Greens (Spinach, Kale)", "desc": "Rich in calcium, magnesium, and vitamin K which are critical for bone strength" },
-        { "name": "Fortified Plant Milks (Almond, Soy)", "desc": "Provide calcium and vitamin D which are essential for bone density" },
-        { "name": "Tofu (calcium-set)", "desc": "Excellent plant-based source of calcium" },
-        { "name": "Prunes", "desc": "Studies show prunes can help prevent and reverse bone loss" },
-        { "name": "Beans and Lentils", "desc": "Good sources of calcium, magnesium, and protein for bone health" },
-        { "name": "Seeds (Chia, Sesame, Pumpkin)", "desc": "High in calcium and other bone-supporting minerals" }
+        {
+          "name": "Dark Leafy Greens (Spinach, Kale)",
+          "desc": "Rich in calcium, magnesium, and vitamin K which are critical for bone strength"
+        },
+        {
+          "name": "Fortified Plant Milks (Almond, Soy)",
+          "desc": "Provide calcium and vitamin D which are essential for bone density"
+        },
+        {
+          "name": "Tofu (calcium-set)",
+          "desc": "Excellent plant-based source of calcium"
+        },
+        {
+          "name": "Prunes",
+          "desc": "Studies show prunes can help prevent and reverse bone loss"
+        },
+        {
+          "name": "Beans and Lentils",
+          "desc": "Good sources of calcium, magnesium, and protein for bone health"
+        },
+        {
+          "name": "Seeds (Chia, Sesame, Pumpkin)",
+          "desc": "High in calcium and other bone-supporting minerals"
+        }
       ],
       "nonVegan": [
-        { "name": "Dairy (Milk, Cheese, Yogurt)", "desc": "Rich in calcium and vitamin D for bone strength" },
-        { "name": "Fatty Fish (Salmon, Sardines with bones)", "desc": "Provide vitamin D and calcium (from bones in canned sardines)" }
+        {
+          "name": "Dairy (Milk, Cheese, Yogurt)",
+          "desc": "Rich in calcium and vitamin D for bone strength"
+        },
+        {
+          "name": "Fatty Fish (Salmon, Sardines with bones)",
+          "desc": "Provide vitamin D and calcium (from bones in canned sardines)"
+        }
       ]
     },
     "searchKey": "osteoporosis",
@@ -965,12 +1439,30 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Celery", "desc": "Acts as a diuretic and contains compounds that may prevent kidney stone formation" },
-        { "name": "Lemon Juice (in water)", "desc": "Citrate in lemon juice helps prevent calcium oxalate stones from forming" },
-        { "name": "Basil Juice", "desc": "Contains acetic acid that may help dissolve kidney stones and reduce pain" },
-        { "name": "Pomegranate Juice", "desc": "Antioxidants may help prevent stones from forming" },
-        { "name": "Kidney Beans", "desc": "High in B vitamins and fiber that may help prevent kidney stones" },
-        { "name": "Dandelion Root Tea", "desc": "Acts as a diuretic and may reduce risk of stone formation" }
+        {
+          "name": "Celery",
+          "desc": "Acts as a diuretic and contains compounds that may prevent kidney stone formation"
+        },
+        {
+          "name": "Lemon Juice (in water)",
+          "desc": "Citrate in lemon juice helps prevent calcium oxalate stones from forming"
+        },
+        {
+          "name": "Basil Juice",
+          "desc": "Contains acetic acid that may help dissolve kidney stones and reduce pain"
+        },
+        {
+          "name": "Pomegranate Juice",
+          "desc": "Antioxidants may help prevent stones from forming"
+        },
+        {
+          "name": "Kidney Beans",
+          "desc": "High in B vitamins and fiber that may help prevent kidney stones"
+        },
+        {
+          "name": "Dandelion Root Tea",
+          "desc": "Acts as a diuretic and may reduce risk of stone formation"
+        }
       ],
       "nonVegan": []
     },
@@ -999,15 +1491,36 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Anti-inflammatory foods (Berries, Leafy Greens)", "desc": "Reduce systemic inflammation that can worsen asthma symptoms" },
-        { "name": "Ginger", "desc": "Anti-inflammatory and bronchodilatory properties may reduce asthma symptoms" },
-        { "name": "Garlic and Onions", "desc": "Anti-inflammatory properties may help manage asthma" },
-        { "name": "Apples", "desc": "Rich in quercetin, an antioxidant that has been linked to reduced asthma risk" },
-        { "name": "Turmeric", "desc": "Curcumin may help reduce airway inflammation" },
-        { "name": "Vitamin D-rich foods (Fortified foods, Mushrooms)", "desc": "Low vitamin D levels are linked to worse asthma control" }
+        {
+          "name": "Anti-inflammatory foods (Berries, Leafy Greens)",
+          "desc": "Reduce systemic inflammation that can worsen asthma symptoms"
+        },
+        {
+          "name": "Ginger",
+          "desc": "Anti-inflammatory and bronchodilatory properties may reduce asthma symptoms"
+        },
+        {
+          "name": "Garlic and Onions",
+          "desc": "Anti-inflammatory properties may help manage asthma"
+        },
+        {
+          "name": "Apples",
+          "desc": "Rich in quercetin, an antioxidant that has been linked to reduced asthma risk"
+        },
+        {
+          "name": "Turmeric",
+          "desc": "Curcumin may help reduce airway inflammation"
+        },
+        {
+          "name": "Vitamin D-rich foods (Fortified foods, Mushrooms)",
+          "desc": "Low vitamin D levels are linked to worse asthma control"
+        }
       ],
       "nonVegan": [
-        { "name": "Fatty Fish (Salmon, Mackerel)", "desc": "Omega-3s reduce lung inflammation and may reduce asthma severity" }
+        {
+          "name": "Fatty Fish",
+          "desc": "Omega-3s reduce lung inflammation and may reduce asthma severity"
+        }
       ]
     },
     "searchKey": "asthma",
@@ -1032,16 +1545,40 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Fermented Foods (Kimchi, Sauerkraut, Kombucha)", "desc": "Probiotics help restore gut bacteria balance disrupted by infections" },
-        { "name": "Bananas", "desc": "Gentle on the gut and help replenish lost electrolytes" },
-        { "name": "Plain White Rice", "desc": "Easily digestible and helps bind loose stools" },
-        { "name": "Applesauce", "desc": "Contains pectin which helps absorb excess water in the intestines" },
-        { "name": "Toast", "desc": "Bland and easy to digest, helps settle the stomach" },
-        { "name": "Coconut Water", "desc": "Helps replenish electrolytes lost through diarrhea" },
-        { "name": "Oral Rehydration Solution", "desc": "Critical for replacing fluids and electrolytes" }
+        {
+          "name": "Fermented Foods (Kimchi, Sauerkraut, Kombucha)",
+          "desc": "Probiotics help restore gut bacteria balance disrupted by infections"
+        },
+        {
+          "name": "Bananas",
+          "desc": "Gentle on the gut and help replenish lost electrolytes"
+        },
+        {
+          "name": "Plain White Rice",
+          "desc": "Easily digestible and helps bind loose stools"
+        },
+        {
+          "name": "Applesauce",
+          "desc": "Contains pectin which helps absorb excess water in the intestines"
+        },
+        {
+          "name": "Toast",
+          "desc": "Bland and easy to digest, helps settle the stomach"
+        },
+        {
+          "name": "Coconut Water",
+          "desc": "Helps replenish electrolytes lost through diarrhea"
+        },
+        {
+          "name": "Oral Rehydration Solution",
+          "desc": "Critical for replacing fluids and electrolytes"
+        }
       ],
       "nonVegan": [
-        { "name": "Plain Boiled Chicken", "desc": "Lean protein that's easy to digest and helps recovery" }
+        {
+          "name": "Plain Boiled Chicken",
+          "desc": "Lean protein that's easy to digest and helps recovery"
+        }
       ]
     },
     "searchKey": "diarrhea",
@@ -1069,17 +1606,44 @@
   {
     "goodFoods": {
       "vegan": [
-        { "name": "Whole Grains (Oats, Quinoa, Brown Rice)", "desc": "High fiber content helps maintain a healthy weight and improves insulin sensitivity" },
-        { "name": "Leafy Greens (Spinach, Kale, Collard Greens)", "desc": "Low in calories, high in nutrients, and have minimal impact on blood sugar" },
-        { "name": "Berries (Blueberries, Strawberries)", "desc": "High in antioxidants and fiber with a low glycemic index" },
-        { "name": "Legumes (Beans, Lentils, Chickpeas)", "desc": "Excellent source of fiber and plant protein that helps control blood sugar" },
-        { "name": "Nuts (Almonds, Walnuts)", "desc": "Help control blood sugar, reduce inflammation, and decrease heart disease risk" },
-        { "name": "Cinnamon", "desc": "May improve insulin sensitivity and lower blood sugar levels" },
-        { "name": "Turmeric", "desc": "Curcumin may help prevent prediabetes from progressing to type 2 diabetes" }
+        {
+          "name": "Whole Grains (Oats, Quinoa, Brown Rice)",
+          "desc": "High fiber content helps maintain a healthy weight and improves insulin sensitivity"
+        },
+        {
+          "name": "Leafy Greens (Spinach, Kale, Collard Greens)",
+          "desc": "Low in calories, high in nutrients, and have minimal impact on blood sugar"
+        },
+        {
+          "name": "Berries",
+          "desc": "High in antioxidants and fiber with a low glycemic index"
+        },
+        {
+          "name": "Legumes (Beans, Lentils, Chickpeas)",
+          "desc": "Excellent source of fiber and plant protein that helps control blood sugar"
+        },
+        {
+          "name": "Nuts",
+          "desc": "Help control blood sugar, reduce inflammation, and decrease heart disease risk"
+        },
+        {
+          "name": "Cinnamon",
+          "desc": "May improve insulin sensitivity and lower blood sugar levels"
+        },
+        {
+          "name": "Turmeric",
+          "desc": "Curcumin may help prevent prediabetes from progressing to type 2 diabetes"
+        }
       ],
       "nonVegan": [
-        { "name": "Fatty Fish (Salmon, Sardines)", "desc": "Omega-3 fatty acids reduce inflammation and improve heart health in diabetics" },
-        { "name": "Eggs", "desc": "Improve insulin sensitivity and are a good source of protein that helps with blood sugar control" }
+        {
+          "name": "Fatty Fish (Salmon, Sardines)",
+          "desc": "Omega-3 fatty acids reduce inflammation and improve heart health in diabetics"
+        },
+        {
+          "name": "Eggs",
+          "desc": "Improve insulin sensitivity and are a good source of protein that helps with blood sugar control"
+        }
       ]
     },
     "searchKey": "type-2-diabetes",
