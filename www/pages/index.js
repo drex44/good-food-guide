@@ -2,12 +2,12 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import DiseaseCard from "../components/disease/DiseaseCard";
 import Jumbotron from "../components/layout/Jumbotron";
-import { getAllDiseases } from "../modules/api";
+import { getAllDiseases, getAllFoods } from "../modules/api";
 import Grid from "@mui/material/Grid";
 
-const Index = ({ FoodData }) => (
+const Index = ({ FoodData, foodCount }) => (
   <Layout>
-    <Jumbotron />
+    <Jumbotron diseaseCount={FoodData.length} foodCount={foodCount} />
     <Grid container spacing={1} sx={{ padding: "2%", width: "100%" }}>
       {FoodData.map((disease, index) => (
         <Grid
@@ -24,8 +24,10 @@ const Index = ({ FoodData }) => (
 
 Index.getInitialProps = async () => {
   const data = await getAllDiseases();
+  const foods = await getAllFoods();
   return {
-    FoodData: data
+    FoodData: data,
+    foodCount: foods.length
   };
 };
 
