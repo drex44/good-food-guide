@@ -69,7 +69,7 @@ function getQueryStringValue(key) {
     window.location.search.replace(
       new RegExp(
         "^(?:.*[&\\?]" +
-          encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") +
+          encodeURIComponent(key).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") +
           "(?:\\=([^&]*))?)?.*$",
         "i"
       ),
